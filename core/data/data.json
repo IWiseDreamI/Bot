@@ -1,0 +1,1975 @@
+{
+    "tennis": {
+        "words": [
+            {
+                "rus": "Подача",
+                "eng": "Serve",
+                "rus_def": "Начало розыгрыша мяча одним из игроков.",
+                "eng_def": "Initiating a point by hitting the ball into play."
+            },
+            {
+                "rus": "Ракетка",
+                "eng": "Racket",
+                "rus_def": "Инструмент, используемый для удара по мячу.",
+                "eng_def": "The instrument used to hit the ball."
+            },
+            {
+                "rus": "Мяч",
+                "eng": "Ball",
+                "rus_def": "Круглый объект, используемый в игре теннис.",
+                "eng_def": "A round object used in the game of tennis."
+            },
+            {
+                "rus": "Удар",
+                "eng": "Stroke",
+                "rus_def": "Движение ракеткой для удара по мячу.",
+                "eng_def": "The motion of the racket to hit the ball."
+            },
+            {
+                "rus": "Линия поля",
+                "eng": "Baseline",
+                "rus_def": "Граница корта, параллельная сетке.",
+                "eng_def": "The boundary of the court parallel to the net."
+            },
+            {
+                "rus": "Сетка",
+                "eng": "Net",
+                "rus_def": "Вертикальное препятствие, разделяющее корт.",
+                "eng_def": "A vertical barrier dividing the court."
+            },
+            {
+                "rus": "Бейслайн",
+                "eng": "Baseline",
+                "rus_def": "Линия, параллельная сетке, находящаяся сзади корта.",
+                "eng_def": "The line parallel to the net and behind the court."
+            },
+            {
+                "rus": "Слайс",
+                "eng": "Slice",
+                "rus_def": "Удар, при котором ракетка идет под мяч снизу вверх.",
+                "eng_def": "A stroke where the racket moves from bottom to top under the ball."
+            },
+            {
+                "rus": "Твинс",
+                "eng": "Twins",
+                "rus_def": "Двойные подачи на сторону поля.",
+                "eng_def": "Double faults on one side of the court."
+            },
+            {
+                "rus": "Брейк",
+                "eng": "Break",
+                "rus_def": "Выигрыш гейма на подаче соперника.",
+                "eng_def": "Winning a game on the opponent's serve."
+            },
+            {
+                "rus": "Деюс",
+                "eng": "Deuce",
+                "rus_def": "Равенство в счете после двух выигранных очков.",
+                "eng_def": "Equality in the score after two points won."
+            },
+            {
+                "rus": "Любовь",
+                "eng": "Love",
+                "rus_def": "Особый способ обозначения нулевого счета.",
+                "eng_def": "A special way of denoting a score of zero."
+            },
+            {
+                "rus": "Воллей",
+                "eng": "Volley",
+                "rus_def": "Удар без отскока мяча от земли.",
+                "eng_def": "A shot hit before the ball bounces on the ground."
+            },
+            {
+                "rus": "Возврат",
+                "eng": "Return",
+                "rus_def": "Ответный удар на подачу соперника.",
+                "eng_def": "A shot played in response to the opponent's serve."
+            },
+            {
+                "rus": "Бекхенд",
+                "eng": "Backhand",
+                "rus_def": "Удар, совершаемый с обратной стороны ракетки.",
+                "eng_def": "A shot played on the non-dominant side of the racket."
+            },
+            {
+                "rus": "Форхенд",
+                "eng": "Forehand",
+                "rus_def": "Удар, совершаемый с лицевой стороны ракетки.",
+                "eng_def": "A shot played on the dominant side of the racket."
+            },
+            {
+                "rus": "Эйс",
+                "eng": "Ace",
+                "rus_def": "Подача, которая приводит к выигрышу очка.",
+                "eng_def": "A serve that results in a point."
+            },
+            {
+                "rus": "Гейм",
+                "eng": "Game",
+                "rus_def": "Единица подсчета в теннисе.",
+                "eng_def": "A unit of scoring in tennis."
+            },
+            {
+                "rus": "Тай-брейк",
+                "eng": "Tiebreak",
+                "rus_def": "Особый раунд для разрешения равенства в сетах.",
+                "eng_def": "A special round to resolve sets equality."
+            },
+            {
+                "rus": "Двойной матч",
+                "eng": "Double match",
+                "rus_def": "Игра в теннис, где участвуют по два игрока на каждой стороне.",
+                "eng_def": "A tennis game where two players are on each side."
+            },
+            {
+                "rus": "Шайссе",
+                "eng": "Chase",
+                "rus_def": "Попытка догнать мяч до того, как он коснется земли.",
+                "eng_def": "An attempt to reach the ball before it touches the ground."
+            },
+            {
+                "rus": "Топ-спин",
+                "eng": "Topspin",
+                "rus_def": "Эффект, придаваемый мячу вращением сверху вниз.",
+                "eng_def": "Affect given to the ball by hitting it with a forward and up spin."
+            },
+            {
+                "rus": "Поднятие",
+                "eng": "Lob",
+                "rus_def": "Удар с высоким подбросом мяча.",
+                "eng_def": "A shot with a high arching trajectory."
+            },
+            {
+                "rus": "Служебный гейм",
+                "eng": "Service game",
+                "rus_def": "Игра, в которой игрок подает мяч.",
+                "eng_def": "The game in which a player serves the ball."
+            },
+            {
+                "rus": "Теннисный мяч",
+                "eng": "Tennis ball",
+                "rus_def": "Мяч, используемый в игре теннис.",
+                "eng_def": "The ball used in the game of tennis."
+            },
+            {
+                "rus": "Лет",
+                "eng": "Let",
+                "rus_def": "Переигровка точки из-за некорректной подачи.",
+                "eng_def": "A replay of a point due to an improper serve."
+            },
+            {
+                "rus": "Сет",
+                "eng": "Set",
+                "rus_def": "Часть игры, включающая несколько геймов.",
+                "eng_def": "A portion of a tennis match consisting of several games."
+            },
+            {
+                "rus": "Теннисный корт",
+                "eng": "Tennis court",
+                "rus_def": "Игровая площадка для тенниса.",
+                "eng_def": "The playing surface for tennis."
+            },
+            {
+                "rus": "Десятка",
+                "eng": "Decade",
+                "rus_def": "Игровая ситуация, когда один игрок выиграл 10 очков.",
+                "eng_def": "A game situation where one player has won 10 points."
+            },
+            {
+                "rus": "Сет-пойнт",
+                "eng": "Set point",
+                "rus_def": "Очко, которое может завершить сет в пользу игрока.",
+                "eng_def": "A point that can end a set in favor of a player."
+            },
+            {
+                "rus": "Брейк-пойнт",
+                "eng": "Break point",
+                "rus_def": "Очко, при котором игрок может выиграть гейм на подаче соперника.",
+                "eng_def": "A point where a player can win a game on the opponent's serve."
+            },
+            {
+                "rus": "Двойной брейк-пойнт",
+                "eng": "Double break point",
+                "rus_def": "Очко, при котором игрок может выиграть гейм, имея две возможности на подаче соперника.",
+                "eng_def": "A point where a player can win a game with two opportunities on the opponent's serve."
+            },
+            {
+                "rus": "Кросс-корт",
+                "eng": "Cross-court",
+                "rus_def": "Удар мяча по диагонали через корт.",
+                "eng_def": "Hitting the ball diagonally across the court."
+            },
+            {
+                "rus": "Воут",
+                "eng": "Vote",
+                "rus_def": "Решение судьи по поводу спорной ситуации.",
+                "eng_def": "The umpire's decision on a disputed situation."
+            },
+            {
+                "rus": "Рейлли",
+                "eng": "Rally",
+                "rus_def": "Длительный обмен ударами между игроками.",
+                "eng_def": "An extended exchange of shots between players."
+            },
+            {
+                "rus": "Матч-пойнт",
+                "eng": "Match point",
+                "rus_def": "Очко, которое может завершить весь матч в пользу игрока.",
+                "eng_def": "A point that can end the entire match in favor of a player."
+            },
+            {
+                "rus": "Теннисный клуб",
+                "eng": "Tennis club",
+                "rus_def": "Организация, предоставляющая объекты для игры в теннис.",
+                "eng_def": "An organization providing facilities for playing tennis."
+            },
+            {
+                "rus": "Рейтинг ATP",
+                "eng": "ATP ranking",
+                "rus_def": "Система рейтинга теннисистов от Ассоциации теннисных профессионалов.",
+                "eng_def": "The ranking system for tennis players by the Association of Tennis Professionals."
+            },
+            {
+                "rus": "Рейтинг WTA",
+                "eng": "WTA ranking",
+                "rus_def": "Система рейтинга теннисисток от Женской теннисной ассоциации.",
+                "eng_def": "The ranking system for female tennis players by the Women's Tennis Association."
+            },
+            {
+                "rus": "Теннисная ракетка",
+                "eng": "Tennis racket",
+                "rus_def": "Инструмент для удара по мячу в игре теннис.",
+                "eng_def": "The instrument used to hit the ball in the game of tennis."
+            },
+            {
+                "rus": "Теннисный мяч",
+                "eng": "Tennis ball",
+                "rus_def": "Круглый объект, предназначенный для использования в игре теннис.",
+                "eng_def": "A round object designed for use in the game of tennis."
+            }
+        ],
+        "questions": []
+    },
+    "basketball": {
+        "words": [
+            {
+                "rus": "Подача",
+                "eng": "Pass",
+                "rus_def": "Передача мяча между игроками своей команды.",
+                "eng_def": "The act of transferring the ball to a teammate."
+            },
+            {
+                "rus": "Бросок",
+                "eng": "Shot",
+                "rus_def": "Попытка забросить мяч в корзину с целью забить очки.",
+                "eng_def": "An attempt to throw the ball into the basket to score points."
+            },
+            {
+                "rus": "Корзина",
+                "eng": "Basket",
+                "rus_def": "Обруч, прикрепленный к щите, через который игроки забрасывают мяч.",
+                "eng_def": "The hoop attached to the backboard through which players shoot the ball."
+            },
+            {
+                "rus": "Двухочковый бросок",
+                "eng": "Two-pointer",
+                "rus_def": "Бросок мяча, который приносит два очка.",
+                "eng_def": "A shot that scores two points when successful."
+            },
+            {
+                "rus": "Трехочковый бросок",
+                "eng": "Three-pointer",
+                "rus_def": "Бросок мяча из-за линии трехочкового круга, приносящий три очка.",
+                "eng_def": "A shot from beyond the three-point arc that scores three points."
+            },
+            {
+                "rus": "Щит",
+                "eng": "Backboard",
+                "rus_def": "Панель, на которой установлен обруч, и которая поддерживает кольцо.",
+                "eng_def": "The board supporting the hoop and attached to the basket."
+            },
+            {
+                "rus": "Блок",
+                "eng": "Block",
+                "rus_def": "Попытка отразить бросок соперника, поднимая руки.",
+                "eng_def": "An attempt to deflect an opponent's shot by raising one's hands."
+            },
+            {
+                "rus": "Подбор",
+                "eng": "Rebound",
+                "rus_def": "Взятие мяча после неудачного броска, касания обруча или доски.",
+                "eng_def": "The act of retrieving the ball after a missed shot, a rim touch, or a backboard touch."
+            },
+            {
+                "rus": "Перехват",
+                "eng": "Steal",
+                "rus_def": "Захват мяча у соперника.",
+                "eng_def": "Taking the ball away from an opponent."
+            },
+            {
+                "rus": "Передача",
+                "eng": "Assist",
+                "rus_def": "Передача мяча союзнику, которая приводит к успешному броску.",
+                "eng_def": "Passing the ball to a teammate that leads to a successful shot."
+            },
+            {
+                "rus": "Фол",
+                "eng": "Foul",
+                "rus_def": "Нарушение правил, сопровождающееся противоправным контактом.",
+                "eng_def": "A rule violation accompanied by unlawful contact."
+            },
+            {
+                "rus": "Лэй-ап",
+                "eng": "Lay-up",
+                "rus_def": "Бросок мяча с короткой дистанции без отрыва от земли.",
+                "eng_def": "A shot near the basket with a short distance, usually without leaving the ground."
+            },
+            {
+                "rus": "Зональная защита",
+                "eng": "Zone defense",
+                "rus_def": "Тактика защиты, при которой игроки покрывают определенную зону корта.",
+                "eng_def": "A defensive strategy in which players cover specific areas of the court."
+            },
+            {
+                "rus": "Человек-к-человеку защита",
+                "eng": "Man-to-man defense",
+                "rus_def": "Тактика защиты, при которой каждый игрок отвечает за определенного соперника.",
+                "eng_def": "A defensive strategy in which each player is responsible for guarding a specific opponent."
+            },
+            {
+                "rus": "Тайм-аут",
+                "eng": "Timeout",
+                "rus_def": "Остановка игры для консультации с тренером.",
+                "eng_def": "A break in the game for consultation with the coach."
+            },
+            {
+                "rus": "Нарушение подачи",
+                "eng": "Shot clock violation",
+                "rus_def": "Нарушение правил, когда команда не успевает бросить мяч в установленный срок.",
+                "eng_def": "A rule violation when a team fails to attempt a shot within the allotted time."
+            },
+            {
+                "rus": "Счетчик бросков",
+                "eng": "Shot clock",
+                "rus_def": "Устройство, отсчитывающее время для броска мяча.",
+                "eng_def": "A device counting down time for a shot attempt."
+            },
+            {
+                "rus": "Разворот",
+                "eng": "Crossover",
+                "rus_def": "Техника дриблинга, при которой игрок меняет руку, держащую мяч.",
+                "eng_def": "A dribbling technique where a player changes the hand holding the ball."
+            },
+            {
+                "rus": "Маневр по корту",
+                "eng": "Court movement",
+                "rus_def": "Плавное передвижение игрока по корту для эффективной игры.",
+                "eng_def": "The smooth movement of a player across the court for effective play."
+            },
+            {
+                "rus": "Тренер",
+                "eng": "Coach",
+                "rus_def": "Лидер команды, обучающий и координирующий игровые действия.",
+                "eng_def": "The team leader who instructs and coordinates the players during the game."
+            },
+            {
+                "rus": "Манчестер",
+                "eng": "Fast break",
+                "rus_def": "Быстрый контратакующий момент после захвата мяча от соперника.",
+                "eng_def": "A rapid offensive play following a defensive rebound or turnover."
+            },
+            {
+                "rus": "Оборонительный борт",
+                "eng": "Defensive board",
+                "rus_def": "Подбор мяча в собственной зоне после неудачного броска соперника.",
+                "eng_def": "Rebounding the ball in one's own zone after an opponent's missed shot."
+            },
+            {
+                "rus": "Обязательная замена",
+                "eng": "Substitution",
+                "rus_def": "Введение нового игрока в игру на замену другому игроку.",
+                "eng_def": "Introducing a new player into the game to replace another player."
+            },
+            {
+                "rus": "Трехсекундное нарушение",
+                "eng": "Three-second violation",
+                "rus_def": "Нарушение правил, когда игрок проводит более трех секунд в ограниченной зоне.",
+                "eng_def": "A rule violation when a player spends more than three seconds in the restricted area."
+            },
+            {
+                "rus": "Бигмен",
+                "eng": "Big man",
+                "rus_def": "Высокий и физически крепкий игрок, обычно играющий в области подбора и блокировки.",
+                "eng_def": "A tall and physically strong player, typically playing in the rebounding and shot-blocking areas."
+            },
+            {
+                "rus": "Дриблинг",
+                "eng": "Dribbling",
+                "rus_def": "Техника ведения мяча при передвижении по корту.",
+                "eng_def": "The technique of moving the ball while walking or running on the court."
+            },
+            {
+                "rus": "Средний партнер",
+                "eng": "Mid-range jumper",
+                "rus_def": "Бросок мяча средней дистанции от корзины.",
+                "eng_def": "A shot taken from a moderate distance from the basket."
+            },
+            {
+                "rus": "Реверс",
+                "eng": "Reverse lay-up",
+                "rus_def": "Бросок мяча с обратной стороны корзины, обычно с изменением руки.",
+                "eng_def": "A lay-up shot taken from the opposite side of the basket, usually with a hand switch."
+            },
+            {
+                "rus": "Фейк",
+                "eng": "Fake",
+                "rus_def": "Имитация движения или броска для обмана соперника.",
+                "eng_def": "An imitation of a movement or shot to deceive an opponent."
+            },
+            {
+                "rus": "Проход",
+                "eng": "Drive",
+                "rus_def": "Атака игрока в сторону корзины с целью забросить мяч.",
+                "eng_def": "An offensive move by a player towards the basket with the intention of scoring."
+            },
+            {
+                "rus": "Рим-против-рим",
+                "eng": "Rim-to-rim",
+                "rus_def": "Бросок мяча с одной стороны корзины на другую.",
+                "eng_def": "A shot that travels from one side of the basket to the other."
+            },
+            {
+                "rus": "Второй шанс",
+                "eng": "Second chance",
+                "rus_def": "Возможность подбора мяча после неудачного броска собственной команды.",
+                "eng_def": "The opportunity to rebound the ball after a missed shot by one's own team."
+            },
+            {
+                "rus": "Обручное кольцо",
+                "eng": "Rim",
+                "rus_def": "Круглое кольцо, прикрепленное к щите, через которое проходят броски.",
+                "eng_def": "The circular hoop attached to the backboard through which shots are made."
+            },
+            {
+                "rus": "Жесткий блок",
+                "eng": "Hard foul",
+                "rus_def": "Фол с намерением предотвратить бросок соперника.",
+                "eng_def": "A foul with the intention of preventing the opponent's shot."
+            },
+            {
+                "rus": "Дрэйн",
+                "eng": "Drain",
+                "rus_def": "Успешный бросок, приносящий очки.",
+                "eng_def": "A successful shot that scores points."
+            },
+            {
+                "rus": "Технический фол",
+                "eng": "Technical foul",
+                "rus_def": "Фол, совершенный вне игрового действия, за который назначается штраф.",
+                "eng_def": "A foul committed outside of gameplay, resulting in a penalty."
+            },
+            {
+                "rus": "Рекет",
+                "eng": "Racket",
+                "rus_def": "Действие блокировки броска соперника.",
+                "eng_def": "The action of blocking an opponent's shot."
+            },
+            {
+                "rus": "Кроссовер дриблинг",
+                "eng": "Crossover dribble",
+                "rus_def": "Дриблинг с перекрестным движением мяча между ногами.",
+                "eng_def": "Dribbling with a crosswise movement of the ball between the legs."
+            },
+            {
+                "rus": "Кольцо для свободных бросков",
+                "eng": "Free-throw line",
+                "rus_def": "Линия на корте, от которой производят штрафные броски.",
+                "eng_def": "The line on the court from which free throws are taken."
+            },
+            {
+                "rus": "Бросок с лета",
+                "eng": "Jump shot",
+                "rus_def": "Бросок мяча, выполняемый с прыжка.",
+                "eng_def": "A shot taken while jumping."
+            }
+        ],
+        "questions": []
+    },
+    "volleyball": {
+        "words": [
+            {
+                "rus": "Подача",
+                "eng": "Serve",
+                "rus_def": "Действие по введению мяча в игру с задней линии.",
+                "eng_def": "The action of putting the ball into play from behind the end line."
+            },
+            {
+                "rus": "Пас",
+                "eng": "Pass",
+                "rus_def": "Передача мяча между игроками своей команды.",
+                "eng_def": "The act of transferring the ball to a teammate."
+            },
+            {
+                "rus": "Атака",
+                "eng": "Attack",
+                "rus_def": "Активная попытка преодолеть блок соперника и забить очко.",
+                "eng_def": "An aggressive attempt to score by hitting the ball over the net."
+            },
+            {
+                "rus": "Блок",
+                "eng": "Block",
+                "rus_def": "Защита от атаки соперника, поднимая руки перед собой.",
+                "eng_def": "A defensive play where players jump with their hands raised above the net."
+            },
+            {
+                "rus": "Либеро",
+                "eng": "Libero",
+                "rus_def": "Специализированный защитник, имеющий право на подачу и защиту.",
+                "eng_def": "A specialized defensive player allowed to replace back-row players."
+            },
+            {
+                "rus": "Ротация",
+                "eng": "Rotation",
+                "rus_def": "Изменение позиций игроков после каждой подачи.",
+                "eng_def": "The clockwise movement of players after each serve."
+            },
+            {
+                "rus": "Выход из обороны",
+                "eng": "Side out",
+                "rus_def": "Переход права на подачу после выигранного розыгрыша.",
+                "eng_def": "Winning the right to serve after successfully defending against the opponent."
+            },
+            {
+                "rus": "Перестрелка",
+                "eng": "Joust",
+                "rus_def": "Соперничество двух игроков в поднятии мяча.",
+                "eng_def": "A contest between two players at the net to push the ball to their advantage."
+            },
+            {
+                "rus": "Фрибол",
+                "eng": "Freeball",
+                "rus_def": "Подача мяча сопернику без угрозы атаки.",
+                "eng_def": "A ball that is sent over the net with no spin, making it easier for the opponent to defend."
+            },
+            {
+                "rus": "Двойное касание",
+                "eng": "Double hit",
+                "rus_def": "Ошибка, когда один игрок касается мяча дважды подряд.",
+                "eng_def": "An error where a player contacts the ball twice in succession."
+            },
+            {
+                "rus": "Тайм-аут",
+                "eng": "Timeout",
+                "rus_def": "Остановка игры для консультации с тренером.",
+                "eng_def": "A break in the game for consultation with the coach."
+            },
+            {
+                "rus": "Ролл-шот",
+                "eng": "Roll shot",
+                "rus_def": "Удар мяча с вращением для изменения траектории полета.",
+                "eng_def": "A hit with spin to change the trajectory of the ball."
+            },
+            {
+                "rus": "Пайп",
+                "eng": "Pipe",
+                "rus_def": "Атака через центрального игрока из задней зоны.",
+                "eng_def": "An attack through the middle by a back-row player."
+            },
+            {
+                "rus": "Красная карточка",
+                "eng": "Red card",
+                "rus_def": "Выговор или удаление из игры за серьезные нарушения.",
+                "eng_def": "A warning or ejection from the game for serious misconduct."
+            },
+            {
+                "rus": "Желтая карточка",
+                "eng": "Yellow card",
+                "rus_def": "Предупреждение за нарушение правил с выдачей желтой карточки.",
+                "eng_def": "A warning for rule violation with the issuance of a yellow card."
+            },
+            {
+                "rus": "Линия атаки",
+                "eng": "Attack line",
+                "rus_def": "Линия на поле, которую не должны переступать атакующие игроки.",
+                "eng_def": "The line on the court that attackers should not cross before hitting the ball."
+            },
+            {
+                "rus": "Планирующая подача",
+                "eng": "Float serve",
+                "rus_def": "Подача мяча без вращения.",
+                "eng_def": "A serve with no spin, making it unpredictable for the receiver."
+            },
+            {
+                "rus": "Вайп",
+                "eng": "Wipe",
+                "rus_def": "Удар мяча о блок с целью получения очка.",
+                "eng_def": "Hitting the ball off the block to score a point."
+            },
+            {
+                "rus": "Пайп-подача",
+                "eng": "Pipe set",
+                "rus_def": "Подача мяча центральному игроку из задней зоны.",
+                "eng_def": "Setting the ball to the middle player from the back row."
+            },
+            {
+                "rus": "Боковая подача",
+                "eng": "Side set",
+                "rus_def": "Подача мяча боковому нападающему.",
+                "eng_def": "Setting the ball to the outside hitter."
+            },
+            {
+                "rus": "Дамп-удар",
+                "eng": "Dump shot",
+                "rus_def": "Короткий удар мяча через сеть.",
+                "eng_def": "A quick and short hit over the net."
+            },
+            {
+                "rus": "Центральный защитник",
+                "eng": "Middle blocker",
+                "rus_def": "Игрок, занимающий центральную позицию в блочной формации.",
+                "eng_def": "A player positioned in the middle of the blocking formation."
+            },
+            {
+                "rus": "Боковой нападающий",
+                "eng": "Outside hitter",
+                "rus_def": "Игрок, атакующий с левой, или правой стороны сетки.",
+                "eng_def": "A player who attacks from the left or right side of the net."
+            },
+            {
+                "rus": "Противоположный нападающий",
+                "eng": "Opposite hitter",
+                "rus_def": "Игрок, атакующий с противоположной стороны сетки.",
+                "eng_def": "A player who attacks from the opposite side of the setter."
+            },
+            {
+                "rus": "Прием подачи",
+                "eng": "Reception",
+                "rus_def": "Передача мяча на позицию подачи.",
+                "eng_def": "Passing the served ball to the setter."
+            },
+            {
+                "rus": "Центральный нападающий",
+                "eng": "Middle hitter",
+                "rus_def": "Игрок, атакующий из позиции по центру сетки.",
+                "eng_def": "A player who attacks from the central position of the net."
+            },
+            {
+                "rus": "Слайд-нападение",
+                "eng": "Slide",
+                "rus_def": "Нападение игрока, двигающегося вдоль сетки.",
+                "eng_def": "An attack by a player sliding along the net."
+            },
+            {
+                "rus": "Задняя подача",
+                "eng": "Back set",
+                "rus_def": "Подача мяча игроку, находящемуся за атакующим.",
+                "eng_def": "Setting the ball to a player behind the attacker."
+            },
+            {
+                "rus": "Удар по линии",
+                "eng": "Line shot",
+                "rus_def": "Удар мяча вдоль боковой линии поля.",
+                "eng_def": "Hitting the ball along the sideline."
+            },
+            {
+                "rus": "Удар по диагонали",
+                "eng": "Cross-court shot",
+                "rus_def": "Удар мяча по диагонали через поле.",
+                "eng_def": "Hitting the ball diagonally across the court."
+            },
+            {
+                "rus": "Тап",
+                "eng": "Tip",
+                "rus_def": "Легкий и короткий удар верхней частью пальцев.",
+                "eng_def": "A soft and short hit using the fingertips."
+            },
+            {
+                "rus": "Дамп-удар над сеткой",
+                "eng": "Dump-over",
+                "rus_def": "Удар мяча над сеткой, обманывая защитников.",
+                "eng_def": "A hit over the net, deceiving the defenders."
+            },
+            {
+                "rus": "Замена",
+                "eng": "Substitution",
+                "rus_def": "Введение нового игрока в состав команды.",
+                "eng_def": "Introducing a new player into the lineup."
+            },
+            {
+                "rus": "Расстановка",
+                "eng": "Line up",
+                "rus_def": "Порядок размещения игроков на корте.",
+                "eng_def": "The order of placement of players on the court."
+            },
+            {
+                "rus": "Игрок задней линии",
+                "eng": "Back line player",
+                "rus_def": "Игрок занимающий позицию на задней линии.",
+                "eng_def": "A player occupying a position on the back line."
+            },
+            {
+                "rus": "Подающий игрок",
+                "eng": "Server",
+                "rus_def": "Игрок, выполняющий подачу",
+                "eng_def": "The player who serves"
+            },
+            {
+                "rus": "Принимающий игрок",
+                "eng": "Receiving player",
+                "rus_def": "Игрок, принимающий мяч",
+                "eng_def": "The player receiving the ball"
+            },
+            {
+                "rus": "Партия",
+                "eng": "Set",
+                "rus_def": "Одна полноценная игра, продолжающаяся до 25 очков.",
+                "eng_def": "One complete game lasting up to 25 points"
+            },
+            {
+                "rus": "Результативная подача навылет",
+                "eng": "Ace",
+                "rus_def": "Этот термин означает, когда игрок подает мяч, а команда соперника не может его передать. ",
+                "eng_def": "This term refers to when a player serves the ball and the opposing team is unable to pass it. "
+            },
+            {
+                "rus": "Касание мяча",
+                "eng": "Ball touch"
+            },
+            {
+                "rus": "Смена сторон плoщадки",
+                "eng": "Court switch"
+            },
+            {
+                "rus": "Выбор стороны площадки",
+                "eng": "Court selection"
+            },
+            {
+                "rus": "Запрос замены",
+                "eng": "Substitution request",
+                "rus_def": "Запрос на вступление одного игрока в игру на место другого игрока, который должен покинуть площадку.",
+                "eng_def": "A request for one player to enter the game in place of another player who must leave the court."
+            },
+            {
+                "rus": "Ралли",
+                "eng": "Rally",
+                "rus_def": "Последовательность игровых действий, определяющих каждое очко с момента подачи мяча до выхода мяча за пределы поля.",
+                "eng_def": "The sequence of play actions that determine each point from the time the ball is served to the time the ball goes out of bounds."
+            },
+            {
+                "rus": "Штраф за нарушение дисциплины",
+                "eng": "Misconduct penalty",
+                "rus_def": "Первое грубое поведение в матче со стороны любого члена команды наказывается очком и подачей сопернику.",
+                "eng_def": "The first rude behavior in a match by any member of the team is penalized with a point and a serve to the opponent."
+            },
+            {
+                "rus": "Предупреждение",
+                "eng": "Warning"
+            },
+            {
+                "rus": "Спорный мяч",
+                "eng": "Disputed ball",
+                "rus_def": "Мяч, по поводу которого возникает разногласие среди игроков и судей относительно того, принадлежит ли последнее касание мяча одной из команд или нет.",
+                "eng_def": "The ball that causes disagreement among players and referees regarding whether the last touch belongs to one of the teams or not."
+            },
+            {
+                "rus": "Касание сетки",
+                "eng": "Net violation",
+                "rus_def": "Нарушение правил в волейболе, когда игрок или мяч касаются сетки во время игры. Если мяч касается сетки при атаке, это считается ошибкой, и команде противника присуждается очко.",
+                "eng_def": "A rule violation in volleyball where a player or the ball touches the net during play. If the ball touches the net during an attack, it is considered an error, and the opposing team is awarded a point."
+            },
+            {
+                "rus": "Запрос таймаута",
+                "eng": "Time out request"
+            },
+            {
+                "rus": "Проводить жеребъевку",
+                "eng": "Toss up"
+            },
+            {
+                "rus": "Проиграть очко",
+                "eng": "Lose a point"
+            },
+            {
+                "rus": "Заступ",
+                "eng": "Line fault",
+                "rus_def": "Пересечение центральной линии люой частью тела любого игрока.",
+                "eng_def": "Any player crossing the center line with any part of his body."
+            },
+            {
+                "rus": "Ошибка при подаче",
+                "eng": "Service mistake",
+                "rus_def": "Неудачная подача в волейболе.",
+                "eng_def": "Failed serve in volleyball."
+            },
+            {
+                "rus": "Сетка",
+                "eng": "Net"
+            },
+            {
+                "rus": "Мяч",
+                "eng": "Ball"
+            },
+            {
+                "rus": "Площадка",
+                "eng": "Court"
+            },
+            {
+                "rus": "Ошибка при блокировании",
+                "eng": "Blocking fault"
+            },
+            {
+                "rus": "Преимущество в два очка",
+                "eng": "Two point advantage",
+                "rus_def": "Преимущество, необходимое для победы.",
+                "eng_def": "The advantage needed to win."
+            },
+            {
+                "rus": "Матч-поинт",
+                "eng": "Game point",
+                "rus_def": "Последнее очко, необходимое для победы в игре или матче.",
+                "eng_def": "The final point needed to win a game or match."
+            }
+        ],
+        "questions": [
+            {
+                "eng": "The net is the barrier dividing the court. Players hit the ball over it, aiming for the opponent's side. ",
+                "rus": "Сетка - это барьер, разделяющий корт. Игроки отбивают мяч через нее, целясь в сторону соперника.",
+                "eng_answer": "Net",
+                "rus_answer": "Сетка",
+                "quest_type": "missing",
+                "difficulty": "0"
+            },
+            {
+                "eng": "Which term refers to a player committing an infraction by crossing the line of scrimmage before the ball is snapped?",
+                "rus": "Какой термин относится к игроку, совершившему нарушение, пересекая линию схватки до того, как мяч защелкнулся?",
+                "eng_answer": "Line fault",
+                "rus_answer": "Заступ",
+                "quest_type": "knowledge",
+                "difficulty": "0"
+            },
+            {
+                "eng": "The referee issued a warning to the player for unsportsmanlike behavior during the game.",
+                "rus": "Судья вынес игроку предупреждение за неспортивное поведение во время игры.",
+                "eng_answer": "Warning",
+                "rus_answer": "Предупреждение",
+                "quest_type": "missing",
+                "difficulty": "0"
+            },
+            {
+                "eng": "A penalty given to a player for making illegal contact with an opponent while blocking.",
+                "rus": "Штраф, назначаемый игроку за незаконный контакт с соперником во время блокирования.",
+                "eng_answer": "Blocking fault",
+                "rus_answer": "Ошибка при блокировании",
+                "quest_type": "knowledge",
+                "difficulty": "0"
+            },
+            {
+                "eng": "The players were involved in a heated argument over the ownership of the ball, leading to a disputed ball.",
+                "rus": "Игроки вступили в жаркий спор за право владения мячом, что привело к спорный мяч.",
+                "eng_answer": "Disputed ball",
+                "rus_answer": "Спорный мяч",
+                "quest_type": "missing",
+                "difficulty": "0"
+            },
+            {
+                "eng": "In volleyball, a team must win a set by at least a two-point advantage.",
+                "rus": "В волейболе команда должна выиграть сет с преимуществом как минимум в два очка.",
+                "eng_answer": "True",
+                "rus_answer": "Правда",
+                "quest_type": "boolean",
+                "difficulty": "0"
+            },
+            {
+                "eng": "The score is currently tied at 24-24. To win the set, a team must achieve a two point advantage.",
+                "rus": "На данный момент счет равный - 24-24. Чтобы выиграть сет, команда должна добиться преимущество в два очка.",
+                "eng_answer": "Two point advantage",
+                "rus_answer": "Преимущество в два очка",
+                "quest_type": "missing",
+                "difficulty": "0"
+            },
+            {
+                "eng": "The team is leading 24-21, and they are now at game point.",
+                "rus": "Команда ведет 24:21, и теперь у них матч-пойнт.",
+                "eng_answer": "Game point",
+                "rus_answer": "Матч-поинт",
+                "quest_type": "missing",
+                "difficulty": "0"
+            },
+            {
+                "eng": "A team loses a point in volleyball if the ball lands outside the court boundaries.",
+                "rus": "Команда теряет очко в волейболе, если мяч приземляется за границами площадки.",
+                "eng_answer": "Loses",
+                "rus_answer": "Теряет",
+                "quest_type": "missing",
+                "difficulty": "0"
+            },
+            {
+                "eng": "In volleyball, each team can make a maximum of three consecutive contacts with the ball before it must cross the net.",
+                "rus": "В волейболе каждая команда может сделать максимум три последовательных контактов с мячом, прежде чем он должен пересечь сетку.",
+                "eng_answer": "three",
+                "rus_answer": "три",
+                "quest_type": "missing",
+                "difficulty": "1"
+            },
+            {
+                "eng": "The team that wins the rally is awarded a point and the right to serve the next serve.",
+                "rus": "Команда, выигрывшая розыгрыш, получает очко и право подавать следующую подачу.",
+                "eng_answer": "serve",
+                "rus_answer": "подавать",
+                "quest_type": "missing",
+                "difficulty": "1"
+            },
+            {
+                "eng": "The player in the back-right position on the court is often referred to as the setter specialist.",
+                "rus": "Игрока на задней правой позиции на корте часто называют специалистом по разыгрыванию.",
+                "eng_answer": "setter",
+                "rus_answer": "разыгрыванию",
+                "quest_type": "missing",
+                "difficulty": "1"
+            },
+            {
+                "eng": "A point is scored when the ball hits the opponent's court and fails to the ground.",
+                "rus": "Очко засчитывается, когда мяч попадает на сторону соперника и падает на землю.",
+                "eng_answer": "fails",
+                "rus_answer": "падает",
+                "quest_type": "missing",
+                "difficulty": "1"
+            },
+            {
+                "eng": "Volleyball matches are typically played best out of five sets.",
+                "rus": "Матчи по волейболу обычно играются до пяти партий.",
+                "eng_answer": "five",
+                "rus_answer": "пяти",
+                "quest_type": "missing",
+                "difficulty": "1"
+            },
+            {
+                "eng": "The area between the two antennae and above the net is called the attack zone.",
+                "rus": "Область между двумя антеннами и выше сетки называется атакующей зоной.",
+                "eng_answer": "attack",
+                "rus_answer": "атакующей",
+                "quest_type": "missing",
+                "difficulty": "1"
+            },
+            {
+                "eng": "Libero players are known for their defensive skills and wear a contrasting jersey to be easily identified by teammates and game officials.",
+                "rus": "Либеро известны своими навыками в защите и носят контрастную майку для легкой идентификации со стороны товарищей по команде и судей.",
+                "eng_answer": "game",
+                "rus_answer": "судей",
+                "quest_type": "missing",
+                "difficulty": "1"
+            },
+            {
+                "eng": "The libero is the player responsible for the first contact of the ball, typically the pass to set up the attack.",
+                "rus": "Либеро - это игрок, ответственный за первый контакт с мячом, обычно передачу для настройки атаки.",
+                "eng_answer": "libero",
+                "rus_answer": "либеро",
+                "quest_type": "missing",
+                "difficulty": "1"
+            },
+            {
+                "eng": "The rotation occurs when players move clockwise in the rotation order after winning a rally and gaining the serve.",
+                "rus": "Ротация происходит, когда игроки двигаются по часовой стрелке в порядке ротации после выигрыша розыгрыша и получения подачи.",
+                "eng_answer": "rotation",
+                "rus_answer": "ротации",
+                "quest_type": "missing",
+                "difficulty": "1"
+            },
+            {
+                "eng": "During a game, a team can request a maximum of two time-outs to strategize and regroup.",
+                "rus": "В течение игры команда может запросить максимум два тайм-аута для стратегического планирования и перегруппировки.",
+                "eng_answer": "two",
+                "rus_answer": "два",
+                "quest_type": "missing",
+                "difficulty": "1"
+            },
+            {
+                "eng": "The serving team can score a point even if the ball touches the net during service.",
+                "rus": "Команда, подающая мяч, может заработать очко, даже если мяч касается сетки во время подачи.",
+                "eng_answer": "False",
+                "rus_answer": "Ложь",
+                "quest_type": "boolean",
+                "difficulty": "1"
+            },
+            {
+                "eng": "A player is allowed to touch the ball consecutively with different parts of the body during one play.",
+                "rus": "Игроку разрешается касаться мяча последовательно разными частями тела в течение одного розыгрыша.",
+                "eng_answer": "False",
+                "rus_answer": "Ложь",
+                "quest_type": "boolean",
+                "difficulty": "2"
+            },
+            {
+                "eng": "The libero can perform an attack hit from any position on the court.",
+                "rus": "Либеро может выполнять атакующий удар с любой позиции на корте.",
+                "eng_answer": "False",
+                "rus_answer": "Ложь",
+                "quest_type": "boolean",
+                "difficulty": "1"
+            },
+            {
+                "eng": "Volleyball matches are played best of five sets, and the team that wins three sets first wins the match.",
+                "rus": "В волейболе матчи играются до трех сетов, и команда, выигравшая три сета первой, выигрывает матч.",
+                "eng_answer": "True",
+                "rus_answer": "Правда",
+                "quest_type": "boolean",
+                "difficulty": "0"
+            },
+            {
+                "eng": "Players are not allowed to step on or over the center line during play.",
+                "rus": "Игрокам запрещено наступать на или переступать через центральную линию во время игры.",
+                "eng_answer": "True",
+                "rus_answer": "Правда",
+                "quest_type": "boolean",
+                "difficulty": "1"
+            },
+            {
+                "eng": "A ball hitting the boundary line is considered in during a rally.",
+                "rus": "Мяч, касающийся граничной линии, считается в пределах корта во время розыгрыша.",
+                "eng_answer": "True",
+                "rus_answer": "Правда",
+                "quest_type": "boolean",
+                "difficulty": "2"
+            },
+            {
+                "eng": "A team can request an unlimited number of substitutions during a match.",
+                "rus": "Команда может запрашивать неограниченное количество замен в течение матча.",
+                "eng_answer": "False",
+                "rus_answer": "Ложь",
+                "quest_type": "boolean",
+                "difficulty": "1"
+            },
+            {
+                "eng": "A point is scored if the ball lands on the opponent's court after hitting the ceiling.",
+                "rus": "Очко засчитывается, если мяч приземляется на стороне соперника после касания потолка.",
+                "eng_answer": "True",
+                "rus_answer": "Правда",
+                "quest_type": "boolean",
+                "difficulty": "0"
+            },
+            {
+                "eng": "A team is allowed to touch the ball four times before it must cross the net.",
+                "rus": "Команде разрешено касаться мяча четыре раза, прежде чем он должен пересечь сетку.",
+                "eng_answer": "False",
+                "rus_answer": "Ложь",
+                "quest_type": "boolean",
+                "difficulty": "2"
+            },
+            {
+                "eng": "The team that wins the first rally of a set also gets the first serve.",
+                "rus": "Команда, выигравшая первый розыгрыш сета, также получает первую подачу.",
+                "eng_answer": "True",
+                "rus_answer": "Правда",
+                "quest_type": "boolean",
+                "difficulty": "1"
+            },
+            {
+                "eng": "The libero is allowed to serve, but only from the back-right position on the court.",
+                "rus": "Либеро имеет право подавать, но только с позиции задней правой части корта.",
+                "eng_answer": "False",
+                "rus_answer": "Ложь",
+                "quest_type": "boolean",
+                "difficulty": "2"
+            },
+            {
+                "eng": "A rally can end in a draw if neither team commits a fault for an extended period.",
+                "rus": "Розыгрыш может закончиться в ничью, если ни одна из команд не допускает ошибки в течение длительного времени.",
+                "eng_answer": "True",
+                "rus_answer": "Правда",
+                "quest_type": "boolean",
+                "difficulty": "0"
+            },
+            {
+                "eng": "A player is allowed to block or attack the opponent's serve before it crosses the net.",
+                "rus": "Игроку разрешается блокировать или атаковать подачу соперника до того, как она пересечет сетку.",
+                "eng_answer": "False",
+                "rus_answer": "Ложь",
+                "quest_type": "boolean",
+                "difficulty": "1"
+            },
+            {
+                "eng": "A team can win a set even if they do not have the serve at the beginning.",
+                "rus": "Команда может выиграть сет, даже если у нее нет подачи в начале.",
+                "eng_answer": "True",
+                "rus_answer": "Правда",
+                "quest_type": "boolean",
+                "difficulty": "2"
+            },
+            {
+                "eng": "In beach volleyball, players are not allowed to wear sunglasses during a match.",
+                "rus": "В пляжном волейболе игрокам запрещено носить солнцезащитные очки во время матча.",
+                "eng_answer": "False",
+                "rus_answer": "Ложь",
+                "quest_type": "boolean",
+                "difficulty": "1"
+            },
+            {
+                "eng": "The serve is the first action in volleyball, initiated from behind the end line.",
+                "rus": "Подача - это первое действие в волейболе, начинается с задней линии.",
+                "quest_type": "translate",
+                "difficulty": "0"
+            },
+            {
+                "eng": "Players pass the ball between teammates to set up an attack.",
+                "rus": "Игроки передают мяч между союзниками, чтобы подготовить атаку.",
+                "quest_type": "translate",
+                "difficulty": "0"
+            },
+            {
+                "eng": "An effective attack is essential to score points by overcoming the opponent's block.",
+                "rus": "Эффективная атака необходима для набора очков путем преодоления блока соперника.",
+                "quest_type": "translate",
+                "difficulty": "0"
+            },
+            {
+                "eng": "Players use blocking as a defensive strategy to stop the opponent's attack.",
+                "rus": "Игроки используют блокировку как защитную стратегию, чтобы остановить атаку противника.",
+                "quest_type": "translate",
+                "difficulty": "0"
+            },
+            {
+                "eng": "The libero is a specialized defender allowed to replace back-row players.",
+                "rus": "Либеро - это специализированный защитник, имеющий право на замену игроков задней линии.",
+                "quest_type": "translate",
+                "difficulty": "0"
+            },
+            {
+                "eng": "Rotation occurs after each serve, where players move clockwise to new positions.",
+                "rus": "Ротация происходит после каждой подачи, когда игроки двигаются по часовой стрелке на новые позиции.",
+                "quest_type": "translate",
+                "difficulty": "0"
+            },
+            {
+                "eng": "Winning the side out grants the right to serve after a successful defense.",
+                "rus": "Победа в выходе из обороны дает право на подачу после успешной защиты.",
+                "quest_type": "translate",
+                "difficulty": "0"
+            },
+            {
+                "eng": "A joust occurs when two players compete to push the ball to their advantage at the net.",
+                "rus": "Перестрелка происходит, когда два игрока соперничают, чтобы выиграть мяч у сетки.",
+                "quest_type": "translate",
+                "difficulty": "0"
+            },
+            {
+                "eng": "A freeball is a relatively easy ball sent over the net without a strong attack threat.",
+                "rus": "Фрибол - это относительно легкий мяч, отправленный через сетку без угрозы сильной атаки.",
+                "quest_type": "translate",
+                "difficulty": "0"
+            },
+            {
+                "eng": "A double hit results from a player contacting the ball twice in a row.",
+                "rus": "Двойное касание происходит, когда игрок касается мяча дважды подряд.",
+                "quest_type": "translate",
+                "difficulty": "0"
+            },
+            {
+                "eng": "Teams can call a timeout to consult with the coach during a game.",
+                "rus": "Команды могут вызвать тайм-аут, чтобы посоветоваться с тренером во время игры.",
+                "quest_type": "translate",
+                "difficulty": "0"
+            },
+            {
+                "eng": "A roll shot involves spinning the ball to change its trajectory.",
+                "rus": "Ролл-шот включает вращение мяча для изменения его траектории.",
+                "quest_type": "translate",
+                "difficulty": "0"
+            },
+            {
+                "eng": "A pipe is an attack through the center by a back-row player.",
+                "rus": "Пайп - это атака через центр от игрока задней зоны.",
+                "quest_type": "translate",
+                "difficulty": "0"
+            },
+            {
+                "eng": "Receiving a red card results in a warning or ejection for serious misconduct.",
+                "rus": "Получение красной карточки влечет за собой предупреждение или удаление за серьезные нарушения.",
+                "quest_type": "translate",
+                "difficulty": "0"
+            },
+            {
+                "eng": "A yellow card serves as a caution for rule violations.",
+                "rus": "Желтая карточка служит предупреждением за нарушение правил.",
+                "quest_type": "translate",
+                "difficulty": "0"
+            },
+            {
+                "eng": "The attack line marks the boundary for attackers during play.",
+                "rus": "Линия атаки определяет границу для атакующих во время игры.",
+                "quest_type": "translate",
+                "difficulty": "0"
+            },
+            {
+                "eng": "A float serve lacks spin, making it unpredictable for the receiver.",
+                "rus": "Плавающая подача не имеет вращения, что делает ее непредсказуемой для приемщика.",
+                "quest_type": "translate",
+                "difficulty": "0"
+            },
+            {
+                "eng": "Players often use a wipe to score by hitting the ball off the block.",
+                "rus": "Игроки часто используют вайп для забивания, отбивая мяч от блока.",
+                "quest_type": "translate",
+                "difficulty": "0"
+            },
+            {
+                "eng": "Executing a pipe set involves setting the ball to the middle player from the back row.",
+                "rus": "Исполнение пайп-подачи включает передачу мяча центральному игроку из задней зоны.",
+                "quest_type": "translate",
+                "difficulty": "0"
+            },
+            {
+                "eng": "In a side set, the ball is set to the outside hitter.",
+                "rus": "В боковой подаче мяч передается наружному нападающему.",
+                "quest_type": "translate",
+                "difficulty": "0"
+            },
+            {
+                "eng": "A dump shot involves a quick and short hit over the net.",
+                "rus": "Дамп-удар включает в себя быстрый и короткий удар через сетку.",
+                "quest_type": "translate",
+                "difficulty": "0"
+            },
+            {
+                "eng": "The middle blocker positions centrally in the blocking formation.",
+                "rus": "Центральный защитник занимает центральное положение в блокирующей формации.",
+                "quest_type": "translate",
+                "difficulty": "0"
+            },
+            {
+                "eng": "An outside hitter attacks from either side of the net.",
+                "rus": "Боковой нападающий атакует с одной из сторон сетки.",
+                "quest_type": "translate",
+                "difficulty": "0"
+            },
+            {
+                "eng": "The opposite hitter attacks from the opposite side of the setter.",
+                "rus": "Противоположный нападающий атакует с противоположной стороны от сеттера.",
+                "quest_type": "translate",
+                "difficulty": "0"
+            }
+        ]
+    },
+    "archery": {
+        "words": [
+            {
+                "rus": "Лук",
+                "eng": "Bow",
+                "rus_def": "Инструмент для стрельбы из стрелы.",
+                "eng_def": "A tool for shooting arrows."
+            },
+            {
+                "rus": "Стрела",
+                "eng": "Arrow",
+                "rus_def": "Проектиль, выпускаемый из лука.",
+                "eng_def": "Projectile shot from a bow."
+            },
+            {
+                "rus": "Тетива",
+                "eng": "Bowstring",
+                "rus_def": "Предмет, соединяющий верхний и нижний концы лука.",
+                "eng_def": "Item connecting the upper and lower ends of a bow."
+            },
+            {
+                "rus": "Лучник",
+                "eng": "Archer",
+                "rus_def": "Человек, владеющий навыками стрельбы из лука.",
+                "eng_def": "A person skilled in archery."
+            },
+            {
+                "rus": "Прицел",
+                "eng": "Sight",
+                "rus_def": "Устройство для наведения прицела на цель.",
+                "eng_def": "Device for aiming at a target."
+            },
+            {
+                "rus": "Залп",
+                "eng": "Volley",
+                "rus_def": "Одновременный выстрел несколькими лучниками.",
+                "eng_def": "Simultaneous shot by multiple archers."
+            },
+            {
+                "rus": "Мишень",
+                "eng": "Target",
+                "rus_def": "Объект, на который направлен выстрел.",
+                "eng_def": "Object aimed at during a shot."
+            },
+            {
+                "rus": "Паралимпийская стрельба из лука",
+                "eng": "Paralympic archery",
+                "rus_def": "Вид спорта, адаптированный для людей с ограниченными возможностями.",
+                "eng_def": "Adapted sport for individuals with disabilities."
+            },
+            {
+                "rus": "Скит",
+                "eng": "Quiver",
+                "rus_def": "Сумка или футляр для переноски стрел.",
+                "eng_def": "Bag or case for carrying arrows."
+            },
+            {
+                "rus": "Выстрел",
+                "eng": "Shot",
+                "rus_def": "Действие выпуска стрелы из лука.",
+                "eng_def": "Action of releasing an arrow from a bow."
+            },
+            {
+                "rus": "Флеча",
+                "eng": "Fletching",
+                "rus_def": "Перья на задней части стрелы, обеспечивающие стабилизацию.",
+                "eng_def": "Feathers at the rear of an arrow, providing stabilization."
+            },
+            {
+                "rus": "Блочный лук",
+                "eng": "Compound bow",
+                "rus_def": "Тип лука с блоками и дополнительной системой тетивы.",
+                "eng_def": "Type of bow with pulleys and an additional string system."
+            },
+            {
+                "rus": "Традиционный лук",
+                "eng": "Traditional bow",
+                "rus_def": "Классический лук без использования сложных механизмов.",
+                "eng_def": "Classic bow without the use of complex mechanisms."
+            },
+            {
+                "rus": "Шафт",
+                "eng": "Shaft",
+                "rus_def": "Центральная часть стрелы, к которой прикрепляется наконечник и перья.",
+                "eng_def": "Central part of an arrow where the point and fletching are attached."
+            },
+            {
+                "rus": "Олимпийская стрельба из лука",
+                "eng": "Olympic archery",
+                "rus_def": "Дисциплина в лучной стрельбе, включенная в программу Олимпийских игр.",
+                "eng_def": "Archery discipline included in the Olympic Games program."
+            },
+            {
+                "rus": "Стенд",
+                "eng": "Range",
+                "rus_def": "Место для стрельбы из лука.",
+                "eng_def": "Area designated for archery shooting."
+            },
+            {
+                "rus": "Турнир по стрельбе из лука",
+                "eng": "Archery tournament",
+                "rus_def": "Соревнование, в котором участвуют лучники для определения лучшего стрелка.",
+                "eng_def": "Competition where archers participate to determine the best shooter."
+            },
+            {
+                "rus": "Тренировочная мишень",
+                "eng": "Practice target",
+                "rus_def": "Мишень, используемая для тренировок и улучшения навыков.",
+                "eng_def": "Target used for practice and skill improvement."
+            },
+            {
+                "rus": "Линза",
+                "eng": "Lens",
+                "rus_def": "Оптическое устройство, улучшающее видимость цели.",
+                "eng_def": "Optical device enhancing visibility of the target."
+            },
+            {
+                "rus": "Преднатяг",
+                "eng": "Pre-draw",
+                "rus_def": "Подготовительное действие перед основным натягом лука.",
+                "eng_def": "Preparatory action before the main draw of the bowstring."
+            },
+            {
+                "rus": "Турнирная стрельба",
+                "eng": "Match play",
+                "rus_def": "Соревнование, где лучники соревнуются друг с другом.",
+                "eng_def": "Competition where archers compete against each other."
+            },
+            {
+                "rus": "Слепой выстрел",
+                "eng": "Blind shot",
+                "rus_def": "Выстрел без использования прицела или оптических устройств.",
+                "eng_def": "Shot without using a sight or optical devices."
+            },
+            {
+                "rus": "Точность",
+                "eng": "Accuracy",
+                "rus_def": "Точность попадания стрел в цель.",
+                "eng_def": "Precision of arrows hitting the target."
+            },
+            {
+                "rus": "Группировка стрел",
+                "eng": "Arrow grouping",
+                "rus_def": "Расположение нескольких стрел на мишени близко друг к другу.",
+                "eng_def": "Arrangement of multiple arrows on the target closely together."
+            },
+            {
+                "rus": "Стрелковая линия",
+                "eng": "Shooting line",
+                "rus_def": "Линия, за которой лучники стреляют в мишень.",
+                "eng_def": "Line behind which archers shoot at the target."
+            },
+            {
+                "rus": "Длина выстрела",
+                "eng": "Draw length",
+                "rus_def": "Расстояние, на которое можно натянуть тетиву лука.",
+                "eng_def": "Distance by which the bowstring can be drawn."
+            },
+            {
+                "rus": "Натяг",
+                "eng": "Draw weight",
+                "rus_def": "Сила, которую нужно приложить к тетиве для натяга лука.",
+                "eng_def": "Force required to pull the bowstring for bow draw."
+            },
+            {
+                "rus": "Тетивный узел",
+                "eng": "Bowstring knot",
+                "rus_def": "Узел, соединяющий тетиву и верхний конец лука.",
+                "eng_def": "Knot connecting the bowstring to the upper end of the bow."
+            },
+            {
+                "rus": "Стрелковый колчан",
+                "eng": "Quiver",
+                "rus_def": "Устройство для переноски стрел, крепящееся к телу лучника.",
+                "eng_def": "Device for carrying arrows attached to the archer's body."
+            },
+            {
+                "rus": "Кривая лета",
+                "eng": "Trajectory curve",
+                "rus_def": "Путь движения стрелы в воздухе от лука до мишени.",
+                "eng_def": "Path of arrow movement in the air from the bow to the target."
+            },
+            {
+                "rus": "Фронтальный ветер",
+                "eng": "Headwind",
+                "rus_def": "Ветер, дующий против направления полета стрелы.",
+                "eng_def": "Wind blowing against the direction of the arrow's flight."
+            },
+            {
+                "rus": "Боковой ветер",
+                "eng": "Crosswind",
+                "rus_def": "Ветер, дующий поперек направления полета стрелы.",
+                "eng_def": "Wind blowing across the direction of the arrow's flight."
+            },
+            {
+                "rus": "Одежда лучника",
+                "eng": "Archer's attire",
+                "rus_def": "Одежда, предназначенная для комфорта и безопасности лучника.",
+                "eng_def": "Clothing designed for the comfort and safety of the archer."
+            },
+            {
+                "rus": "Каркас лука",
+                "eng": "Bow riser",
+                "rus_def": "Основная часть лука, к которой прикрепляются другие компоненты.",
+                "eng_def": "Main part of the bow to which other components are attached."
+            },
+            {
+                "rus": "Прицельная марка",
+                "eng": "Aiming mark",
+                "rus_def": "Отметка на прицеле, указывающая на точку попадания в цель.",
+                "eng_def": "Mark on the sight indicating the point of impact on the target."
+            },
+            {
+                "rus": "Стойка лука",
+                "eng": "Bow stance",
+                "rus_def": "Поза лучника при стрельбе из лука.",
+                "eng_def": "Archer's posture when shooting a bow."
+            },
+            {
+                "rus": "Камень лука",
+                "eng": "Bow nock",
+                "rus_def": "Зажим, который удерживает стрелу на тетиве лука.",
+                "eng_def": "Clip holding the arrow on the bowstring."
+            },
+            {
+                "rus": "Тензометр",
+                "eng": "Bow scale",
+                "rus_def": "Прибор для измерения веса натяга лука.",
+                "eng_def": "Device for measuring the draw weight of a bow."
+            },
+            {
+                "rus": "Лукострел",
+                "eng": "Archer's glove",
+                "rus_def": "Перчатка, предназначенная для защиты пальцев, тянущих тетиву.",
+                "eng_def": "Glove designed to protect the fingers pulling the bowstring."
+            },
+            {
+                "rus": "Наконечник стрелы",
+                "eng": "Arrow point",
+                "rus_def": "Металлическая часть стрелы, предназначенная для проникновения в мишень.",
+                "eng_def": "Metal part of the arrow designed for penetration into the target."
+            },
+            {
+                "rus": "Тетивный нок",
+                "eng": "Bowstring nock",
+                "rus_def": "Паз на конце стрелы, который защелкивается на тетиве.",
+                "eng_def": "Groove at the end of an arrow that clips onto the bowstring."
+            },
+            {
+                "rus": "Тулейка",
+                "eng": "Nocking point",
+                "rus_def": "Отметка на тетиве, указывающая, где следует устанавливать стрелу.",
+                "eng_def": "Mark on the bowstring indicating where to place the arrow."
+            },
+            {
+                "rus": "Луковая стрелковая дисциплина",
+                "eng": "Archery discipline",
+                "rus_def": "Вид спорта, связанный с лукострельной практикой.",
+                "eng_def": "Sport related to archery practice."
+            },
+            {
+                "rus": "Блиц-турнир",
+                "eng": "Blitz tournament",
+                "rus_def": "Соревнование с короткими интервалами между выстрелами.",
+                "eng_def": "Competition with short intervals between shots."
+            }
+        ],
+        "questions": []
+    },
+    "boxing": {
+        "words": [
+            {
+                "rus": "Бокс",
+                "eng": "Boxing",
+                "rus_def": "Спортивный вид единоборства, в котором два бойца сражаются друг с другом, используя только кулаки.",
+                "eng_def": "A combat sport in which two fighters engage in a contest using only their fists."
+            },
+            {
+                "rus": "Ринг",
+                "eng": "Ring",
+                "rus_def": "Прямоугольная область, в которой проводятся боксерские поединки.",
+                "eng_def": "The rectangular area where boxing matches take place."
+            },
+            {
+                "rus": "Боксер",
+                "eng": "Boxer",
+                "rus_def": "Участник боксерского поединка.",
+                "eng_def": "A participant in a boxing match."
+            },
+            {
+                "rus": "Тренер",
+                "eng": "Trainer",
+                "rus_def": "Инструктор, обучающий боксера технике и стратегии боя.",
+                "eng_def": "An instructor who teaches a boxer technique and fighting strategy."
+            },
+            {
+                "rus": "Груша для ударов",
+                "eng": "Punching bag",
+                "rus_def": "Оборудование для тренировки ударов и улучшения силы и выносливости.",
+                "eng_def": "Equipment used for practicing punches and improving strength and endurance."
+            },
+            {
+                "rus": "Нокаут",
+                "eng": "Knockout (KO)",
+                "rus_def": "Победа в поединке, вызванная тем, что соперник выбит из строя и не может продолжить бой.",
+                "eng_def": "Victory in a match caused by the opponent being incapacitated and unable to continue the fight."
+            },
+            {
+                "rus": "Технический нокаут",
+                "eng": "Technical knockout (TKO)",
+                "rus_def": "Решение рефери прекратить бой из-за невозможности соперника продолжить поединок.",
+                "eng_def": "Referee's decision to stop the fight due to the opponent's inability to continue."
+            },
+            {
+                "rus": "Гандикап",
+                "eng": "Handicap",
+                "rus_def": "Преимущество или недостаток веса или опыта для создания более равных условий в поединке.",
+                "eng_def": "Weight or experience advantage or disadvantage to create more equal conditions in a match."
+            },
+            {
+                "rus": "Весовая категория",
+                "eng": "Weight class",
+                "rus_def": "Классификация боксеров по весу для более справедливых сопоставлений.",
+                "eng_def": "Classification of boxers based on weight for fairer matchups."
+            },
+            {
+                "rus": "Угол",
+                "eng": "Corner",
+                "rus_def": "Место на ринге, где находятся тренеры боксера во время перерывов между раундами.",
+                "eng_def": "The area of the ring where a boxer's trainers are during breaks between rounds."
+            },
+            {
+                "rus": "Боксерские перчатки",
+                "eng": "Boxing gloves",
+                "rus_def": "Защитные перчатки, которые боксеры носят для защиты рук и лица.",
+                "eng_def": "Protective gloves worn by boxers to safeguard their hands and faces."
+            },
+            {
+                "rus": "Раунд",
+                "eng": "Round",
+                "rus_def": "Отрезок времени боксерского поединка, обычно продолжительностью 3 минуты.",
+                "eng_def": "A segment of time in a boxing match, typically lasting 3 minutes."
+            },
+            {
+                "rus": "Удар",
+                "eng": "Punch",
+                "rus_def": "Атака кулаком, направленная на соперника.",
+                "eng_def": "A fist attack directed towards an opponent."
+            },
+            {
+                "rus": "Комбинация",
+                "eng": "Combination",
+                "rus_def": "Серия последовательных ударов, выполняемых боксером.",
+                "eng_def": "A series of consecutive punches executed by a boxer."
+            },
+            {
+                "rus": "Джэб",
+                "eng": "Jab",
+                "rus_def": "Легкий, быстрый удар левой рукой для дистанцирования от соперника.",
+                "eng_def": "A light, quick left-hand punch used to maintain distance from the opponent."
+            },
+            {
+                "rus": "Хук",
+                "eng": "Hook",
+                "rus_def": "Удар, выполняемый с бокового направления с изогнутым кулаком.",
+                "eng_def": "A punch thrown from a lateral direction with a bent fist."
+            },
+            {
+                "rus": "Апперкот",
+                "eng": "Uppercut",
+                "rus_def": "Удар вверх, выполняемый из низкого положения вверх в сторону подбородка.",
+                "eng_def": "An upward punch executed from a lower position towards the opponent's chin."
+            },
+            {
+                "rus": "Кросс",
+                "eng": "Cross",
+                "rus_def": "Прямой удар правой рукой через центр.",
+                "eng_def": "A straight punch with the right hand straight through the center."
+            },
+            {
+                "rus": "Блок",
+                "eng": "Block",
+                "rus_def": "Защитное движение для предотвращения ударов соперника.",
+                "eng_def": "Defensive movement to prevent opponent's punches."
+            },
+            {
+                "rus": "Уклонение",
+                "eng": "Duck",
+                "rus_def": "Положение, в котором боксер наклоняет тело, чтобы избежать удара.",
+                "eng_def": "A position where a boxer leans the body to avoid a punch."
+            },
+            {
+                "rus": "Блокировка удара",
+                "eng": "Parry",
+                "rus_def": "Техника отклонения удара с помощью перчатки.",
+                "eng_def": "Technique of deflecting a punch using the glove."
+            },
+            {
+                "rus": "Поединок",
+                "eng": "Match",
+                "rus_def": "Соревнование между двумя боксерами.",
+                "eng_def": "Competition between two boxers."
+            },
+            {
+                "rus": "Рефери",
+                "eng": "Referee",
+                "rus_def": "Судья, следящий за правильностью проведения боксерского поединка.",
+                "eng_def": "The official overseeing the proper conduct of a boxing match."
+            },
+            {
+                "rus": "Счетчик",
+                "eng": "Scorecard",
+                "rus_def": "Таблица, на которой регистрируются очки, заработанные боксерами в поединке.",
+                "eng_def": "A chart on which points earned by boxers in a match are recorded."
+            },
+            {
+                "rus": "Блокировка тела",
+                "eng": "Body block",
+                "rus_def": "Защитное движение для предотвращения ударов в корпус боксера.",
+                "eng_def": "Defensive move to prevent punches to the boxer's torso."
+            },
+            {
+                "rus": "Спарринг",
+                "eng": "Sparring",
+                "rus_def": "Тренировочный бой между боксерами для улучшения навыков.",
+                "eng_def": "Training match between boxers to improve skills."
+            },
+            {
+                "rus": "Беззащитная зона",
+                "eng": "Vulnerable area",
+                "rus_def": "Часть тела, которая подвержена ударам и требует особой осторожности.",
+                "eng_def": "Part of the body susceptible to punches and requiring special caution."
+            },
+            {
+                "rus": "Таймер",
+                "eng": "Timer",
+                "rus_def": "Устройство для отсчета времени раунда и перерывов.",
+                "eng_def": "Device for counting down the round and break times."
+            },
+            {
+                "rus": "Боксерский пояс",
+                "eng": "Boxing belt",
+                "rus_def": "Награда, вручаемая чемпиону в весовой категории.",
+                "eng_def": "Award given to the champion in a weight class."
+            },
+            {
+                "rus": "Медицинский осмотр",
+                "eng": "Medical examination",
+                "rus_def": "Проверка состояния здоровья боксера перед поединком.",
+                "eng_def": "Assessment of a boxer's health condition before a match."
+            },
+            {
+                "rus": "Ожидание решения судьи",
+                "eng": "Judges' decision",
+                "rus_def": "Окончательное решение судей относительно победителя поединка.",
+                "eng_def": "Final decision by judges regarding the winner of the match."
+            },
+            {
+                "rus": "Боксерский клуб",
+                "eng": "Boxing club",
+                "rus_def": "Учебное заведение или организация, где занимаются боксом.",
+                "eng_def": "Educational institution or organization where boxing is practiced."
+            },
+            {
+                "rus": "Блокада ударов",
+                "eng": "Blocking punches",
+                "rus_def": "Техника предотвращения ударов соперника.",
+                "eng_def": "Technique to prevent opponent's punches from landing."
+            },
+            {
+                "rus": "Специальные удары",
+                "eng": "Special punches",
+                "rus_def": "Необычные или сложные удары, выполняемые боксером.",
+                "eng_def": "Unusual or complex punches executed by a boxer."
+            }
+        ],
+        "questions": []
+    },
+    "hockey": {
+        "words": [
+            {
+                "rus": "Хоккей",
+                "eng": "Hockey",
+                "rus_def": "Командный вид спорта, в котором целью является забрасывание шайбы в ворота соперника.",
+                "eng_def": "A team sport in which the objective is to score goals by shooting the puck into the opponent's net."
+            },
+            {
+                "rus": "Ворота",
+                "eng": "Goal",
+                "rus_def": "Конструкция, через которую нужно забросить шайбу для засчитывания очка.",
+                "eng_def": "Structure through which the puck must be shot to score a point."
+            },
+            {
+                "rus": "Шайба",
+                "eng": "Puck",
+                "rus_def": "Круглый объект, используемый для игры в хоккей.",
+                "eng_def": "A round object used in the game of hockey."
+            },
+            {
+                "rus": "Клюшка",
+                "eng": "Stick",
+                "rus_def": "Инструмент, который хоккеист использует для управления шайбой.",
+                "eng_def": "Tool that a hockey player uses to control the puck."
+            },
+            {
+                "rus": "Нападающий",
+                "eng": "Forward",
+                "rus_def": "Игрок, чей основной задачей является забрасывание шайбы в ворота соперника.",
+                "eng_def": "Player whose primary responsibility is to score goals by shooting the puck into the opponent's net."
+            },
+            {
+                "rus": "Защитник",
+                "eng": "Defenseman",
+                "rus_def": "Игрок, ответственный за защиту своих ворот и предотвращение забрасывания шайбы соперником.",
+                "eng_def": "Player responsible for defending their goal and preventing the opponent from scoring."
+            },
+            {
+                "rus": "Вратарь",
+                "eng": "Goalie",
+                "rus_def": "Игрок, защищающий ворота и предотвращающий забрасывание шайбы.",
+                "eng_def": "Player who defends the goal and prevents the puck from entering."
+            },
+            {
+                "rus": "Атака",
+                "eng": "Attack",
+                "rus_def": "Командная стратегия нападения на ворота соперника.",
+                "eng_def": "Team strategy of advancing toward the opponent's goal to score."
+            },
+            {
+                "rus": "Защита",
+                "eng": "Defense",
+                "rus_def": "Командная стратегия предотвращения забрасывания шайбы соперником.",
+                "eng_def": "Team strategy of preventing the opponent from scoring."
+            },
+            {
+                "rus": "Буллит",
+                "eng": "Shootout",
+                "rus_def": "Способ определения победителя в матче, когда результат не определен в основное время.",
+                "eng_def": "Method of determining the winner in a game when the result is undecided in regulation time."
+            },
+            {
+                "rus": "Лед",
+                "eng": "Ice",
+                "rus_def": "Покрытие, на котором играется хоккей, обычно замерзшая вода.",
+                "eng_def": "Surface on which hockey is played, typically frozen water."
+            },
+            {
+                "rus": "Судья",
+                "eng": "Referee",
+                "rus_def": "Официальное лицо, следящее за соблюдением правил во время игры.",
+                "eng_def": "Official responsible for enforcing the rules during the game."
+            },
+            {
+                "rus": "Шлем",
+                "eng": "Helmet",
+                "rus_def": "Средство защиты, надеваемое на голову игрока для предотвращения травм.",
+                "eng_def": "Protective gear worn on a player's head to prevent injuries."
+            },
+            {
+                "rus": "Минута штрафа",
+                "eng": "Penalty Minute",
+                "rus_def": "Время, которое игрок проводит вне игры из-за нарушения правил.",
+                "eng_def": "Time a player spends off the ice due to rule violations."
+            },
+            {
+                "rus": "Голевой проход",
+                "eng": "Scoring Chance",
+                "rus_def": "Ситуация, в которой команда имеет возможность забросить шайбу в ворота.",
+                "eng_def": "Situation in which a team has the opportunity to score a goal."
+            },
+            {
+                "rus": "Кроссовки",
+                "eng": "Skates",
+                "rus_def": "Обувь, предназначенная для движения по льду во время игры в хоккей.",
+                "eng_def": "Footwear designed for moving on ice during a hockey game."
+            },
+            {
+                "rus": "Линейный судья",
+                "eng": "Linesman",
+                "rus_def": "Судья, следящий за линиями поля и выполняющий другие функции на льду.",
+                "eng_def": "Official responsible for the lines on the rink and performing other on-ice duties."
+            },
+            {
+                "rus": "Офсайд",
+                "eng": "Offside",
+                "rus_def": "Ситуация, когда игрок находится вне игры, находясь ближе к воротам соперника, чем шайба.",
+                "eng_def": "Situation in which a player is out of play by being closer to the opponent's goal than the puck."
+            },
+            {
+                "rus": "Ледовая арена",
+                "eng": "Ice Arena",
+                "rus_def": "Стадион, предназначенный для проведения хоккейных матчей.",
+                "eng_def": "Stadium designed for hosting hockey games."
+            },
+            {
+                "rus": "Бросок",
+                "eng": "Shot",
+                "rus_def": "Действие по направлению шайбы в сторону ворот.",
+                "eng_def": "Action of propelling the puck towards the goal."
+            },
+            {
+                "rus": "Голкипер",
+                "eng": "Goaltender",
+                "rus_def": "Вратарь, защищающий ворота от бросков соперников.",
+                "eng_def": "Player who defends the goal from opponents' shots."
+            },
+            {
+                "rus": "Контратака",
+                "eng": "Counterattack",
+                "rus_def": "Атака, запущенная в ответ на атаку соперника.",
+                "eng_def": "Attack launched in response to the opponent's attack."
+            },
+            {
+                "rus": "Ловушка",
+                "eng": "Trap",
+                "rus_def": "Тактика, направленная на замедление передвижения шайбы соперником.",
+                "eng_def": "Tactic aimed at slowing down the opponent's puck movement."
+            },
+            {
+                "rus": "Тренировка",
+                "eng": "Training",
+                "rus_def": "Систематические занятия для повышения навыков и физической подготовки игроков.",
+                "eng_def": "Systematic exercises to enhance the skills and physical fitness of players."
+            },
+            {
+                "rus": "Кривая клюшки",
+                "eng": "Stick Curve",
+                "rus_def": "Изгиб клюшки для улучшения контроля над шайбой.",
+                "eng_def": "Curve in the stick to improve control over the puck."
+            },
+            {
+                "rus": "Тренерская команда",
+                "eng": "Coaching Staff",
+                "rus_def": "Группа тренеров, руководящих командой и обучающих игроков.",
+                "eng_def": "Group of coaches leading the team and instructing players."
+            },
+            {
+                "rus": "Молоко",
+                "eng": "Milkshake",
+                "rus_def": "Традиционный напиток, который игроки пьют после тренировок для восстановления.",
+                "eng_def": "Traditional beverage players consume after workouts for recovery."
+            },
+            {
+                "rus": "Пас",
+                "eng": "Pass",
+                "rus_def": "Передача шайбы союзнику для создания атаки.",
+                "eng_def": "Sending the puck to a teammate to create an offensive play."
+            },
+            {
+                "rus": "Третий тайм",
+                "eng": "Overtime",
+                "rus_def": "Дополнительное время, если результат не определен в основное время.",
+                "eng_def": "Extra time played if the result is undecided in regulation time."
+            },
+            {
+                "rus": "Стойка вратаря",
+                "eng": "Goalie Stance",
+                "rus_def": "Поза вратаря при готовности к отражению бросков.",
+                "eng_def": "Position a goaltender takes when ready to stop shots."
+            },
+            {
+                "rus": "Подкат",
+                "eng": "Checking",
+                "rus_def": "Физический контакт соперника для отнятия у него шайбы или замедления движения.",
+                "eng_def": "Physical contact with an opponent to take the puck or slow their movement."
+            },
+            {
+                "rus": "Подача",
+                "eng": "Slapshot",
+                "rus_def": "Сильный удар по шайбе, начинающийся с заднего конца клюшки.",
+                "eng_def": "Powerful shot on the puck starting with the back end of the stick."
+            },
+            {
+                "rus": "Блокировка",
+                "eng": "Block",
+                "rus_def": "Защита вратарем, путем закрытия части тела для предотвращения входа шайбы.",
+                "eng_def": "Goaltender's defense by covering part of the body to prevent the puck from entering."
+            },
+            {
+                "rus": "Отбор шайбы",
+                "eng": "Puck Possession",
+                "rus_def": "Контроль над шайбой во время игры.",
+                "eng_def": "Control of the puck during the game."
+            },
+            {
+                "rus": "Шайба в створ",
+                "eng": "Puck in the Crease",
+                "rus_def": "Шайба находится в пределах малой вратарской зоны.",
+                "eng_def": "Puck is within the goalie's small goal crease area."
+            },
+            {
+                "rus": "Тактика",
+                "eng": "Tactics",
+                "rus_def": "План действий команды для достижения победы.",
+                "eng_def": "Team's plan of action to achieve victory."
+            },
+            {
+                "rus": "Замена вратаря",
+                "eng": "Goalie Change",
+                "rus_def": "Смена вратаря в течение игры.",
+                "eng_def": "Replacing the goaltender during the game."
+            },
+            {
+                "rus": "Голевой кросс",
+                "eng": "Cross-Ice Pass",
+                "rus_def": "Передача шайбы по ширине льда для создания атаки.",
+                "eng_def": "Passing the puck across the width of the ice to create an offensive play."
+            },
+            {
+                "rus": "Очки",
+                "eng": "Points",
+                "rus_def": "Система подсчета баллов в турнире или сезоне.",
+                "eng_def": "Scoring system in a tournament or season."
+            },
+            {
+                "rus": "Молния",
+                "eng": "Lightning",
+                "rus_def": "Срок замораживания льда после гола, когда команда не может делать замены.",
+                "eng_def": "Time delay after a goal is scored when a team cannot make substitutions."
+            }
+        ],
+        "questions": []
+    }
+}
