@@ -84,7 +84,6 @@ async def start_lesson(call: CallbackQuery, state: FSMContext):
 @router.callback_query(Lesson.end)
 async def lesson_end(call: CallbackQuery, state: FSMContext):
     data = await state.get_data()
-
     quests = data["lesson"].quests
     last = data["lesson_last"]
     quest = quests[last]
@@ -92,6 +91,7 @@ async def lesson_end(call: CallbackQuery, state: FSMContext):
     answer = call.data.replace(re.findall(r"[^_]*_", call.data)[0], "")
     correct = check_example(quest, data["lesson"], answer, data["question"])
     
+    await state.clear()
     await call.answer("Правильно" if correct else "Неправильно")
     await call.message.edit_text(text="Вы успешно завершили урок")
 

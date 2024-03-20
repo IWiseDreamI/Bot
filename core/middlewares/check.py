@@ -33,8 +33,8 @@ def check_word(quest: Quest, mode: str, answer: str, question: str):
 
 
 def check_translate(quest: Quest, mode: str, answer: str):
+    print(mode)
     correct_answer = quest.eng if mode == "eng" else quest.rus
-    print(correct_answer)
     check = check_translate_ai(correct_answer, answer, quest.topic.eng)
     return check
 

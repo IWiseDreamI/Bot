@@ -76,13 +76,17 @@ text = {
         "eng": "Завершите предыдущее тестирование, чтобы продолжить.\nИли воспользуйтесь командой /end_test чтобы его завершить."
     },
     "contacts": {
-        "rus": "Контакты",
-        "eng": "Контакты"
+        "rus": "Контакты:\nТелефон: +7-914-167-45-99\nEmail: email@gmail.com",
+        "eng": "Contacts:\nPhone: +7-914-167-45-99\nEmail: email@gmail.com"
     },
     "unfinished_lesson": {
         "rus": "Complete the previous test to continue 🔚.\nOr use the /end_lesson command to end it.",
         "eng": "Завершите обучение, чтобы продолжить 🔚.\nИли воспользуйтесь командой /end_lesson чтобы его завершить."
     },
+    "admin_options": {
+        "rus": "<code>Available options:\n\n</code>/change_mode<code> - Switch the language of study\n</code>/change_topic<code> - Change the topic of the assignments</code>/commands<code> - Get all available commands</code>",
+        "eng": "<code>Доступные опции:\n\n</code>/change_mode<code> - Переключить язык изучения\n</code>/change_topic<code> - Сменить тематику заданий</code>/commands<code> - Получить все доступные команды</code>"        
+    }
 }
 
 commands_list = ["тестирование", "обучение", "/end_test", "/end_lesson", "прогресс", "опции", "контакты"]

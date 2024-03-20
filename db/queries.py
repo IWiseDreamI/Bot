@@ -50,14 +50,17 @@ def add_user(user):
     session.flush()
     session.commit()
 
+
 def get_user_progress(id):
     user = get_user(id)
+    print(user.fullname)
     topic = get_topic(user.topic.eng)
 
-    statement = select(Progress).where(Progress.topic_id == topic.id and Progress.user_id == id)
+    statement = select(Progress).where((Progress.user_id == id) & (Progress.topic_id == topic.id))
     progress = session.execute(statement).first()
 
     if(progress): progress = progress[0]
+    print(progress.user.fullname)
     return progress
 
 

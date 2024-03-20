@@ -31,8 +31,10 @@ async def set_tmode(quest, question, test, state):
         rus = bool(re.search('[а-яА-Я]', question))
         if(rus): await state.update_data(quest_mode="rus")
         else: await state.update_data(quest_mode="eng")
+
     else: 
-        await state.update_data(quest_mode=test.user.mode)
+        print("switched")
+        await state.update_data(quest_mode=test.mode)
 
 
 @router.message(Command(commands=["end_test"]))
@@ -104,16 +106,16 @@ async def testing(call: CallbackQuery, state: FSMContext):
     test = data["test"]
     last = data["last"]
     mode = data["quest_mode"]
-    question = data["question"]
+    last_question = data["question"]
 
     answer = call.data.replace(re.findall(r"[^_]*_", call.data)[0], "")
-    
+    correct = check_quest(test.quests[last], test, mode, answer, last_question)
+    await call.answer("Правильно" if correct else "Неправильно")
+
     kb = quest_keyboard(test.quests[last + 1], mode)
-    correct = check_quest(test.quests[last], test, mode, answer, question)
+    question = quest_text(test.quests[last + 1], mode, last + 1)
     await set_tmode(test.quests[last + 1], question, test, state)
 
-    await call.answer("Правильно" if correct else "Неправильно")
-    question = quest_text(test.quests[last + 1], mode, last + 1)
     await call.message.edit_text(text=question, reply_markup=kb, parse_mode=ParseMode.HTML)
     await state.update_data(last = last + 1, question=question)
     await state.set_state(Test.test)
@@ -123,8 +125,8 @@ async def testing(call: CallbackQuery, state: FSMContext):
         return
 
 
-@router.message(Test.test, F.text.lower() != "обучение")
-async def testing_text_answer(message: Message, state: FSMContext, bot: Bot):
+@router.message(Test.end, F.text.lower() != "обучение")
+async def testing_end(message: Message, state: FSMContext, bot: Bot):
     data = await state.get_data()
     await bot.edit_message_text(chat_id=message.chat.id, message_id=data["message_id"], text="Идет проверка...", parse_mode=ParseMode.HTML)
 
@@ -132,19 +134,47 @@ async def testing_text_answer(message: Message, state: FSMContext, bot: Bot):
     last = data["last"]
     mode = data["quest_mode"]
     question = data["question"]
-
+    
     answer = message.text
-
+    check_quest(test.quests[last], test, mode, answer, question)
     await message.delete()
 
+
+    test = get_test(data["test"].id)
+    result = get_result(test)
+
+    await bot.edit_message_text(chat_id=message.chat.id, message_id=data["message_id"], text=result, parse_mode=ParseMode.HTML)
+    await state.clear()
+
+
+@router.message(Test.test, F.text.lower() != "обучение")
+async def testing_text_answer(message: Message, state: FSMContext, bot: Bot):
+    data = await state.get_data()
+
+    await message.delete()
+    await bot.edit_message_text(
+        chat_id=message.chat.id, message_id=data["message_id"], 
+        text="Идет проверка...", parse_mode=ParseMode.HTML
+    )
+
+    test = data["test"]
+    last = data["last"]
+    mode = data["quest_mode"]
+    last_question = data["question"]
+
+    answer = message.text
+    check_quest(test.quests[last], test, mode, answer, last_question)
+
+    mode = test.mode
     kb = quest_keyboard(test.quests[last + 1], mode)
-    check_quest(test.quests[last], test, mode, answer, question)
+    question = quest_text(test.quests[last + 1], mode, last + 1)
     await set_tmode(test.quests[last + 1], question, test, state)
 
-    question = quest_text(test.quests[last + 1], mode, last + 1)
-    await bot.edit_message_text(chat_id=message.chat.id, message_id=data["message_id"], text=question, reply_markup=kb, parse_mode=ParseMode.HTML)
+    await bot.edit_message_text(
+        chat_id=message.chat.id, message_id=data["message_id"], 
+        text=question, reply_markup=kb, parse_mode=ParseMode.HTML
+    )
     await state.update_data(last = last + 1, question=question)
-
     await state.set_state(Test.test)
 
     if(last == len(test.quests) - 2): 

@@ -20,7 +20,7 @@ from core.middlewares.ai import get_question
 from core.middlewares.texts import get_new_quests
 from core.middlewares.voice import get_text_from_audio
 
-from db.queries import add_questions, add_user, change_language, get_general_info, get_user, get_user_info
+from db.queries import add_questions, add_user, change_language, change_topic, get_general_info, get_user, get_user_info
 
 
 class Audio(StatesGroup):
@@ -28,6 +28,7 @@ class Audio(StatesGroup):
 
 
 class NewQuest(StatesGroup):
+    quest = State()
     topic = State()
     qtype = State()
     quests = State()    
@@ -44,22 +45,21 @@ async def add_question(message: Message, state: FSMContext):
     kb = get_topics_kb(user.mode)
 
     if(message.from_user.id in ADMINS): 
-        await state.set_state(NewQuest.topic)
+        await state.set_state(NewQuest.quest)
         await message.answer("Выберите тематику:", reply_markup=kb)
     
     else: await message.answer("Вы не имеете доступа к этой команде.")
 
 
-@router.callback_query(F.data.startswith("topic_"), NewQuest.topic)
+@router.callback_query(F.data.startswith("topic_"), NewQuest.quest)
 async def new_question_topic(call: CallbackQuery, state: FSMContext):
     topic = call.data.split("_")[1]
 
     await state.update_data(topic=topic)
-    await state.set_state(NewQuest.qtype)
     await call.message.edit_text(f"Выберите тип вопроса: ", reply_markup=quest_type_kb)
     
 
-@router.callback_query(F.data.startswith("type_"), NewQuest.qtype)
+@router.callback_query(F.data.startswith("type_"), NewQuest.quest)
 async def new_question_type(call: CallbackQuery, state: FSMContext):
     qtype = call.data.split("_")[1]
     await state.update_data(qtype=qtype)
@@ -131,7 +131,7 @@ async def kb_change_topic(message: Message):
 
 
 @router.callback_query(F.data.startswith("topic_"))
-async def change_topic(call: Message):
+async def change(call: Message):
     topic = call.data.split("_")[1]
     change_topic(call.from_user.id, topic)
     await call.message.edit_text(f"Тематика изучения: {topic.capitalize()}.\n")
