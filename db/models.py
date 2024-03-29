@@ -154,6 +154,8 @@ class Lesson(Base):
 
     topic: Mapped["Topic"] = relationship()
     topic_id: Mapped[int] = mapped_column(ForeignKey("topics.id"))
+    
+    created_date: Mapped[int] = mapped_column(default=int(time.time()))
 
 
 class Example(Base):

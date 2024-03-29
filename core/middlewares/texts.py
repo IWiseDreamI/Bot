@@ -29,15 +29,13 @@ def get_quest(quest: Quest, mode: str):
     qt = quest.quest_type 
     if(mode == "rus"):
         if(qt == "definition"): return word(quest, mode)
-        if(qt == "voice"): return quest.rus
         if(qt == "translate"): return list(set([quest.eng, quest.rus]))[0]
         if(qt != "missing"): return quest.rus
         else: return missing(quest.rus, quest.rus_answer)
 
     if(mode == "eng"): 
         if(qt == "definition"): return word(quest, mode)
-        if(qt == "voice"): return quest.eng
-        if(qt == "translate"): return list(set([quest.eng, quest.rus]))[0]
+        if(qt in "translate" ): return list(set([quest.eng, quest.rus]))[0]
         if(qt != "missing"): return quest.eng
         else: return missing(quest.eng, quest.eng_answer)
 
@@ -57,12 +55,11 @@ def get_result(test: Test):
         answer = test.answers[i]
         if(answer.correct): correct += 1     
         emojis = ["\U0001F3AF", "❗️"]
-        print(answer.answer)
         result += f"#{counter+1} Ваш ответ: {answer.answer.capitalize().replace('_', ' ')} {emojis[0] if answer.correct else emojis[1]}\n"
         counter += 1
 
 
-    return f"Правильных ответов {correct} из 10:\n\n{result}"
+    return f"<code>Правильных ответов {correct} из 10:\n\n{result}</code>"
 
 
 def get_lesson_text(lesson):

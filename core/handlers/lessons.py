@@ -7,14 +7,10 @@ from core.middlewares.check import check_example
 from aiogram.enums import ParseMode
 from aiogram.filters import Command
 
-from db.queries import generate_lesson, get_user
 from core.markup.quests import example_quest_kb
-from core.middlewares.texts import get_lesson_text, get_example_text
-from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from core.data.env import text
+from core.middlewares.texts import get_example_text
 
 router = Router()
-
 
 class Lesson(StatesGroup):
     lesson = State()
@@ -33,38 +29,13 @@ async def end_lesson(message: Message, state: FSMContext, bot: Bot):
     if(data.get("lesson")):
         await bot.edit_message_text(
             chat_id=message.chat.id, message_id=data["message_id"], 
-            text="Обучение было досрочно завершено.",
+            text="Урок был досрочно завершен.",
             parse_mode=ParseMode.HTML
         )
-        await message.answer(text="Вы успешно завершили обучение досрочно.")
+        await message.answer(text="Вы завершили уроки досрочно.")
+
     else:
         await message.answer(text="Не найдено урока для досрочного завершения.")
-
-@router.message(F.text.lower() == "обучение")
-async def lesson(message: Message, state: FSMContext):
-    data = await state.get_data()
-    user = get_user(message.from_user.id)
-
-    if(data.get("lesson") is not None):
-        await message.answer(text=text["unfinished_lesson"][user.mode])
-        return
-    
-    if(data.get("test") is not None):
-        await message.answer(text=text["unfinished_test"][user.mode])
-        return
-    
-    lesson = generate_lesson(message.from_user.id)
-    msg = await message.answer(
-        text=get_lesson_text(lesson), 
-        reply_markup=InlineKeyboardMarkup(inline_keyboard=[
-            [InlineKeyboardButton(
-                text="Далее" if lesson.user.mode == "eng" else "Next",
-                callback_data="next"
-            )]
-        ])
-    )
-    
-    await state.update_data(lesson=lesson, message_id=msg.message_id)
 
 
 @router.callback_query(F.data.startswith("next"))

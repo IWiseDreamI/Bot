@@ -1,3 +1,4 @@
+import os
 from aiogram import Bot, Dispatcher
 from aiogram.types import Message
 from aiogram.filters import Command
@@ -6,12 +7,16 @@ from aiogram.fsm.context import FSMContext
 from aiogram import Bot, Dispatcher, F, Router, html
 from aiogram.types import CallbackQuery
 from aiogram.enums import ParseMode
+from dotenv import find_dotenv, load_dotenv
 
 from core.markup.inline import user_mode, confirm_key, get_topics_kb
 from core.markup.reply import menu
 from core.data.env import get_progress, text, user_already_exist
 
 from db.queries import add_user, change_topic, get_user, get_user_progress
+
+load_dotenv(find_dotenv())
+ADMINS = list(map(lambda id: int(id), os.environ.get("ADMIN_ID").split(",")))
 
 class User(StatesGroup):
     username = State()
@@ -86,10 +91,16 @@ async def topic(call: CallbackQuery, state: FSMContext):
 @router.message(F.text.lower() == "опции")
 async def options(message: Message):
     user = get_user(message.from_user.id)
-    await message.answer(
-        text=text["options"][user.mode], 
-        parse_mode=ParseMode.HTML
-    )
+    if(user.id in ADMINS):
+        await message.answer(
+            text=text["admin_options"], 
+            parse_mode=ParseMode.HTML
+        )
+    else:
+        await message.answer(
+            text=text["options"][user.mode], 
+            parse_mode=ParseMode.HTML
+        )
 
 
 @router.message(F.text.lower() == "контакты")

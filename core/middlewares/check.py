@@ -17,7 +17,6 @@ def check_missing(quest: Quest, mode: str, answer: str):
 def check_knowledge(quest: Quest, mode: str, answer: str):
     correct_answer = quest.eng_answer if mode == "eng" else quest.rus_answer
     correct = correct_answer.lower() == answer.lower().replace("_", " ")
-
     return correct
 
 
@@ -33,19 +32,36 @@ def check_word(quest: Quest, mode: str, answer: str, question: str):
 
 
 def check_translate(quest: Quest, mode: str, answer: str):
-    print(mode)
     correct_answer = quest.eng if mode == "eng" else quest.rus
     check = check_translate_ai(correct_answer, answer, quest.topic.eng)
     return check
 
 
+def check_voice(quest: Quest, mode: str, answer: str):
+    check = False
+    if(not answer): return False
+    correct = quest.eng.replace(" ", "").lower() if mode == "eng" else quest.rus.replace(" ", "").lower()
+    answer = answer.replace(".", "").replace(",", "").replace(" ", "").lower()
+    min_len = len(answer) if len(answer) < len(correct) else len(correct)
+    counter = 0
+
+    for i in range(min_len): counter += 1 if(answer[i] == correct[i]) else 0
+
+    if(counter > len(correct) * 0.6): check = True
+    if(answer in correct): check = True
+
+    return check
+
+
 def check_quest(quest: Quest, test: Test, mode: str, answer: str, question=""):
     result = False
-
-    if(quest.quest_type == "missing"): result = check_missing(quest, mode, answer)
-    if(quest.quest_type == "knowledge" or quest.quest_type == "boolean"): result = check_knowledge(quest, mode, answer)
-    if(quest.quest_type == "definition"): result = check_word(quest, mode, answer, question)
-    if(quest.quest_type == "translate"): result = check_translate(quest, mode, answer)
+    qt = quest.quest_type
+    if(answer is None): return result
+    if(qt == "missing"): result = check_missing(quest, mode, answer)
+    if(qt in ["knowledge", "boolean"]): result = check_knowledge(quest, mode, answer)
+    if(qt == "definition"): result = check_word(quest, mode, answer, question)
+    if(qt == "translate"): result = check_translate(quest, mode, answer)
+    if(qt == "voice"): result = check_voice(quest, mode, answer)
     add_answer(answer, result, quest, test)    
 
     return result

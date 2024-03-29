@@ -1,7 +1,7 @@
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from core.data.env import topics
 
-confirmation_kb = InlineKeyboardMarkup(inline_keyboard=[
+quest_confirmation_kb = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(
         text="Добавить",
         callback_data="new_quest_true"

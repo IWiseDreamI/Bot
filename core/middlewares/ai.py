@@ -107,7 +107,6 @@ def check_translate_ai(quest_text, user_text, topic):
 
     try: 
         answer = json.loads(completion.choices[0].message.content)
-        print(answer)
         answer = answer["translate"] == "True" and answer["correct"] == "True" and answer["different_lang"] == "True"
     
     except: pass

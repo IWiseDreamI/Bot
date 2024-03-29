@@ -57,7 +57,7 @@ def init_examples():
     session.commit()
 
 
-def init_words_quests():
+def init_sentence_quests():
     for topic in data:
         topic = get_topic(topic)
 
@@ -73,6 +73,11 @@ def init_words_quests():
                 quest_type="definition", difficulty="1",
                 topic=topic, topic_id=topic.id, 
             ))
+            session.add(Quest(
+                eng=word.eng, rus=word.rus,
+                quest_type="voice", difficulty="2",
+                topic=topic, topic_id=topic.id, 
+            ))
 
     session.commit()
 
@@ -84,7 +89,7 @@ def init_db():
     init_quests()
     init_words()
     init_examples()
-    init_words_quests()
+    init_sentence_quests()
 
 if __name__ == '__main__':
     init_db()

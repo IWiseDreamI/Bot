@@ -10,6 +10,11 @@ from db.models import Answer, Example, Lesson, Progress, User, Topic, Quest, Tes
 
 session = Session(sql, expire_on_commit=True)
 
+def get_day_time():
+    ctime = int(time.time())
+    dtime = ctime - ctime % (3600 * 24)
+    return dtime
+
 def get_topic(topic_str: str):
     topic_statement = select(Topic).where(Topic.eng == topic_str.capitalize())
     topic = session.execute(topic_statement).first()
@@ -53,14 +58,12 @@ def add_user(user):
 
 def get_user_progress(id):
     user = get_user(id)
-    print(user.fullname)
     topic = get_topic(user.topic.eng)
 
     statement = select(Progress).where((Progress.user_id == id) & (Progress.topic_id == topic.id))
     progress = session.execute(statement).first()
 
     if(progress): progress = progress[0]
-    print(progress.user.fullname)
     return progress
 
 
@@ -228,14 +231,13 @@ def add_answer(answer: str, correct: bool, quest: Quest, test: Test):
     session.add(new_answer)
     session.add(test)
 
-    session.flush()
     session.commit()
 
     return new_answer
 
 
 def add_progress(test: Test):
-    test_statement = update(Progress).where(Progress.user_id == test.user_id and Progress.topic_id == test.topic_id).values(exp=Progress.exp + 50)
+    test_statement = update(Progress).where((Progress.user_id == test.user_id) & (Progress.topic_id == test.topic_id)).values(exp=Progress.exp + 50)
     session.execute(test_statement)
 
 
@@ -249,26 +251,69 @@ def check_test_success(test: Test):
     return counter >= test_len * 0.7
 
 
-def get_general_info():
-    data = {"tests_num": "", "answers_num": "", "success_tests": "", "correct_answer": ""}
-    
-    tests_stmt = select(Test).where(Test.created_date >= time.time() - 24 * 3600)
-    answers_stmt = select(Answer).where(Answer.created_date >= time.time() - 24 * 3600)
-    
-    tests = session.execute(tests_stmt).all()
-    answers = session.execute(answers_stmt).all()
-    
-    data["tests_num"] = len(tests)
-    data["answers_num"] = len(tests)
+def get_user_stats(id):
+    user = get_user(id)
+    dtime = get_day_time()
 
-    data["success_tests"] = len(list(filter(lambda test: check_test_success(test[0]), tests)))
-    data["correct_answers"] = len(list(filter(lambda answer: answer[0].correct, answers)))
+    correct = []
+
+    data = {
+        "user": user, 
+        "tests": 0,
+        "lessons": 0, 
+        "correct": 0
+    }
+
+    lessons = select(Lesson).where((Lesson.user_id == id) & (Lesson.created_date >= dtime))
+    tests = select(Test).where((Test.user_id == id) & (Test.created_date >= dtime))
+    lessons = list(map(lambda lesson: lesson[0], session.execute(lessons).all()))
+    tests = list(map(lambda test: test[0], session.execute(tests).all()))
+
+    data["lessons"] = len(lessons); data["tests"] = len(tests)
+    
+    for test in tests:
+        for answer in test.answers:
+            if(answer.correct): correct.append(answer)
+
+    data["correct"] = len(correct)
 
     return data
 
 
-def get_user_info(id):
-    pass
+def bot_stats(last_day: bool = False):
+    dtime = get_day_time()
+    users = []; correct = []
+    lesson = []; tests = []
+    data = {
+        "users": 0,
+        "tests": 0,
+        "lessons": 0,
+        "correct": 0,
+    }
+
+    if(last_day):
+        lessons = select(Lesson).where(Lesson.created_date >= dtime)
+        tests = select(Test).where(Test.created_date >= dtime)
+    else: 
+        lessons = select(Lesson)
+        tests = select(Test)
+        
+    lessons = list(map(lambda lesson: lesson[0], session.execute(lessons).all()))
+    tests = list(map(lambda test: test[0], session.execute(tests).all()))
+
+    for test in tests:
+        for answer in test.answers:
+            if(answer.correct): correct.append(answer) 
+
+    for lesson in lessons: users.append(lesson.user_id)
+    for test in tests: users.append(test.user_id)
+
+    data["users"] = len(list(set(users)))
+    data["tests"] = len(tests)
+    data["lessons"] = len(lessons)
+    data["correct"] = len(correct)
+
+    return data
 
 
 def change_language(id) -> User:
@@ -300,7 +345,6 @@ def add_questions(questions):
     topic = get_topic(questions[0]["topic"])
 
     for quest in questions:
-
         if (quest["quest_type"] == "missing"):
             quest["rus"] = re.sub(r"_+", quest["rus_answer"], quest["rus"])
             quest["eng"] = re.sub(r"_+", quest["eng_answer"], quest["eng"])
@@ -311,6 +355,32 @@ def add_questions(questions):
             quest_type=quest["quest_type"], difficulty=quest["difficulty"],
             topic=topic, topic_id=topic.id, 
         ))
+
+    session.flush()
+    session.commit()
+
+
+def add_word(word):
+    topic = get_topic(word['topic'])
+
+    session.add(Word(
+        eng=word["eword"], rus=word["rword"],
+        eng_def=word.get("edef"), rus_def=word.get("rdef"),
+        topic=topic, topic_id=topic.id, 
+    ))
+    
+    session.add(Quest(
+        eng=word["eword"], rus=word["rword"],
+        eng_answer=word.get("edef"), rus_answer=word.get("rdef"),
+        quest_type="definition", difficulty="1",
+        topic=topic, topic_id=topic.id, 
+    ))
+
+    session.add(Quest(
+        eng=word["eword"], rus=word["rword"],
+        quest_type="voice", difficulty="2",
+        topic=topic, topic_id=topic.id, 
+    ))
 
     session.flush()
     session.commit()
