@@ -1,4 +1,5 @@
 import os
+import re
 from aiogram import Bot, Dispatcher
 from aiogram.types import Message
 from aiogram.filters import Command
@@ -9,7 +10,7 @@ from aiogram.types import CallbackQuery
 from aiogram.enums import ParseMode
 from dotenv import find_dotenv, load_dotenv
 
-from core.markup.inline import user_mode, confirm_key, get_topics_kb
+from core.markup.inline import get_topics_types_kb, user_mode, confirm_key, get_topics_kb
 from core.markup.reply import menu
 from core.data.env import get_progress, text, user_already_exist
 
@@ -51,7 +52,7 @@ async def confirm(message: Message, state: FSMContext):
 
 @router.callback_query(F.data.startswith("confirm"), User.mode)
 async def fullname(call: CallbackQuery, state: FSMContext):
-    confirm = call.data.split("_")[1]
+    confirm = call.data.replace(re.findall(r"[^_]*_", call.data)[0], "")
     data = await state.get_data()
 
     if(confirm == "false" or data.get("confirm") is None or len(data.get("confirm")) > 255):
@@ -68,16 +69,22 @@ async def fullname(call: CallbackQuery, state: FSMContext):
 
 @router.callback_query(F.data.startswith("mode"), User.mode)
 async def mode(call: CallbackQuery, state: FSMContext):
-    mode = call.data.split("_")[1]
-    await state.set_state(User.topic)
+    mode = call.data.replace(re.findall(r"[^_]*_", call.data)[0], "")
     await state.update_data(mode=mode)
     await call.answer(f"Выбран режим: {mode.capitalize()}")
-    await call.message.edit_text("Выберите тематику изучения:", reply_markup=get_topics_kb(mode))
+    await call.message.edit_text("Выберите тематику изучения:", reply_markup=get_topics_types_kb(mode))
+
+
+@router.callback_query(F.data.startswith("topictype"), User.mode)
+async def mode(call: CallbackQuery, state: FSMContext):
+    topictype = call.data.replace(re.findall(r"[^_]*_", call.data)[0], "")
+    await state.set_state(User.topic)
+    await call.message.edit_text(f"Выберите тематику изучения:", reply_markup=get_topics_kb(mode, topictype))
 
 
 @router.callback_query(F.data.startswith("topic_"), User.topic)
 async def topic(call: CallbackQuery, state: FSMContext):
-    topic = call.data.split("_")[1]
+    topic = call.data.replace(re.findall(r"[^_]*_", call.data)[0], "")
     await state.update_data(topic=topic)
     await call.answer(f"Выбрана тема: {topic}")
 

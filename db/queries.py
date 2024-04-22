@@ -251,6 +251,45 @@ def check_test_success(test: Test):
     return counter >= test_len * 0.7
 
 
+def get_topic_stats(topic: str, today: bool = False):
+    topic = get_topic(topic)
+    dtime = get_day_time()
+    users = []; correct = []
+
+    if(today):
+        lessons = select(Lesson).where((Topic.id == topic.id) & (Lesson.created_date >= dtime))
+        tests = select(Test).where((Topic.id == topic.id) & (Test.created_date >= dtime))
+    
+    else: 
+        lessons = select(Lesson).where(Lesson.topic_id == topic.id)
+        tests = select(Test).where(Test.topic_id == topic.id)
+
+    lessons = list(map(lambda lesson: lesson[0], session.execute(lessons).all()))
+    tests = list(map(lambda test: test[0], session.execute(tests).all()))
+
+    for lesson in lessons: users.append(lesson.user_id)
+    for test in tests: users.append(test.user_id)
+
+    for test in tests:
+        for answer in test.answers:
+            if(answer.correct): correct.append(answer) 
+
+    data = {
+        "users": 0,
+        "tests": 0,
+        "lessons": 0,
+        "correct": 0,
+    }
+
+    data["users"] = len(list(set(users)))
+    data["tests"] = len(tests)
+    data["lessons"] = len(lessons)
+    data["correct"] = len(correct)
+
+    return data
+
+
+
 def get_user_stats(id):
     user = get_user(id)
     dtime = get_day_time()
@@ -280,7 +319,7 @@ def get_user_stats(id):
     return data
 
 
-def bot_stats(last_day: bool = False):
+def bot_stats(today: bool = False):
     dtime = get_day_time()
     users = []; correct = []
     lesson = []; tests = []
@@ -291,7 +330,7 @@ def bot_stats(last_day: bool = False):
         "correct": 0,
     }
 
-    if(last_day):
+    if(today):
         lessons = select(Lesson).where(Lesson.created_date >= dtime)
         tests = select(Test).where(Test.created_date >= dtime)
     else: 
@@ -316,6 +355,75 @@ def bot_stats(last_day: bool = False):
     return data
 
 
+def bot_users_stats(today: bool = False):
+    dtime = get_day_time()
+    users = []
+    lesson = []; tests = []
+    users_data = {}
+    data = {
+        "users": 0,
+        "tests": 0,
+        "lessons": 0,
+        "users_data": {},
+        "users_count": 0,
+    }
+
+    if(today):
+        lessons = select(Lesson).where(Lesson.created_date >= dtime)
+        tests = select(Test).where(Test.created_date >= dtime)
+    
+    else: 
+        lessons = select(Lesson)
+        tests = select(Test)
+        
+    lessons = list(map(lambda lesson: lesson[0], session.execute(lessons).all()))
+    tests = list(map(lambda test: test[0], session.execute(tests).all()))
+
+    for lesson in lessons: 
+        if(users_data.get(lesson.user_id) is None): 
+            users_data[lesson.user_id] = {}
+            users_data[lesson.user_id]["lessons"] = 0
+
+        users_data[lesson.user_id]["lessons"] += 1    
+        users.append(lesson.user_id)
+
+    for test in tests: 
+        if(users_data.get(test.user_id) is None): 
+            users_data[test.user_id] = {}
+            users_data[test.user_id]["tests"] = 0
+
+        users_data[test.user_id]["tests"] += 1
+        users.append(test.user_id)
+
+    users_id = list(set(users))
+    users = []
+
+    data["users_count"] = len(users_id)
+    data["tests"] = len(tests)
+    data["lessons"] = len(lessons)
+
+    for user_id in users_id:
+        user = select(User).where(User.id == int(user_id))
+        user = session.execute(user).first()
+        users.append(user[0])
+
+    data["users"] = users
+
+    print(users_data)
+    print(users)
+
+    for user_data in users_data:
+        for user in users:
+            if(int(user_data) == user.id):
+                users_data[user.id]["name"] = user.username
+                if(users_data[user.id].get("lessons") is None): users_data[user.id]["lessons"] = 0
+                if(users_data[user.id].get("tests") is None): users_data[user.id]["tests"] = 0
+
+    data["users_data"] = users_data
+
+    return data
+
+
 def change_language(id) -> User:
     user = get_user(id)
     mode = "rus" if user.mode == "eng" else "eng"
@@ -325,9 +433,20 @@ def change_language(id) -> User:
 
 
 def change_topic(id, topic) -> User:
+    user = get_user(id)
     topic = get_topic(topic)
     user_stmt = update(User).where(User.id == int(id)).values(topic_id=topic.id)
+    
+    progress = Progress(
+        user = user, user_id = user.id,
+        topic=topic, topic_id=topic.id, exp = 0
+    )
+
+    session.add(progress)
+    
+    session.commit()
     session.execute(user_stmt)
+
     return get_user(id)
 
 
@@ -384,3 +503,4 @@ def add_word(word):
 
     session.flush()
     session.commit()
+

@@ -57,18 +57,33 @@ quest_type_kb = InlineKeyboardMarkup(inline_keyboard=[
     )],
 ])
 
-def get_topics_kb(mode: str):
+def get_topics_types_kb(mode: str):
     buttons = []
     row = []
 
-    for topic in topics:
+    for topictype in topics:
         row.append(InlineKeyboardButton(
-            text=topic[0] if mode == "eng" else topic[1],
-            callback_data=f"topic_{topic[0].lower()}"
+            text=topics[topictype]["eng"] if mode == "eng" else topics[topictype]["rus"],
+            callback_data=f"topictype_{topics[topictype]['eng'].lower()}"
         ))
 
         if(len(row) == 2): 
             buttons.append(row) 
             row = []
+
+    return InlineKeyboardMarkup(inline_keyboard=buttons)
+
+def get_topics_kb(mode: str, topictype: str):
+    buttons = []
+
+    print(topics)
+
+    for topic in topics[topictype]:
+        if(topic in ["eng", "rus"]): continue
+
+        buttons.append([InlineKeyboardButton(
+            text=topics[topictype][topic]["eng"] if mode == "eng" else topics[topictype][topic]["rus"],
+            callback_data=f"topic_{topics[topictype][topic]['eng'].lower()}"
+        )])
 
     return InlineKeyboardMarkup(inline_keyboard=buttons)

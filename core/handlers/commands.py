@@ -1,4 +1,5 @@
 import os
+import re
 import soundfile as sf
 from aiogram.types import Message
 from aiogram import Bot, Dispatcher
@@ -13,14 +14,10 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 from core.middlewares.ai import get_question
 from core.middlewares.voice import get_text_from_audio
-from core.data.env import get_bot_stats, get_bot_stats_today, get_stats, text, word_confirm
+from core.data.env import get_bot_stats, get_bot_stats_today, get_bot_users_stats, get_stats, get_today_topic_statistic, get_topic_statistic, text, word_confirm
 from core.middlewares.texts import get_lesson_text, get_new_quests
-from core.markup.inline import get_topics_kb, quest_type_kb, quest_confirmation_kb, confirm_key
+from core.markup.inline import get_topics_kb, get_topics_types_kb, quest_type_kb, quest_confirmation_kb, confirm_key
 from db.queries import add_questions, change_language, change_topic, generate_lesson, get_user
-
-
-# class Audio(StatesGroup):
-#     audio = State()
 
 
 class NewQuest(StatesGroup):
@@ -43,6 +40,10 @@ class NewWord(StatesGroup):
 class ChangeTopic(StatesGroup):
     topic = State()
 
+class TopicStats(StatesGroup):
+    topic = State()
+    today = State()
+
 
 router = Router()
 load_dotenv(find_dotenv())
@@ -52,14 +53,21 @@ ADMINS = list(map(lambda id: int(id),os.environ.get("ADMIN_ID").split(",")))
 @router.message(Command(commands=["add_quest"]))
 async def add_question(message: Message, state: FSMContext):
     user = get_user(message.from_user.id)
-    kb = get_topics_kb(user.mode)
-
+    kb = get_topics_types_kb(user.mode)
+    
     if(message.from_user.id in ADMINS): 
         await state.clear()
         await state.set_state(NewQuest.quest)
         await message.answer("Выберите тематику:", reply_markup=kb)
     
     else: await message.answer("Вы не имеете доступа к этой команде.")
+
+
+@router.callback_query(F.data.startswith("topictype"), NewQuest.quest)
+async def change(call: Message):
+    user = get_user(call.from_user.id)
+    topictype = call.data.replace(re.findall(r"[^_]*_", call.data)[0], "")
+    await call.message.edit_text(f"Выберите тематику изучения:", reply_markup=get_topics_kb(user.mode, topictype))
 
 
 @router.callback_query(F.data.startswith("topic_"), NewQuest.quest)
@@ -132,6 +140,14 @@ async def stats(message: Message):
     await message.answer(text=answer, parse_mode=ParseMode.HTML)
 
 
+@router.message(Command(commands=["all_users_stats"]))
+async def stats(message: Message):
+    if(message.from_user.id in ADMINS): answer = get_bot_users_stats()    
+    else: answer = "Вы не имеете доступа к этой команде."
+    
+    await message.answer(text=answer, parse_mode=ParseMode.HTML)
+
+
 @router.message(Command(commands=["change_mode"]))
 async def change_mode(message: Message):
     user = change_language(message.from_user.id)
@@ -142,7 +158,14 @@ async def change_mode(message: Message):
 async def kb_change_topic(message: Message, state: FSMContext):
     user = get_user(message.from_user.id)
     await state.set_state(ChangeTopic.topic)
-    await message.answer(text=text["change_topic"][user.mode], reply_markup=get_topics_kb(user.mode))
+    await message.answer(text=text["change_topic"][user.mode], reply_markup=get_topics_types_kb(user.mode))
+
+
+@router.callback_query(F.data.startswith("topictype"), ChangeTopic.topic)
+async def change(call: Message):
+    user = get_user(call.from_user.id)
+    topictype = call.data.replace(re.findall(r"[^_]*_", call.data)[0], "")
+    await call.message.edit_text(f"Выберите тематику изучения:", reply_markup=get_topics_kb(user.mode, topictype))
 
 
 @router.callback_query(F.data.startswith("topic_"), ChangeTopic.topic)
@@ -177,32 +200,11 @@ async def lesson(message: Message, state: FSMContext):
     )
     
     await state.update_data(lesson=lesson, message_id=msg.message_id)
-
-async def set_admin_commands(dp: Dispatcher):
-    dp.include_router(router)
-
-    
-# @router.message(Command(commands=["audio"]))
-# async def audio(message: Message, state: FSMContext):
-#     await state.set_state(Audio.audio)
-#     await message.answer("Запишите голосовое - бот отправит вам текстовый вариант произнесенного")
-
-
-# @router.message(Audio.audio)
-# async def audio(message: Message, bot: Bot, state: FSMContext):
-#     file = await bot.get_file(message.voice.file_id)
-#     filename = file.file_id
-#     await bot.download(message.voice.file_id, f"core/data/voice/ogg/{filename}.ogg")
-#     data, samplerate = sf.read(f"core/data/voice/ogg/{filename}.ogg")
-#     sf.write(f"core/data/voice/wav/{filename}.wav", data, samplerate)
-#     text = get_text_from_audio(filename, "eng")
-#     await message.answer(text)
-#     await state.clear()
     
 @router.message(Command(commands=["add_word"]))
-async def add_question(message: Message, state: FSMContext):
+async def add_word(message: Message, state: FSMContext):
     user = get_user(message.from_user.id)
-    kb = get_topics_kb(user.mode)
+    kb = get_topics_types_kb(user.mode)
 
     if(message.from_user.id in ADMINS):
         await state.clear() 
@@ -213,13 +215,21 @@ async def add_question(message: Message, state: FSMContext):
     else: await message.answer("Вы не имеете доступа к этой команде.")
 
 
+@router.callback_query(F.data.startswith("topictype"), NewWord.topic)
+async def change(call: Message):
+    user = get_user(call.from_user.id)
+    topictype = call.data.replace(re.findall(r"[^_]*_", call.data)[0], "")
+    await call.message.edit_text(f"Выберите тематику изучения:", reply_markup=get_topics_kb(user.mode, topictype))
+
+
 @router.callback_query(F.data.startswith("topic_"), NewWord.topic)
-async def new_word_eng(call: CallbackQuery, state: FSMContext):
+async def change(call: Message, state: FSMContext):
     topic = call.data.split("_")[1]
+    
     await state.update_data(topic=topic)
     await state.set_state(NewWord.eword)
     await call.message.edit_text(f"Напишите слово на английском:")
-    
+
 
 @router.message(NewWord.eword)
 async def word_def_eng(message: Message, state: FSMContext, bot: Bot):
@@ -275,8 +285,52 @@ async def new_word_confirm(message: Message, state: FSMContext, bot: Bot):
 
 @router.callback_query(NewWord.end, F.data.startswith("confirm_"))
 async def add_new_word(call: CallbackQuery, state: FSMContext):
-    data = await state.get_data()
     confirm = call.data.split("_")[1]
     
     if(confirm == "false"): await call.message.edit_text("Слово не было добавлено в бд.")
     else: await call.message.edit_text("Слово было успешно добавлено в бд.")
+
+
+@router.message(Command(commands=["topic_stats", "today_topic_stats"]))
+async def topic_stats(message: Message, state: FSMContext):
+    user = get_user(message.from_user.id)
+    kb = get_topics_types_kb(user.mode)
+
+    if(message.text == "/today_topic_stats"): await state.update_data(today="True")
+    else: await state.update_data(today="False")
+
+    if(message.from_user.id in ADMINS): 
+        await state.clear()
+        await state.set_state(TopicStats.topic)
+        await message.answer("Выберите тематику:", reply_markup=kb)
+    
+    else: await message.answer("Вы не имеете доступа к этой команде.")
+
+
+@router.callback_query(F.data.startswith("topictype"), TopicStats.topic)
+async def topic(call: Message):
+    user = get_user(call.from_user.id)
+    topictype = call.data.replace(re.findall(r"[^_]*_", call.data)[0], "")
+    await call.message.edit_text(f"Выберите тематику изучения:", reply_markup=get_topics_kb(user.mode, topictype))
+
+
+@router.callback_query(F.data.startswith("topic_"), TopicStats.topic)
+async def get_result(call: Message, state: FSMContext):
+    topic = call.data.replace(re.findall(r"[^_]*_", call.data)[0], "")
+    data = await state.get_data()
+
+    print(data)
+
+    answer = ""
+
+    if(data.get("today")): answer = get_today_topic_statistic(topic)
+    else: answer = get_topic_statistic(topic)
+
+    await call.message.edit_text(answer, parse_mode=ParseMode.HTML)
+
+
+
+
+
+async def set_admin_commands(dp: Dispatcher):
+    dp.include_router(router)

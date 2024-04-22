@@ -7,7 +7,11 @@ from core.data.env import topics, data
 from db.queries import get_topic, session
 
 def init_topics():
-    for topic in topics: session.add(Topic(eng=topic[0], rus=topic[1]))
+    for topictype in topics:
+        for topic in topics[topictype]:
+            if(topic in ["eng", "rus"]): continue
+            session.add(Topic(eng=topics[topictype][topic]["eng"], rus=topics[topictype][topic]["rus"]))
+
     session.commit()
 
 
@@ -27,8 +31,10 @@ def init_words():
 
 def init_quests():
     for topic in data:
+        print(topic)
         topic = get_topic(topic)
-        for quest in data[topic.eng.lower()]["questions"]:
+        print(topic.eng)
+        for quest in data[topic.eng.lower()].get("questions"):
             session.add(Quest(
                 eng=quest["eng"], rus=quest["rus"],
                 eng_answer=quest.get("eng_answer"), rus_answer=quest.get("rus_answer"),
