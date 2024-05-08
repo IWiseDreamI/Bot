@@ -26,14 +26,24 @@ def check_word(quest: Quest, mode: str, answer: str, question: str):
     variants = question.split(")")[1:]
     variants = list(map(lambda variant: re.findall(r'[^\n]*', variant.strip())[0], variants))
     answers = {"a": 0, "b": 1, "c": 2, "d": 3}
-    if(variants[answers[answer]].lower() == correct_answer.lower()): correct = True
+
+    user_answer = variants[answers.get(answer)] if answers.get(answer) else "False"    
+    if(user_answer.lower() == correct_answer.lower()): correct = True
 
     return correct
 
 
 def check_translate(quest: Quest, mode: str, answer: str):
+    check = False
     correct_answer = quest.eng if mode == "eng" else quest.rus
-    check = check_translate_ai(correct_answer, answer, quest.topic.eng)
+    if(quest.quest_type == "translate_select"): correct_answer = quest.eng if mode == "rus" else quest.rus
+    if(len(answer.split(" ")) > 2): check = check_translate_ai(correct_answer, answer, quest.topic.eng)
+    else: 
+        counter = 0
+        min_len = len(answer) if(len(answer) < len(correct_answer)) else len(correct_answer)
+        for i in range(min_len): counter += 1 if(answer[i] == correct_answer[i]) else 0
+        if(counter > len(correct_answer) * 0.7): check = True
+
     return check
 
 
@@ -60,7 +70,7 @@ def check_quest(quest: Quest, test: Test, mode: str, answer: str, question=""):
     if(qt == "missing"): result = check_missing(quest, mode, answer)
     if(qt in ["knowledge", "boolean"]): result = check_knowledge(quest, mode, answer)
     if(qt == "definition"): result = check_word(quest, mode, answer, question)
-    if(qt == "translate"): result = check_translate(quest, mode, answer)
+    if(qt in ["translate", "translate_select"]): result = check_translate(quest, mode, answer)
     if(qt == "voice"): result = check_voice(quest, mode, answer)
     add_answer(answer, result, quest, test)    
 

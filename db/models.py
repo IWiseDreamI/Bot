@@ -5,7 +5,7 @@ from sqlalchemy.orm import mapped_column, Mapped, relationship, DeclarativeBase
 from typing import List
 
 mode = Enum("eng", "rus", name="mode")
-quest_type = Enum("translate", "voice", "boolean", "missing", "knowledge", "definition", name="quest_type")
+quest_type = Enum("translate", "voice", "boolean", "missing", "knowledge", "definition", "translate_select", name="quest_type")
 
 class Base(DeclarativeBase):
     pass

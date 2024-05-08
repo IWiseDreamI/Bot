@@ -409,9 +409,6 @@ def bot_users_stats(today: bool = False):
 
     data["users"] = users
 
-    print(users_data)
-    print(users)
-
     for user_data in users_data:
         for user in users:
             if(int(user_data) == user.id):

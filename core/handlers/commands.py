@@ -319,17 +319,12 @@ async def get_result(call: Message, state: FSMContext):
     topic = call.data.replace(re.findall(r"[^_]*_", call.data)[0], "")
     data = await state.get_data()
 
-    print(data)
-
     answer = ""
 
     if(data.get("today")): answer = get_today_topic_statistic(topic)
     else: answer = get_topic_statistic(topic)
 
     await call.message.edit_text(answer, parse_mode=ParseMode.HTML)
-
-
-
 
 
 async def set_admin_commands(dp: Dispatcher):

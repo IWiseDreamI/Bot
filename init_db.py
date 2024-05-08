@@ -24,6 +24,7 @@ def init_words():
                 eng_def=word.get("eng_def"), rus_def=word.get("rus_def"),
                 topic=topic, topic_id=topic.id
             ))
+            session.add
 
     session.flush()
     session.commit()
@@ -33,7 +34,6 @@ def init_quests():
     for topic in data:
         print(topic)
         topic = get_topic(topic)
-        print(topic.eng)
         for quest in data[topic.eng.lower()].get("questions"):
             session.add(Quest(
                 eng=quest["eng"], rus=quest["rus"],
@@ -73,6 +73,16 @@ def init_sentence_quests():
         words = list(filter(lambda word: word.eng_def is not None, words))
         
         for word in words:
+            session.add(Quest(
+                eng=word.eng, rus=word.rus,
+                quest_type="translate_select", difficulty="0",
+                topic=topic, topic_id=topic.id, 
+            ))
+            session.add(Quest(
+                eng=word.eng, rus=word.rus,
+                quest_type="translate", difficulty="0",
+                topic=topic, topic_id=topic.id, 
+            ))
             session.add(Quest(
                 eng=word.eng, rus=word.rus,
                 eng_answer=word.eng_def, rus_answer=word.rus_def,

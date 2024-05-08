@@ -93,7 +93,7 @@
             },
             {
                 "eng": "A lap",
-                "rus": "Круг (на стадионе)",
+                "rus": "Круг",
                 "eng_def": "One circuit of a racetrack or running track.",
                 "rus_def": "Один круг на трассе или беговой дорожке."
             },
@@ -141,7 +141,7 @@
             },
             {
                 "eng": "A sprint",
-                "rus": "Спринт (бег на короткую дистанцию)",
+                "rus": "Спринт",
                 "eng_def": "A short, fast race over a short distance.",
                 "rus_def": "Короткая, быстрая гонка на коротком расстоянии."
             },
@@ -307,7 +307,7 @@
                 "eng_def": "An attempt to reach the ball before it touches the ground."
             },
             {
-                "rus": "Топ-спин",
+                "rus": "Кручение",
                 "eng": "Topspin",
                 "rus_def": "Эффект, придаваемый мячу вращением сверху вниз.",
                 "eng_def": "Affect given to the ball by hitting it with a forward and up spin."
@@ -433,7 +433,7 @@
         "words": [
             {
                 "eng": "Assist",
-                "rus": "Передача",
+                "rus": "Помощь",
                 "eng_def": "A pass that leads directly to a made basket.",
                 "rus_def": "Передача, которая приводит непосредственно к заброшенной мячу в корзину."
             },
@@ -457,7 +457,7 @@
             },
             {
                 "eng": "Bounce",
-                "rus": "Прыгать (о мяче)",
+                "rus": "Отскок",
                 "eng_def": "To rebound after hitting a surface and striking it repeatedly.",
                 "rus_def": "Отскакивать после удара о поверхность и повторно сталкиваться с ней."
             },
@@ -481,7 +481,7 @@
             },
             {
                 "eng": "Draft",
-                "rus": "Драфт (отбор игроков для NBA)",
+                "rus": "Драфт",
                 "eng_def": "The process of selecting amateur players for professional sports leagues.",
                 "rus_def": "Процесс отбора любительских игроков для профессиональных спортивных лиг."
             },
@@ -517,12 +517,12 @@
             },
             {
                 "eng": "Layup",
-                "rus": "Лэй-ап (бросок из-под корзины)",
+                "rus": "Лэй-ап",
                 "eng_def": "A close-range shot taken near the basket while driving to the hoop.",
                 "rus_def": "Бросок с близкого расстояния, сделанный у корзины при движении к кольцу."
             },
             {
-                "eng": "MVP (most valuable player)",
+                "eng": "MVP",
                 "rus": "Лучший игрок",
                 "eng_def": "The player judged to be the most important to their team's success in a particular season.",
                 "rus_def": "Игрок, признанный наиболее важным для успеха своей команды в определенном сезоне."
@@ -553,7 +553,7 @@
             },
             {
                 "eng": "Rebound",
-                "rus": "Подбор (мяча)",
+                "rus": "Подбор",
                 "eng_def": "The act of retrieving the ball after a missed shot.",
                 "rus_def": "Действие по возвращению мяча после неудачного броска."
             },
@@ -565,7 +565,7 @@
             },
             {
                 "eng": "Slam dunk",
-                "rus": "Слэм-данк (вид броска)",
+                "rus": "Слэм-данк",
                 "eng_def": "A forceful, one-handed dunk where the player leaps through the air and forcefully powers the ball through the hoop.",
                 "rus_def": "Мощный, одноручный данк, при котором игрок подпрыгивает в воздухе и силой приводит мяч через кольцо."
             },
@@ -598,9 +598,92 @@
                 "rus": "Нарушение",
                 "eng_def": "An infraction of the rules resulting in loss of possession or a free throw for the opposing team.",
                 "rus_def": "Нарушение правил, приводящее к потере владения или штрафному броску для противоположной команды."
+            },
+            {
+                "eng": "Guard",
+                "rus": "Защитник",
+                "eng_def": "A player who defends the goal or point against the opposing team.",
+                "rus_def": "Игрок, который защищает цель или точку от противоположной команды."
+            },
+            {
+                "eng": "Forward",
+                "rus": "Нападающий",
+                "eng_def": "A player whose primary role is to score goals.",
+                "rus_def": "Игрок, основной ролью которого является забивание голов."
+            },
+            {
+                "eng": "Point guard",
+                "rus": "Распорядитель",
+                "eng_def": "A player who handles the ball primarily to set up plays for the offense.",
+                "rus_def": "Игрок, который управляет мячом преимущественно для организации атак."
+            },
+            {
+                "eng": "Bench",
+                "rus": "Cкамейка запасных",
+                "eng_def": "The area where players sit during a game while not actively participating.",
+                "rus_def": "Зона, где игроки сидят во время игры, пока они активно не участвуют."
+            },
+            {
+                "eng": "Сourt",
+                "rus": "Поле для игры",
+                "eng_def": "The rectangular area on which basketball games are played.",
+                "rus_def": "Прямоугольная зона, на которой проводятся баскетбольные матчи."
+            },
+            {
+                "eng": "Rim",
+                "rus": "кольцо",
+                "eng_def": "The metal hoop that forms the target for throwing or bouncing a basketball into.",
+                "rus_def": "Металлический обруч, образующий цель для метания или подбрасывания баскетбольного мяча."
+            },
+            {
+                "eng": "press",
+                "rus": "прессинг",
+                "eng_def": "A defensive strategy in which a team tries to quickly regain possession by closely guarding an opponent.",
+                "rus_def": "Оборонительная стратегия, при которой команда пытается быстро вернуть контроль, внимательно охраняя противника."
             }
         ],
-        "questions": []
+        "questions": [
+            {
+                "eng": "Players are not allowed to run or walk with the ball; they must dribble it to move around the court.",
+                "rus": "Игрокам не разрешается бегать или ходить с мячом; они должны вести его, чтобы передвигаться по площадке.",
+                "eng_answer": "Dribble",
+                "rus_answer": "Вести",
+                "quest_type": "missing",
+                "difficulty": "0"
+            },
+            {
+                "eng": "Overtime periods are played if the score is tied at the end of regulation time.",
+                "rus": "Овертаймы проводятся, если в конце основного времени счет ничейный.",
+                "eng_answer": "Overtime",
+                "rus_answer": "Овертаймы",
+                "quest_type": "missing",
+                "difficulty": "0"
+            },
+            {
+                "eng": "The shot clock limits each posession to a certain amount of time.",
+                "rus": "Время на бросок ограничивает каждую позиция определенным количеством времени.",
+                "eng_answer": "Posession",
+                "rus_answer": "Позиция",
+                "quest_type": "missing",
+                "difficulty": "0"
+            },
+            {
+                "eng": "A technical foul is called for unsportmanlike conduct, such as arguing with referees.",
+                "rus": "Технический фол назначается за неспортивное поведение, например, за споры с судьями.",
+                "eng_answer": "Foul",
+                "rus_answer": "Фол",
+                "quest_type": "missing",
+                "difficulty": "0"
+            },
+            {
+                "eng": "The objective is to score points by shooting the basketball through the opponent's rim.",
+                "rus": "Цель - набрать очки, забросить баскетбольный мяч в кольцо соперника.",
+                "eng_answer": "Shooting",
+                "rus_answer": "Забросить",
+                "quest_type": "missing",
+                "difficulty": "0"
+            }
+        ]
     },
     "volleyball": {
         "words": [
@@ -653,7 +736,7 @@
                 "rus_def": "Игрок, который пытается заблокировать мяч на сетке, чтобы предотвратить его переход на свою сторону."
             },
             {
-                "eng": "Hitter/spiker",
+                "eng": "Hitter",
                 "rus": "Нападающий",
                 "eng_def": "A player who attacks the ball to score points by hitting it over the net.",
                 "rus_def": "Игрок, который атакует мяч, чтобы набрать очки, ударив его через сетку."
@@ -852,12 +935,12 @@
             },
             {
                 "eng": "Sideout",
-                "rus": "Потеря (переxод) подачи",
+                "rus": "Потеря подачи",
                 "eng_def": "The loss of the serve by the serving team.",
                 "rus_def": "Потеря подачи командой, подающей мяч."
             },
             {
-                "eng": "Lose the serve (to)",
+                "eng": "Lose the serve",
                 "rus": "Терять подачу",
                 "eng_def": "To lose the right to serve due to a fault or error.",
                 "rus_def": "Потерять право на подачу из-за ошибки или промаха."
@@ -917,7 +1000,7 @@
                 "rus_def": "Ошибка, совершенная игроком при попытке блокировать мяч."
             },
             {
-                "eng": "Disputed ball/Contested ball",
+                "eng": "Disputed ball",
                 "rus": "Спорный мяч",
                 "eng_def": "A ball whose possession is disputed by both teams.",
                 "rus_def": "Мяч, владение которым оспаривается обеими командами."
@@ -935,7 +1018,7 @@
                 "rus_def": "Ошибка, совершенная обеими командами одновременно."
             },
             {
-                "eng": "Technical error/Fault/Foul/Mistake",
+                "eng": "Technical error",
                 "rus": "Техническая ошибка",
                 "eng_def": "An error resulting from a violation of the rules or technical requirements.",
                 "rus_def": "Ошибка, возникающая из-за нарушения правил или технических требований."
@@ -971,7 +1054,7 @@
                 "rus_def": "Нарушение, при котором мяч касается сетки во время подачи."
             },
             {
-                "eng": "Touch the net (to)",
+                "eng": "Touch the net",
                 "rus": "Касаться сетки",
                 "eng_def": "To make contact with the net while playing the ball.",
                 "rus_def": "Сделать контакт с сеткой во время игры мячом."
@@ -983,7 +1066,7 @@
                 "rus_def": "Ошибка, совершенная при атакующем ударе."
             },
             {
-                "eng": "Service mistake/Service fault",
+                "eng": "Service fault",
                 "rus": "Ошибка при подаче",
                 "eng_def": "An error made during a serve.",
                 "rus_def": "Ошибка, совершенная при подаче."
@@ -1007,7 +1090,7 @@
                 "rus_def": "Точка, которая, если выиграна, завершает игру."
             },
             {
-                "eng": "Win a point (to)",
+                "eng": "Win a point",
                 "rus": "Выиграть очко",
                 "eng_def": "To score a point.",
                 "rus_def": "Забить очко."
@@ -1025,7 +1108,7 @@
                 "rus_def": "Официальный запрос на таймаут."
             },
             {
-                "eng": "Toss up (to)",
+                "eng": "Toss up",
                 "rus": "Проводить жеребьевку",
                 "eng_def": "To decide the initial possession of the ball by tossing it into the air.",
                 "rus_def": "Решить начальное владение мячом, бросив его в воздух."
@@ -1459,20 +1542,20 @@
                 "rus_def": "Организация, управляющая спортом в стрельбе из лука на международном уровне."
             },
             {
-                "eng": "EMAU (European and Mediterranean Archery Union)",
+                "eng": "European and Mediterranean Archery Union (EMAU)",
                 "rus": "Европейский и Среднеземноморский союз стрельбы из лука",
                 "eng_def": "A regional governing body for archery in Europe and the Mediterranean region.",
                 "rus_def": "Региональная организация, управляющая стрельбой из лука в Европе и Средиземноморье."
             },
             {
-                "eng": "To Aim",
+                "eng": "Aim",
                 "rus": "Прицеливаться",
                 "eng_def": "To direct one's weapon or sight towards a target with the intent of hitting it.",
                 "rus_def": "Направлять оружие или прицел в сторону цели с целью попасть в нее."
             },
             {
                 "eng": "Aiming",
-                "rus": "Прицеливание, Наводка, Наведение",
+                "rus": "Прицеливание",
                 "eng_def": "The action of directing a weapon or sight towards a target with the intent of hitting it.",
                 "rus_def": "Действие направления оружия или прицела на цель с целью попасть в нее."
             },
@@ -1501,19 +1584,19 @@
                 "rus_def": "Снаряд с прямым тонким стержнем и наконечником на одном из концов."
             },
             {
-                "eng": "Sighter Arrow",
-                "rus": "Пробный выстрел",
+                "eng": "Sighter arrow",
+                "rus": "Приццельная стрела",
                 "eng_def": "An arrow used to adjust aim or to calibrate equipment.",
                 "rus_def": "Стрела, используемая для корректировки прицела или калибровки оборудования."
             },
             {
-                "eng": "Arrow Head",
+                "eng": "Arrow head",
                 "rus": "Наконечник стрелы",
                 "eng_def": "The pointed end of an arrow.",
                 "rus_def": "Острый конец стрелы."
             },
             {
-                "eng": "Arrow Rest",
+                "eng": "Arrow rest",
                 "rus": "Полочка для стрелы",
                 "eng_def": "A device on a bow to support an arrow.",
                 "rus_def": "Устройство на луке для поддержки стрелы."
@@ -1531,13 +1614,13 @@
                 "rus_def": "Оружие для стрельбы стрелами, обычно изогнутый из куска дерева."
             },
             {
-                "eng": "Composite Bow",
-                "rus": "Сложный лук",
+                "eng": "Composite bow",
+                "rus": "Блочный лук",
                 "eng_def": "A bow made from multiple materials such as wood, horn, and sinew.",
                 "rus_def": "Лук, изготовленный из нескольких материалов, таких как дерево, рог и сухожилие."
             },
             {
-                "eng": "Bow Limb",
+                "eng": "Bow limb",
                 "rus": "Плечо лука",
                 "eng_def": "The part of the bow that bends when the string is drawn.",
                 "rus_def": "Часть лука, которая изгибается при натягивании тетивы."
@@ -1553,12 +1636,6 @@
                 "rus": "Кликер",
                 "eng_def": "A device that produces an audible click to indicate when the archer's draw length has been reached.",
                 "rus_def": "Устройство, издающее звуковой щелчок, чтобы указать, что длина натяжения лука достигнута."
-            },
-            {
-                "eng": "Director of Shooting",
-                "rus": "Руководитель стрельбы",
-                "eng_def": "The official in charge of overseeing an archery event.",
-                "rus_def": "Официальный лицо, ответственное за контроль над соревнованиями по стрельбе из лука."
             },
             {
                 "eng": "Distance",
@@ -1589,18 +1666,6 @@
                 "rus": "Напальчник",
                 "eng_def": "A protective covering for the fingers used to draw the bowstring.",
                 "rus_def": "Защитная оболочка для пальцев, используемая для натягивания тетивы."
-            },
-            {
-                "eng": "FITA Round",
-                "rus": "Круг ФИТА",
-                "eng_def": "A standardized format for archery competition consisting of various distances and numbers of arrows.",
-                "rus_def": "Стандартный формат соревнований по стрельбе из лука, состоящий из различных дистанций и количества стрел."
-            },
-            {
-                "eng": "Double FITA Round",
-                "rus": "Двойной круг ФИТА",
-                "eng_def": "A format for archery competition that involves shooting two FITA rounds.",
-                "rus_def": "Формат соревнований по стрельбе из лука, включающий в себя два круга ФИТА."
             },
             {
                 "eng": "Fletching",
@@ -1645,7 +1710,7 @@
                 "rus_def": "Выемка на конце стрелы, куда устанавливается тетива."
             },
             {
-                "eng": "Peep Hole",
+                "eng": "Peep hole",
                 "rus": "Диоптрический прицел",
                 "eng_def": "A small aperture through which the archer views the target.",
                 "rus_def": "Маленькое отверстие, через которое лучник видит цель."
@@ -1663,14 +1728,14 @@
                 "rus_def": "Оценка, присуждаемая при подсчете."
             },
             {
-                "eng": "Point of Aim",
+                "eng": "Point of aim",
                 "rus": "Точка прицеливания",
                 "eng_def": "The precise spot at which an archer aims on the target.",
                 "rus_def": "Точное место, на которое лучник прицеливается в цели."
             },
             {
                 "eng": "Quiver",
-                "rus": "Колчан для стрел",
+                "rus": "Колчан",
                 "eng_def": "A container for holding arrows.",
                 "rus_def": "Контейнер для хранения стрел."
             },
@@ -1687,7 +1752,7 @@
                 "rus_def": "Документ, используемый для записи счета и других деталей соревнования."
             },
             {
-                "eng": "Scoring Value",
+                "eng": "Scoring value",
                 "rus": "Оценка",
                 "eng_def": "The point value assigned to an arrow hitting a particular zone on the target.",
                 "rus_def": "Оценочное значение, присваиваемое стреле, попавшей в определенную зону цели."
@@ -1735,7 +1800,7 @@
                 "rus_def": "Действие выпуска стрелы из лука или другого оружия."
             },
             {
-                "eng": "Sight(s)",
+                "eng": "Sight",
                 "rus": "Прицел",
                 "eng_def": "A device used to assist in aiming.",
                 "rus_def": "Устройство, используемое для помощи в прицеливании."
@@ -1777,37 +1842,37 @@
                 "rus_def": "Счет, присвоенный стреле, в зависимости от того, куда она попала по мишени."
             },
             {
-                "eng": "Zones (Faces)",
-                "rus": "Зоны (Круги) Мишени",
+                "eng": "Zones",
+                "rus": "Зоны",
                 "eng_def": "The different sections of a target, each with its own scoring value.",
                 "rus_def": "Различные секции мишени, каждая со своим собственным оценочным значением."
             },
             {
-                "eng": "Gold Zone",
+                "eng": "Gold zone",
                 "rus": "Золотой круг",
                 "eng_def": "The central area of a target with the highest scoring value.",
                 "rus_def": "Центральная область мишени с наивысшим оценочным значением."
             },
             {
-                "eng": "Black Zone",
+                "eng": "Black zone",
                 "rus": "Черный круг",
                 "eng_def": "The outermost area of a target with the lowest scoring value.",
                 "rus_def": "Самая внешняя область мишени с наименьшим оценочным значением."
             },
             {
-                "eng": "Blue Zone",
+                "eng": "Blue zone",
                 "rus": "Голубой круг",
                 "eng_def": "A section of a target with a moderate scoring value.",
                 "rus_def": "Секция мишени с умеренным оценочным значением."
             },
             {
-                "eng": "Red Zone",
+                "eng": "Red zone",
                 "rus": "Красный круг",
                 "eng_def": "A section of a target with a high scoring value.",
                 "rus_def": "Секция мишени с высоким оценочным значением."
             },
             {
-                "eng": "White Zone",
+                "eng": "White zone",
                 "rus": "Белый круг",
                 "eng_def": "A section of a target with a moderate scoring value.",
                 "rus_def": "Секция мишени с умеренным оценочным значением."
@@ -1821,7 +1886,7 @@
                 "eng": "Assistant second",
                 "rus": "Помощник секунданта",
                 "eng_def": "A person who assists the second (trainer) of a boxer during a fight.",
-                "rus_def": "Человек, который помогает второму (тренеру) боксера во время боя."
+                "rus_def": "Человек, который помогает секунданту боксера во время боя."
             },
             {
                 "eng": "Attack",
@@ -1933,7 +1998,7 @@
             },
             {
                 "eng": "To parry a blow",
-                "rus": "Отбивать/парировать удар",
+                "rus": "Парировать удар",
                 "eng_def": "To deflect or block an opponent's strike.",
                 "rus_def": "Отклонить или блокировать удар противника."
             },
@@ -1992,70 +2057,10 @@
                 "rus_def": "Человек, который участвует в спорте бокса."
             },
             {
-                "eng": "Amateur boxer",
-                "rus": "Боксер-любитель",
-                "eng_def": "A boxer who engages in boxing as a hobby or for amateur competition.",
-                "rus_def": "Боксер, который занимается боксом как хобби или для любительских соревнований."
-            },
-            {
-                "eng": "Ambidextrous boxer",
-                "rus": "Боксер, одинаково владеющий обеими руками",
-                "eng_def": "A boxer who can use both hands with equal skill.",
-                "rus_def": "Боксер, который может использовать обе руки с одинаковым мастерством."
-            },
-            {
-                "eng": "Left-handed boxer, Southpaw",
-                "rus": "Боксер-левша",
-                "eng_def": "A boxer who predominantly uses their left hand for striking.",
-                "rus_def": "Боксер, который в основном использует левую руку для ударов."
-            },
-            {
-                "eng": "Professional boxer, Pugilist",
-                "rus": "Боксер профессионал",
-                "eng_def": "A boxer who competes in boxing for financial gain or as a career.",
-                "rus_def": "Боксер, который соревнуется в боксе ради финансового выигрыша или как карьера."
-            },
-            {
-                "eng": "Right-handed boxer",
-                "rus": "Боксер-правша",
-                "eng_def": "A boxer who predominantly uses their right hand for striking.",
-                "rus_def": "Боксер, который в основном использует правую руку для ударов."
-            },
-            {
-                "eng": "Clean boxer",
-                "rus": "Боксёр, дерущийся по правилам",
-                "eng_def": "A boxer who fights according to the rules and regulations of the sport.",
-                "rus_def": "Боксер, который сражается в соответствии с правилами и регламентом спорта."
-            },
-            {
-                "eng": "Dirty boxer",
-                "rus": "Боксёр, дерущийся не по правилам",
-                "eng_def": "A boxer who engages in illegal or unsportsmanlike conduct during a fight.",
-                "rus_def": "Боксер, который занимается нелегальным или неспортивным поведением во время боя."
-            },
-            {
                 "eng": "Boxing",
                 "rus": "Бокс",
                 "eng_def": "The sport or practice of fighting with gloved fists according to set rules.",
                 "rus_def": "Спорт или практика схватки с перчатками по определенным правилам."
-            },
-            {
-                "eng": "Amateur boxing",
-                "rus": "Любительский бокс",
-                "eng_def": "The form of boxing practiced by amateurs, often as a hobby or amateur competition.",
-                "rus_def": "Форма бокса, практикуемая любителями, часто как хобби или любительское соревнование."
-            },
-            {
-                "eng": "Close-quarter boxing",
-                "rus": "Ближний бой",
-                "eng_def": "Fighting at close range, often involving infighting and short-range punches.",
-                "rus_def": "Схватка на близком расстоянии, часто включающая в себя ближний бой и короткие удары."
-            },
-            {
-                "eng": "Professional boxing",
-                "rus": "Профессиональный бокс",
-                "eng_def": "The form of boxing practiced by professionals, often for financial gain.",
-                "rus_def": "Форма бокса, практикуемая профессионалами, часто ради финансового выигрыша."
             },
             {
                 "eng": "Boxing gloves",
@@ -2070,20 +2075,14 @@
                 "rus_def": "Действие удара противника головой."
             },
             {
-                "eng": "Bye",
-                "rus": "Пока!",
-                "eng_def": "A term used to bid farewell.",
-                "rus_def": "Термин, используемый для прощания."
-            },
-            {
                 "eng": "Caution",
-                "rus": "Замечание, предупреждение",
+                "rus": "Замечание",
                 "eng_def": "A warning or advisory message.",
                 "rus_def": "Предупреждение или советующее сообщение."
             },
             {
                 "eng": "Clinch",
-                "rus": "Захват, клинч",
+                "rus": "Захват",
                 "eng_def": "A grappling position where fighters hold each other closely.",
                 "rus_def": "Позиция захвата, в которой бойцы держатся друг за друга."
             },
@@ -2125,15 +2124,9 @@
             },
             {
                 "eng": "Duck",
-                "rus": "Нырок; утка",
+                "rus": "Нырок",
                 "eng_def": "A quick lowering of the head or body to avoid a blow.",
                 "rus_def": "Быстрое опускание головы или тела для уклонения от удара."
-            },
-            {
-                "eng": "Eyebrow cut",
-                "rus": "Рассечение брови",
-                "eng_def": "A laceration or wound on the eyebrow.",
-                "rus_def": "Разрез или рана на брови."
             },
             {
                 "eng": "Fast-mover",
@@ -2143,21 +2136,9 @@
             },
             {
                 "eng": "Fighter",
-                "rus": "Агрессивный боксер (боец)",
+                "rus": "Агрессивный боксер",
                 "eng_def": "A person who engages in physical combat or boxing matches.",
                 "rus_def": "Человек, который участвует в физическом бою или боксерских поединках."
-            },
-            {
-                "eng": "Prizefighter, Bruiser",
-                "rus": "Профессиональный боксер",
-                "eng_def": "A boxer who competes for prizes or money in professional matches.",
-                "rus_def": "Боксер, который соревнуется за призы или деньги в профессиональных поединках."
-            },
-            {
-                "eng": "Fight(ing)",
-                "rus": "Бой",
-                "eng_def": "Engagement in physical combat or boxing matches.",
-                "rus_def": "Участие в физическом бою или боксерских поединках."
             },
             {
                 "eng": "Fist",
@@ -2172,13 +2153,13 @@
                 "rus_def": "Движение ног в боксе, особенно с точки зрения ловкости и позиционирования."
             },
             {
-                "eng": "Gong, Bell",
+                "eng": "Gong",
                 "rus": "Гонг",
                 "eng_def": "A metallic instrument used to signal the start or end of a round.",
                 "rus_def": "Металлический инструмент, используемый для сигнализации начала или конца раунда."
             },
             {
-                "eng": "Gown, Robe",
+                "eng": "Gown",
                 "rus": "Халат",
                 "eng_def": "A garment worn by boxers during their entrance to the ring.",
                 "rus_def": "Одежда, надеваемая боксерами при входе на ринг."
@@ -2353,7 +2334,7 @@
             },
             {
                 "eng": "Pace",
-                "rus": "Темп, скорость",
+                "rus": "Темп",
                 "eng_def": "The rate or speed at which a boxing match progresses.",
                 "rus_def": "Скорость или скорость, с которой прогрессирует боксерский поединок."
             },
@@ -2418,36 +2399,6 @@
                 "rus_def": "Поднятая платформа, огороженная веревками, где проходят боксерские поединки."
             },
             {
-                "eng": "Ring announcer",
-                "rus": "Анонсер ринга",
-                "eng_def": "A person who introduces fighters and announces rounds during a boxing match.",
-                "rus_def": "Человек, который представляет бойцов и объявляет раунды во время боксерского поединка."
-            },
-            {
-                "eng": "Ring doctor",
-                "rus": "Доктор-врач",
-                "eng_def": "A medical professional responsible for the health and safety of boxers during a match.",
-                "rus_def": "Медицинский специалист, ответственный за здоровье и безопасность боксеров во время матча."
-            },
-            {
-                "eng": "Ring girl",
-                "rus": "Девушка ринга",
-                "eng_def": "A woman who displays round cards in between rounds during a boxing match.",
-                "rus_def": "Женщина, которая показывает карточки между раундами во время боксерского поединка."
-            },
-            {
-                "eng": "Ringside physician",
-                "rus": "Доктор-врач",
-                "eng_def": "A medical professional responsible for the health and safety of boxers during a match.",
-                "rus_def": "Медицинский специалист, ответственный за здоровье и безопасность боксеров во время матча."
-            },
-            {
-                "eng": "Ring walk",
-                "rus": "Вход на ринг",
-                "eng_def": "The entrance of boxers into the ring before a match.",
-                "rus_def": "Вход боксеров в ринг перед матчем."
-            },
-            {
                 "eng": "Rope-a-dope",
                 "rus": "Тактика 'веревочной обманки'",
                 "eng_def": "A boxing strategy where a boxer pretends to be trapped against the ropes, allowing their opponent to tire themselves out.",
@@ -2458,12 +2409,6 @@
                 "rus": "Раунд",
                 "eng_def": "A unit of time in boxing matches, typically lasting three minutes.",
                 "rus_def": "Единица времени в боксерских поединках, обычно длится три минуты."
-            },
-            {
-                "eng": "Round card",
-                "rus": "Карточка раунда",
-                "eng_def": "A numbered card displayed between rounds to indicate the current round.",
-                "rus_def": "Нумерованная карточка, отображаемая между раундами, чтобы указать текущий раунд."
             },
             {
                 "eng": "Seconds",
@@ -2521,7 +2466,7 @@
             },
             {
                 "eng": "Swarm",
-                "rus": "Окружить; стая",
+                "rus": "Рой",
                 "eng_def": "A style of boxing where a fighter continuously attacks with a flurry of punches.",
                 "rus_def": "Стиль бокса, при котором боец непрерывно нападает градом ударов."
             },
@@ -2544,7 +2489,7 @@
                 "rus_def": "Боксерский поединок, в котором на кону титул или чемпионат весовой категории."
             },
             {
-                "eng": "TKO (Technical Knockout)",
+                "eng": "Technical Knockout",
                 "rus": "Технический нокаут",
                 "eng_def": "A stoppage of a boxing match by the referee or official due to a fighter being unable to continue.",
                 "rus_def": "Приостановка боксерского поединка арбитром или чиновником из-за невозможности бойца продолжить бой."
@@ -2569,7 +2514,7 @@
             },
             {
                 "eng": "Weigh-in",
-                "rus": "Зачем; взвесить",
+                "rus": "Взвешивание",
                 "eng_def": "The process of determining a boxer's weight before a match.",
                 "rus_def": "Процесс определения веса боксера перед матчем."
             },
@@ -2598,7 +2543,7 @@
             },
             {
                 "eng": "Diving",
-                "rus": "Дайвинг (обманный маневр, симуляция травмы)",
+                "rus": "Дайвинг",
                 "eng_def": "The action of deliberately falling or pretending to be fouled in order to deceive the referee.",
                 "rus_def": "Действие намеренного падения или притворной полученной травмы с целью обмануть арбитра."
             },
@@ -2628,7 +2573,7 @@
             },
             {
                 "eng": "Offside",
-                "rus": "Офсайд (положение «вне игры»)",
+                "rus": "Офсайд",
                 "eng_def": "A rule in soccer where a player is in an offside position if they are nearer to the opponent's goal line than both the ball and the second last opponent.",
                 "rus_def": "Правило в футболе, когда игрок находится в положении вне игры, если он ближе к линии ворот соперника, чем мяч и предпоследний оппонент."
             },
@@ -2688,7 +2633,7 @@
             },
             {
                 "eng": "Tackle",
-                "rus": "Отбирать мяч; блокировать",
+                "rus": "Отбирать мяч",
                 "eng_def": "To challenge an opponent for possession of the ball.",
                 "rus_def": "Вызвать соперника на отбор мяча."
             },
@@ -2788,13 +2733,13 @@
                 "rus_def": "Стиль борьбы, характеризующийся оборонительными техниками и уклонением от атак оппонента, а не инициированием собственных."
             },
             {
-                "eng": "Standing Wrestling; Wrestling from a standing position",
+                "eng": "Standing Wrestling",
                 "rus": "Борьба в стойке",
                 "eng_def": "Wrestling techniques performed while both competitors are standing upright, typically involving throws, takedowns, and clinch work.",
                 "rus_def": "Техники борьбы, выполняемые в то время, когда оба соперника стоят прямо, обычно включающие броски, взятия и клинч."
             },
             {
-                "eng": "Ground Wrestling; Wrestling from a kneeling position",
+                "eng": "Ground Wrestling",
                 "rus": "Борьба в партере",
                 "eng_def": "Wrestling techniques performed when one or both competitors are on the ground, often involving grappling and submission holds.",
                 "rus_def": "Техники борьбы, выполняемые, когда один или оба соперника находятся на земле, часто включающие борьбу в зацепе и приемы на отказ."
@@ -2831,7 +2776,7 @@
             },
             {
                 "eng": "Greco-Roman competitions",
-                "rus": "Соревнования по классической борьбе",
+                "rus": "Греко-римская борьба",
                 "eng_def": "Competitions where wrestlers are prohibited from attacking below the waist and must rely on upper body holds and throws.",
                 "rus_def": "Соревнования, на которых борцам запрещено атаковать ниже пояса и им приходится полагаться на захваты и броски верхней части тела."
             },
@@ -2890,7 +2835,7 @@
                 "rus_def": "Физическая мощь и сила, проявляемая борцом, важная для выполнения мощных техник и подавления оппонентов."
             },
             {
-                "eng": "Suppleness; flexibility",
+                "eng": "Flexibility",
                 "rus": "Гибкость",
                 "eng_def": "The ability of a wrestler's body to bend, stretch, and move freely without injury, facilitating the execution of various techniques.",
                 "rus_def": "Способность тела борца гибко сгибаться, растягиваться и двигаться свободно без травм, облегчающая выполнение различных техник."
@@ -2974,7 +2919,7 @@
                 "rus_def": "Специализированная обувь, предназначенная для обеспечения сцепления и поддержки борцам во время матчей и тренировочных сессий."
             },
             {
-                "eng": "Bathroom; shower",
+                "eng": "Shower",
                 "rus": "Душевая",
                 "eng_def": "A facility equipped with showers and facilities for personal hygiene, used by wrestlers before and after training or competition.",
                 "rus_def": "Помещение, оборудованное душами и удобствами для личной гигиены, используемое борцами до и после тренировок или соревнований."
@@ -2999,7 +2944,7 @@
             },
             {
                 "eng": "Referee",
-                "rus": "Арбитр; судья на ковре",
+                "rus": "Арбитр",
                 "eng_def": "An official who presides over wrestling matches, enforcing rules, ensuring safety, and making decisions on scoring.",
                 "rus_def": "Должностное лицо, руководящее борцовскими матчами, соблюдающее правила, обеспечивающее безопасность и принимающее решения о подсчете очков."
             },
@@ -3034,7 +2979,7 @@
                 "rus_def": "Процесс взвешивания борцов перед соревнованиями для обеспечения соответствия весовым категориям и правилам."
             },
             {
-                "eng": "Weight category (class)",
+                "eng": "Weight category",
                 "rus": "Весовая категория",
                 "eng_def": "A division in wrestling competitions based on participants' body weight, allowing for fair and equitable matchups.",
                 "rus_def": "Деление в борцовских соревнованиях на основе массы тела участников, позволяющее обеспечить справедливые и равные поединки."
@@ -3082,7 +3027,7 @@
                 "rus_def": "Завершение борьбы, объявленное арбитром, обычно после установленной продолжительности или когда один из борцов одерживает победу."
             },
             {
-                "eng": "Passivity; stalling",
+                "eng": "Passivity",
                 "rus": "Пассивность",
                 "eng_def": "A violation in wrestling where a competitor fails to engage in action or attempt to score points, resulting in penalties.",
                 "rus_def": "Нарушение в борьбе, когда участник не вступает в действие или не пытается набрать очки, что влечет за собой штрафы."
@@ -3101,7 +3046,7 @@
             },
             {
                 "eng": "Point",
-                "rus": "Балл (очко)",
+                "rus": "Балл",
                 "eng_def": "A unit of scoring awarded to a wrestler for successfully executing certain techniques or achieving specified outcomes during a match.",
                 "rus_def": "Единица подсчета, присуждаемая борцу за успешное выполнение определенных техник или достижение определенных результатов во время матча."
             },
@@ -3177,8 +3122,8 @@
     "judo": {
         "words": [
             {
-                "eng": "Arm Lock, Udeshigi-Ugetame",
-                "rus": "Болевой прием на руку, Удешиги-Угетаме",
+                "eng": "Udeshigi-Ugetame",
+                "rus": "Удешиги-Угетаме",
                 "eng_def": "Болевой прием, направленный на руку оппонента.",
                 "rus_def": "A joint-locking technique targeting the opponent's arm."
             },
@@ -3328,25 +3273,25 @@
             },
             {
                 "eng": "Draw",
-                "rus": "Ничья, Хикиваке",
+                "rus": "Ничья",
                 "eng_def": "Ситуация, при которой соревнование заканчивается без победителя.",
                 "rus_def": "A situation in which a contest ends without a winner."
             },
             {
                 "eng": "Drop",
-                "rus": "Бросок; ронять",
+                "rus": "Бросок",
                 "eng_def": "Техника броска или сбрасывания.",
                 "rus_def": "A throwing or dropping technique."
             },
             {
                 "eng": "Encirclement",
-                "rus": "Обвив; окружение",
+                "rus": "Окружение",
                 "eng_def": "Окружение оппонента.",
                 "rus_def": "The act of surrounding the opponent."
             },
             {
                 "eng": "Entanglement",
-                "rus": "Захват в узел; затруднительное положение",
+                "rus": "Захват в узел",
                 "eng_def": "Ситуация, при которой оппонент попадает в затруднительное положение.",
                 "rus_def": "A situation in which the opponent is caught in a difficult position."
             },
@@ -3379,6 +3324,114 @@
                 "rus": "Захват",
                 "eng_def": "Захват или удержание оппонента.",
                 "rus_def": "A hold or restraint on the opponent."
+            },
+            {
+                "rus": "Ковер",
+                "eng": "Mat",
+                "rus_def": "Покрытие на татами в зале для дзюдо или других восточных единоборств.",
+                "eng_def": "The covering on the tatami in a judo or other Eastern martial arts training hall."
+            },
+            {
+                "rus": "Судья",
+                "eng": "Referee",
+                "rus_def": "Человек, проводит поединок и оценивает действия спортсменов в соответствии с правилами.",
+                "eng_def": "An official who oversees a match and evaluates the actions of the athletes according to the rules."
+            },
+            {
+                "rus": "Боковой судья",
+                "eng": "Judge",
+                "rus_def": "Официальный, который помогает судье в оценке действий спортсменов во время поединка.",
+                "eng_def": "An official who assists the referee in evaluating the actions of the athletes during a match."
+            },
+            {
+                "rus": "Секундометрист",
+                "eng": "Time-keeper",
+                "rus_def": "Персонал, отвечающий за отсчет времени во время поединка.",
+                "eng_def": "Personnel responsible for keeping track of time during a match."
+            },
+            {
+                "rus": "Поединок",
+                "eng": "Bout",
+                "rus_def": "Состязание между двумя спортсменами.",
+                "eng_def": "A contest between two athletes."
+            },
+            {
+                "rus": "Бросок",
+                "eng": "Throw",
+                "rus_def": "Техника в дзюдо, цель которой - выбросить оппонента на спину.",
+                "eng_def": "A technique in judo aimed at throwing the opponent onto their back."
+            },
+            {
+                "rus": "Замок",
+                "eng": "Lock",
+                "rus_def": "Техника в дзюдо, цель которой - выигрыш поединка за счет захвата партнера и наложения на него силы.",
+                "eng_def": "A technique in judo where victory is achieved by controlling and applying force on the partner."
+            },
+            {
+                "rus": "Захват",
+                "eng": "Grip",
+                "rus_def": "Способ удержания соперника одной или двумя руками.",
+                "eng_def": "A way to hold the opponent using one or both hands."
+            },
+            {
+                "rus": "Подножка",
+                "eng": "Sweep",
+                "rus_def": "Техника в дзюдо, цель которой - выбросить оппонента с ног.",
+                "eng_def": "A technique in judo aimed at sweeping the opponent off their feet."
+            },
+            {
+                "rus": "Удержание",
+                "eng": "Hold",
+                "rus_def": "Позиция, в которой один спортсмен контролирует позицию другого.",
+                "eng_def": "A position where one athlete controls the position of the other."
+            },
+            {
+                "rus": "Хаджиме",
+                "eng": "Hajime",
+                "rus_def": "Команда для начала поединка.",
+                "eng_def": "The command to commence a match."
+            },
+            {
+                "rus": "Хантей",
+                "eng": "Hantei",
+                "rus_def": "Решение судейского состава о победителе при равенстве набранных очков.",
+                "eng_def": "The decision of the judging panel on the winner in case of a tie in points."
+            },
+            {
+                "eng": "Hansoku",
+                "rus": "Хансоку",
+                "eng_def": "Disqualification",
+                "rus_def": "Дисквалификация"
+            },
+            {
+                "eng": "Note",
+                "rus": "Замечание",
+                "eng_def": "A remark, a reprimand",
+                "rus_def": "Замечание, выговор"
+            },
+            {
+                "eng": "Caution",
+                "rus": "Предупреждение",
+                "eng_def": "A warning",
+                "rus_def": "Предостережение"
+            },
+            {
+                "eng": "Ippon",
+                "rus": "Иппон",
+                "eng_def": "The highest score in a match, immediately leading to victory for the judoka executing the throw",
+                "rus_def": "Высшая оценка в поединке, немедленно приводящая к победе проведшего прием дзюдоиста"
+            },
+            {
+                "eng": "Waza-ari",
+                "rus": "Вадзаари",
+                "eng_def": "The second highest score in a match, considered half of an 'ippon'",
+                "rus_def": "Вторая оценка в поединке, считается половиной «иппон»"
+            },
+            {
+                "eng": "To submit",
+                "rus": "Сдаться",
+                "eng_def": "To give up, to yield",
+                "rus_def": "Сдаться, покориться"
             }
         ],
         "questions": []
@@ -3388,7 +3441,7 @@
             {
                 "eng": "To play chess",
                 "rus": "Играть в шахматы",
-                "eng_def": "Engage in the strategic board game involving two players moving pieces on a checkered board to checkmate the opponent's king.",
+                "eng_def": "engage in the strategic board game involving two players moving pieces on a checkered board to checkmate the opponent's king.",
                 "rus_def": "Участвовать в стратегической настольной игре, в которой два игрока перемещают фигуры на клетчатой доске, чтобы поставить короля противника под шах."
             },
             {
@@ -3524,10 +3577,1342 @@
                 "rus_def": "Шахматная фигура, которая движется по диагонали на любое количество клеток."
             },
             {
-                "eng": "(♖) Castle / Rook",
+                "eng": "(♖) Rook",
                 "rus": "(♖) Ладья",
                 "eng_def": "A chess piece that moves horizontally or vertically any number of squares.",
                 "rus_def": "Шахматная фигура, которая движется горизонтально или вертикально на любое количество клеток."
+            }
+        ],
+        "questions": []
+    },
+    "go game": {
+        "words": [
+            {
+                "rus": "Го",
+                "eng": "Go",
+                "rus_def": "настольная стратегическая игра, происходящая из древней Китайской империи",
+                "eng_def": "a tabletop strategy game originating from ancient China"
+            },
+            {
+                "rus": "Гобан - доска для игры",
+                "eng": "Go board/goban",
+                "rus_def": "игровое поле, на котором проводится игра в Го",
+                "eng_def": "the playing surface used for games of Go"
+            },
+            {
+                "rus": "Доска (игровое поле)",
+                "eng": "Board",
+                "rus_def": "поверхность, на которой проводится игра",
+                "eng_def": "surface on which games are played"
+            },
+            {
+                "rus": "Камень (го-иси)",
+                "eng": "Stone/Go-ishi",
+                "rus_def": "игровая фишка, размещаемая на доске",
+                "eng_def": "game piece placed on the board"
+            },
+            {
+                "rus": "свободный перекресток",
+                "eng": "liberty",
+                "rus_def": "незанятый камнем перекресток на доске",
+                "eng_def": "an empty intersection on the board not occupied by stones"
+            },
+            {
+                "rus": "Чаша (го-ке) - сосуд для хранения камней",
+                "eng": "Bowl",
+                "rus_def": "посуда, в которой хранят игровые камни",
+                "eng_def": "container used to hold game stones"
+            },
+            {
+                "rus": "Комплект",
+                "eng": "Set",
+                "rus_def": "набор для игры в Го, включающий доску, камни и другие дополнения",
+                "eng_def": "collection of items used for playing Go, including board, stones, and other accessories"
+            },
+            {
+                "rus": "Бёёми - дополнительное время",
+                "eng": "Byoyomi",
+                "rus_def": "этап игры, где игрокам дается дополнительное время на ходы",
+                "eng_def": "phase of the game where players are given additional time for moves"
+            },
+            {
+                "rus": "Коми - компенсация за право первого хода",
+                "eng": "Komi",
+                "rus_def": "дополнительные очки, предоставляемые игроку без права первого хода",
+                "eng_def": "additional points given to the player without the first move privilege"
+            },
+            {
+                "rus": "Пленные/мертвые камни",
+                "eng": "captured stones",
+                "rus_def": "камни, захваченные противником и изъятые из игры",
+                "eng_def": "stones captured by the opponent and removed from the board"
+            },
+            {
+                "rus": "Территория",
+                "eng": "Territory",
+                "rus_def": "область на доске, окруженная камнями одной стороны, приносящая очки",
+                "eng_def": "area on the board surrounded by stones of one player, earning points"
+            }
+        ],
+        "questions": []
+    },
+    "kickboxing": {
+        "words": [
+            {
+                "eng": "Punch",
+                "rus": "Панч",
+                "eng_def": "A blow with the fist",
+                "rus_def": "Удар кулаком"
+            },
+            {
+                "eng": "Hook",
+                "rus": "Хук",
+                "eng_def": "A short side punch",
+                "rus_def": "Короткий боковой удар"
+            },
+            {
+                "eng": "Cross",
+                "rus": "Кросс",
+                "eng_def": "A medium side punch",
+                "rus_def": "Средний боковой удар"
+            },
+            {
+                "eng": "Swing",
+                "rus": "Свинг",
+                "eng_def": "A long side punch",
+                "rus_def": "Длинный боковой удар"
+            },
+            {
+                "eng": "Uppercut",
+                "rus": "Апперкот",
+                "eng_def": "A punch from below upwards",
+                "rus_def": "Удар снизу вверх"
+            },
+            {
+                "eng": "Jab",
+                "rus": "Джеб",
+                "eng_def": "A straight punch",
+                "rus_def": "Прямой удар"
+            },
+            {
+                "eng": "Blow with the open glove",
+                "rus": "Удар открытой перчаткой",
+                "eng_def": "A strike using the open hand or glove",
+                "rus_def": "Удар, сделанный открытой рукой или перчаткой"
+            },
+            {
+                "eng": "Throw",
+                "rus": "Бросок",
+                "eng_def": "To hurl or project forcefully",
+                "rus_def": "Метать или бросать с силой"
+            },
+            {
+                "eng": "Foot sweep",
+                "rus": "Подсечка",
+                "eng_def": "A technique that involves sweeping an opponent's leg",
+                "rus_def": "Прием, заключающийся в подсечке ноги противника"
+            },
+            {
+                "eng": "Back kick",
+                "rus": "Бэк-кик",
+                "eng_def": "A kick executed with the heel of the foot",
+                "rus_def": "Удар, наносимый пяткой стопы"
+            },
+            {
+                "eng": "Jumping kick",
+                "rus": "Джампинг-кик",
+                "eng_def": "A kick performed while jumping",
+                "rus_def": "Удар, выполняемый во время прыжка"
+            },
+            {
+                "eng": "Low kick",
+                "rus": "Лоукик",
+                "eng_def": "A circular kicking motion targeting the lower body",
+                "rus_def": "Круговое движение ноги, направленное на нижнюю часть тела"
+            },
+            {
+                "eng": "Roundhouse kick",
+                "rus": "Раундхаус",
+                "eng_def": "A circular kick aimed at the body or head",
+                "rus_def": "Круговой удар ногой, направленный на тело или голову"
+            },
+            {
+                "eng": "фронт-кик",
+                "rus": "прямой удар ногой",
+                "eng_def": "front kick",
+                "rus_def": "a kick delivered with the front of the foot"
+            },
+            {
+                "eng": "Файт",
+                "rus": "начало поединка",
+                "eng_def": "Fight",
+                "rus_def": "the beginning of a match or bout"
+            },
+            {
+                "eng": "Тайм",
+                "rus": "остановить время",
+                "eng_def": "Time",
+                "rus_def": "to pause or stop the passage of time"
+            },
+            {
+                "eng": "Брейк",
+                "rus": "разойтись",
+                "eng_def": "Break",
+                "rus_def": "to separate or disperse"
+            },
+            {
+                "eng": "Боксерские бинты",
+                "rus": "boxing bandages",
+                "eng_def": "bandages used in boxing to protect and support the hands",
+                "rus_def": "повязки, используемые в боксе для защиты и поддержки рук"
+            },
+            {
+                "eng": "Перчатки",
+                "rus": "boxing gloves",
+                "eng_def": "boxing gloves",
+                "rus_def": "hand coverings worn by fighters for protection and to increase the impact of punches"
+            },
+            {
+                "eng": "Боксерский шлем",
+                "rus": "boxing helmet",
+                "eng_def": "boxing helmet",
+                "rus_def": "protective headgear worn by boxers during a match"
+            }
+        ],
+        "questions": []
+    },
+    "kurash": {
+        "words": [
+            {
+                "eng": "Пояс",
+                "rus": "Belt",
+                "eng_def": "A band worn around the waist to hold clothing",
+                "rus_def": "Полоса, надеваемая вокруг талии для удержания одежды"
+            },
+            {
+                "eng": "В стойке",
+                "rus": "Standing",
+                "eng_def": "Being upright on the feet; not sitting or lying down",
+                "rus_def": "Находясь на ногах; не сидящий или не лежащий"
+            },
+            {
+                "eng": "Бросок",
+                "rus": "Throw",
+                "eng_def": "To propel something with force through the air by a movement of the arm and hand",
+                "rus_def": "Бросить что-то с силой через воздух движением руки"
+            },
+            {
+                "eng": "Подсечка",
+                "rus": "Sweep",
+                "eng_def": "The act of cleaning or clearing a space with a broom or brush",
+                "rus_def": "Акт очистки или уборки места метлой или щеткой"
+            },
+            {
+                "eng": "Татами",
+                "rus": "Mat",
+                "eng_def": "A traditional Japanese floor covering",
+                "rus_def": "Традиционное японское покрытие пола"
+            },
+            {
+                "eng": "Поклон",
+                "rus": "Bow",
+                "eng_def": "To lower the body briefly by bending the knees",
+                "rus_def": "Кратковременное опускание тела, согнув колени"
+            },
+            {
+                "eng": "Чистая победа",
+                "rus": "Honest victory",
+                "eng_def": "Winning in a fair and just manner without deceit",
+                "rus_def": "Победа в честной и справедливой манере без обмана"
+            },
+            {
+                "eng": "Время",
+                "rus": "Finish",
+                "eng_def": "A particular point during a process or activity",
+                "rus_def": "Конкретный момент во время процесса или деятельности"
+            },
+            {
+                "eng": "Предупреждение",
+                "rus": "Caution",
+                "eng_def": "Care taken to avoid danger or mistakes",
+                "rus_def": "Осторожность, принимаемая для избежания опасности или ошибок"
+            },
+            {
+                "eng": "Выговор; объявляется участнику, совершившему нарушение средней степени.",
+                "rus": "Scolding",
+                "eng_def": "A rebuke given to someone to show disapproval of their actions",
+                "rus_def": "Возражение, данное кому-то для выражения неодобрения его действий"
+            },
+            {
+                "eng": "Удушающий прием",
+                "rus": "Strangle hold",
+                "eng_def": "A wrestling hold that applies pressure to the opponent's neck and throat",
+                "rus_def": "Прием в рестлинге, оказывающий давление на шею и горло оппонента"
+            },
+            {
+                "eng": "Нечестный приём, нарушение правил",
+                "rus": "Dishonest",
+                "eng_def": "Acting in a deceitful or fraudulent way",
+                "rus_def": "Действуя лукаво или мошенническим образом"
+            }
+        ],
+        "questions": []
+    },
+    "mas wrestling": {
+        "words": [
+            {
+                "eng": "Jamb board",
+                "rus": "Разделительная доска",
+                "eng_def": "A board that separates spaces or fills gaps, such as a door jamb.",
+                "rus_def": "Доска, разделяющая пространства или заполняющая промежутки, например, дверной косяк."
+            },
+            {
+                "eng": "Stick",
+                "rus": "Палка (мас)",
+                "eng_def": "A long, thin piece of wood or other material used for various purposes.",
+                "rus_def": "Длинный, тонкий кусок дерева или другого материала, используемый для различных целей."
+            },
+            {
+                "eng": "Grip",
+                "rus": "Хват",
+                "eng_def": "The manner in which an object is grasped or held.",
+                "rus_def": "Способ, которым объект ухватывается или удерживается."
+            },
+            {
+                "eng": "Outer grip",
+                "rus": "Наружный хват",
+                "eng_def": "A grip or hold positioned on the outer part of an object.",
+                "rus_def": "Хват или захват, расположенный на внешней части объекта."
+            },
+            {
+                "eng": "Internal grip",
+                "rus": "Внутренний хват",
+                "eng_def": "A grip or hold positioned on the inner part of an object.",
+                "rus_def": "Хват или захват, расположенный на внутренней части объекта."
+            },
+            {
+                "eng": "Bout",
+                "rus": "Поединок, схватка",
+                "eng_def": "A short period of intense competition or conflict.",
+                "rus_def": "Краткий период интенсивной конкуренции или конфликта."
+            },
+            {
+                "eng": "To pull over",
+                "rus": "Перетянуть",
+                "eng_def": "To move something or someone closer by applying force.",
+                "rus_def": "Переместить что-то или кого-то ближе, применяя силу."
+            },
+            {
+                "eng": "To snatch",
+                "rus": "Вырвать",
+                "eng_def": "To grab or seize something quickly and energetically.",
+                "rus_def": "Быстро и энергично схватить или захватить что-то."
+            },
+            {
+                "eng": "Contact",
+                "rus": "Касание",
+                "eng_def": "The act of touching or meeting.",
+                "rus_def": "Действие касания или встречи."
+            },
+            {
+                "eng": "Victory in a bout",
+                "rus": "победа в схватке",
+                "eng_def": "Achieving success in a competition or conflict.",
+                "rus_def": "Достижение успеха в соревновании или конфликте."
+            },
+            {
+                "eng": "Disputed provision",
+                "rus": "спорное положение",
+                "eng_def": "A clause or condition that is subject to disagreement or debate.",
+                "rus_def": "Пункт или условие, которое подлежит разногласиям или обсуждению."
+            },
+            {
+                "eng": "Pull",
+                "rus": "Тяга сидя",
+                "eng_def": "A pulling exercise done in a seated position.",
+                "rus_def": "Упражнение на развитие тяги, выполняемое в сидячем положении."
+            },
+            {
+                "eng": "Twisting pull",
+                "rus": "Тяга с накручиванием",
+                "eng_def": "A pulling motion that involves twisting or rotating.",
+                "rus_def": "Движение тяги, которое включает в себя вращение или поворот."
+            },
+            {
+                "eng": "Top pull",
+                "rus": "Подрыв",
+                "eng_def": "An explosive pulling movement from a high position.",
+                "rus_def": "Взрывное движение тяги из высокого положения."
+            },
+            {
+                "eng": "Counter hold",
+                "rus": "Контрприем",
+                "eng_def": "A defensive maneuver used to counter an opponent's hold.",
+                "rus_def": "Защитное маневр для противодействия захвату противника."
+            },
+            {
+                "eng": "Temporizing",
+                "rus": "Выжидание",
+                "eng_def": "The act of delaying or postponing a decision or action.",
+                "rus_def": "Действие откладывания или отсрочивания принятия решения или действия."
+            },
+            {
+                "eng": "Breaking of balance",
+                "rus": "Выведение из равновесия",
+                "eng_def": "Disrupting the stability or equilibrium of someone or something.",
+                "rus_def": "Нарушение устойчивости или равновесия кого-то или чего-то."
+            },
+            {
+                "eng": "Snatch",
+                "rus": "Рывок",
+                "eng_def": "A quick and sudden pulling or grabbing movement.",
+                "rus_def": "Быстрое и внезапное движение тяги или захвата."
+            },
+            {
+                "eng": "Resistance",
+                "rus": "Сопротивление",
+                "eng_def": "The refusal to accept or comply with something.",
+                "rus_def": "Отказ от принятия или соблюдения чего-то."
+            },
+            {
+                "eng": "Energy exhaustion",
+                "rus": "Энергетическое изматывание",
+                "eng_def": "The state of being completely depleted of energy.",
+                "rus_def": "Состояние полного исчерпания энергии."
+            }
+        ],
+        "questions": []
+    },
+    "swimming": {
+        "words": [
+            {
+                "rus": "Вольный стиль",
+                "eng": "Freestyle",
+                "rus_def": "Способ плавания, при котором пловец может применять любой стиль плавания.",
+                "eng_def": "A swimming style in which the swimmer can use any stroke."
+            },
+            {
+                "rus": "Плавание на спине",
+                "eng": "Backstroke",
+                "rus_def": "Стиль плавания, при котором пловец плывет на спине, делая равномерные движения руками и ногами.",
+                "eng_def": "A swimming style in which the swimmer swims on their back, using alternating arm and leg motions."
+            },
+            {
+                "rus": "Баттерфляй",
+                "eng": "Butterfly",
+                "rus_def": "Сложный стиль плавания, при котором пловец делает дельфиновые движения руками и ногами.",
+                "eng_def": "A challenging swimming stroke in which the swimmer does dolphin-like movements with both arms and legs simultaneously."
+            },
+            {
+                "rus": "Брасс",
+                "eng": "Breast stroke",
+                "rus_def": "Стиль плавания, при котором пловец плывет на животе, делая круговые движения руками и ногами.",
+                "eng_def": "A swimming style in which the swimmer swims on their stomach, making circular motions with both arms and legs."
+            },
+            {
+                "rus": "Комплексное плавание",
+                "eng": "Medley",
+                "rus_def": "Соревнование по плаванию, включающее несколько дистанций различных стилей.",
+                "eng_def": "A swimming competition that includes multiple distances in different styles."
+            },
+            {
+                "rus": "Эстафета",
+                "eng": "Relay",
+                "rus_def": "Вид командного спорта, включающий передачу эстафеты от одного участника к другому.",
+                "eng_def": "A team sport involving passing a baton from one team member to another."
+            },
+            {
+                "rus": "Плавание на открытой воде",
+                "eng": "Open water swimming",
+                "rus_def": "Вид плавания, проводимый в естественных водоемах, таких как озера, реки или моря.",
+                "eng_def": "A type of swimming conducted in natural bodies of water like lakes, rivers, or seas."
+            },
+            {
+                "rus": "Заплыв",
+                "eng": "Swim, heat",
+                "rus_def": "Одно из мероприятий соревнований по плаванию на определенную дистанцию.",
+                "eng_def": "One of the events in a swimming competition over a certain distance."
+            },
+            {
+                "rus": "Дорожка",
+                "eng": "Swimming lane",
+                "rus_def": "Отмеченная область в бассейне для плавания.",
+                "eng_def": "A marked area in the pool designated for swimming."
+            },
+            {
+                "rus": "Бассейн",
+                "eng": "Pool",
+                "rus_def": "Искусственное водное сооружение, предназначенное для плавания и других водных видов спорта.",
+                "eng_def": "An artificial water facility designed for swimming and other water sports."
+            },
+            {
+                "rus": "Скользкий пол",
+                "eng": "Slippery floor",
+                "rus_def": "Поверхность, на которой скользко и трудно сохранить равновесие.",
+                "eng_def": "A surface where it is slippery and difficult to maintain balance."
+            },
+            {
+                "rus": "Раздевалка",
+                "eng": "Locker",
+                "rus_def": "Помещение, где можно менять одежду и хранить личные вещи.",
+                "eng_def": "A room where one can change clothes and store personal belongings."
+            },
+            {
+                "rus": "Плавки",
+                "eng": "Swimming trunks",
+                "rus_def": "Одежда для плавания, покрывающая нижнюю часть тела.",
+                "eng_def": "Swimwear that covers the lower part of the body."
+            },
+            {
+                "rus": "Плавательные очки",
+                "eng": "Goggles",
+                "rus_def": "Защитные очки для плавания, предназначенные для защиты глаз от воды и хлорированной воды.",
+                "eng_def": "Protective eyewear for swimming designed to protect the eyes from water and chlorine."
+            },
+            {
+                "rus": "На старт!",
+                "eng": "Take your marks!",
+                "rus_def": "Команда для стартового сигнала пловцам.",
+                "eng_def": "The command before the start signal is given to the swimmers."
+            },
+            {
+                "rus": "Предварительный заплыв",
+                "eng": "Heat",
+                "rus_def": "Этап квалификационных соревнований по плаванию.",
+                "eng_def": "A stage in swimming competitions used for qualification."
+            },
+            {
+                "rus": "Стартовая тумбочка",
+                "eng": "Starting end/platform",
+                "rus_def": "Специальная платформа на конце бассейна для старта пловцов.",
+                "eng_def": "A special platform at the end of the pool for swimmers to start from."
+            },
+            {
+                "rus": "Разрывать поверхность воды",
+                "eng": "Break the surface of the water",
+                "rus_def": "Действие, когда пловец выходит на поверхность воды после погружения.",
+                "eng_def": "The action of a swimmer coming up to the water surface after submersion."
+            },
+            {
+                "rus": "Погруженный",
+                "eng": "Submerged",
+                "rus_def": "Полностью находящийся под водой.",
+                "eng_def": "Completely underwater."
+            },
+            {
+                "rus": "Гребок",
+                "eng": "Arm stroke",
+                "rus_def": "Движение руками при плавании, обеспечивающее движение вперед.",
+                "eng_def": "The movement of arms in swimming that propels the swimmer forward."
+            }
+        ],
+        "questions": []
+    },
+    "shooting": {
+        "words": [
+            {
+                "eng": "Shot",
+                "rus": "Выстрел",
+                "eng_def": "The firing of a projectile from a weapon",
+                "rus_def": "Пуск снаряда из оружия"
+            },
+            {
+                "eng": "Trial shot",
+                "rus": "Пробный выстрел",
+                "eng_def": "A test firing to check the performance of a weapon",
+                "rus_def": "Испытательный выстрел для проверки работы оружия"
+            },
+            {
+                "eng": "Armed",
+                "rus": "Заряженный",
+                "eng_def": "Equipped with weapons",
+                "rus_def": "Оснащенный оружием"
+            },
+            {
+                "eng": "Bolt",
+                "rus": "Затвор",
+                "eng_def": "The part of a breech-loading rifle that blocks the rear of the barrel",
+                "rus_def": "Часть карабина с нарезным затвором, блокирующим заднюю часть ствола"
+            },
+            {
+                "eng": "Capacity",
+                "rus": "Емкость магазина",
+                "eng_def": "The number of rounds a gun magazine can hold",
+                "rus_def": "Количество патронов, которые может содержать магазин для оружия"
+            },
+            {
+                "eng": "Grip",
+                "rus": "Рукоятка",
+                "eng_def": "The handle or part of a gun that is held in the hand",
+                "rus_def": "Ручка или деталь оружия, которую держат в руке"
+            },
+            {
+                "eng": "Gun fighter, Marksman",
+                "rus": "Меткий стрелок",
+                "eng_def": "A skilled and accurate shooter",
+                "rus_def": "Опытный и точный стрелок"
+            },
+            {
+                "eng": "Plink",
+                "rus": "Попадание",
+                "eng_def": "The sound of a bullet hitting a metal object",
+                "rus_def": "Звук пули, попадающей в металлический объект"
+            },
+            {
+                "eng": "Range",
+                "rus": "Дистанция стрельбы",
+                "eng_def": "The distance over which a weapon can shoot accurately",
+                "rus_def": "Расстояние, на котором оружие может стрелять точно"
+            },
+            {
+                "eng": "Air rifle",
+                "rus": "Пневматическая винтовка",
+                "eng_def": "A rifle that uses compressed air to fire pellets",
+                "rus_def": "Винтовка, использующая сжатый воздух для стрельбы пулями"
+            },
+            {
+                "eng": "Air pistol",
+                "rus": "Пневматический пистолет",
+                "eng_def": "A pistol that uses compressed air to shoot pellets",
+                "rus_def": "Пистолет, использующий сжатый воздух для стрельбы пулями"
+            },
+            {
+                "eng": "Hammer",
+                "rus": "Курок",
+                "eng_def": "The part of a gun that strikes the firing pin or primer to detonate the cartridge",
+                "rus_def": "Часть оружия, ударяющая по ударнику для воспламенения капсюля от каморы"
+            },
+            {
+                "eng": "To point",
+                "rus": "Целиться",
+                "eng_def": "To aim a gun at a target",
+                "rus_def": "Навести оружие на цель"
+            },
+            {
+                "eng": "Bullseye",
+                "rus": "Центр мишени, «Яблоко»",
+                "eng_def": "The center of a target, usually marked with concentric circles",
+                "rus_def": "Центр мишени, обычно отмеченный концентрическими кругами"
+            },
+            {
+                "eng": "Target",
+                "rus": "Мишень",
+                "eng_def": "The object or location aimed at in shooting sports",
+                "rus_def": "Объект или место, на которое направлена стрельба в стрелковых видах спорта"
+            },
+            {
+                "eng": "To discharge/clear a rifle",
+                "rus": "Разрядить ружье",
+                "eng_def": "To release the ammunition and make the rifle safe",
+                "rus_def": "Освободить патрон и обезопасить ружье"
+            },
+            {
+                "eng": "Line of shooting/shooting line",
+                "rus": "Линия огня",
+                "eng_def": "An imaginary line along which shooters stand to shoot at targets",
+                "rus_def": "Воображаемая линия, вдоль которой стоят стрелки для стрельбы по мишеням"
+            },
+            {
+                "eng": "Shooter",
+                "rus": "Стрелок",
+                "eng_def": "A person skilled in shooting sports",
+                "rus_def": "Человек, владеющий навыками стрельбы в спортивных целях"
+            },
+            {
+                "eng": "Rifle-range",
+                "rus": "Стрельбище",
+                "eng_def": "A designated area for shooting practice with rifles",
+                "rus_def": "определенная зона для тренировочной стрельбы из винтовки"
+            }
+        ],
+        "questions": []
+    },
+    "sambo": {
+        "words": [
+            {
+                "eng": "Болевой",
+                "rus": "Joint lock",
+                "eng_def": "Painful hold",
+                "rus_def": "Болевой захват"
+            },
+            {
+                "eng": "Бросок",
+                "rus": "Throw",
+                "eng_def": "Throw",
+                "rus_def": "Метание"
+            },
+            {
+                "eng": "Подсечка",
+                "rus": "Sweep",
+                "eng_def": "Sweep",
+                "rus_def": "Подсечка"
+            },
+            {
+                "eng": "Захват",
+                "rus": "Grapple, clinch",
+                "eng_def": "Grapple, clinch",
+                "rus_def": "Захват, заклинивание"
+            },
+            {
+                "eng": "Стойка",
+                "rus": "Stance",
+                "eng_def": "Stance",
+                "rus_def": "Стойка"
+            },
+            {
+                "eng": "Прием на конечность",
+                "rus": "Lock",
+                "eng_def": "Lock",
+                "rus_def": "Захват за конечность"
+            },
+            {
+                "eng": "Удержание",
+                "rus": "Retention",
+                "eng_def": "Retention",
+                "rus_def": "Удержание"
+            },
+            {
+                "eng": "Хват",
+                "rus": "Grip, hold",
+                "eng_def": "Grip, hold",
+                "rus_def": "Хват, удержание"
+            },
+            {
+                "eng": "Скручивание (корпуса)",
+                "rus": "Twist",
+                "eng_def": "Twist",
+                "rus_def": "Скручивание (корпуса)"
+            },
+            {
+                "eng": "Сжатие",
+                "rus": "Contraction",
+                "eng_def": "Contraction",
+                "rus_def": "Сжатие"
+            },
+            {
+                "eng": "Сбивание",
+                "rus": "Knocking off",
+                "eng_def": "Knocking off",
+                "rus_def": "Сбивание"
+            },
+            {
+                "eng": "Рывком",
+                "rus": "In a burst",
+                "eng_def": "In a burst",
+                "rus_def": "Рывком"
+            },
+            {
+                "eng": "Переворачивание",
+                "rus": "Rollover",
+                "eng_def": "Rollover",
+                "rus_def": "Переворот"
+            },
+            {
+                "eng": "Рычаг",
+                "rus": "Lever",
+                "eng_def": "Lever",
+                "rus_def": "Рычаг"
+            },
+            {
+                "eng": "Узел",
+                "rus": "Lock",
+                "eng_def": "Lock",
+                "rus_def": "Узел"
+            },
+            {
+                "eng": "Выведение из равновесия",
+                "rus": "Breaking balance",
+                "eng_def": "Breaking balance",
+                "rus_def": "Выведение из равновесия"
+            },
+            {
+                "eng": "Вне ковра",
+                "rus": "Off mat",
+                "eng_def": "Off mat",
+                "rus_def": "Вне ковра"
+            },
+            {
+                "eng": "Удержание",
+                "rus": "Hold-down",
+                "eng_def": "Hold-down",
+                "rus_def": "Удержание"
+            },
+            {
+                "eng": "Положение \"Стоя\"",
+                "rus": "“Standing” position",
+                "eng_def": "“Standing” position",
+                "rus_def": "Положение \"Стоя\""
+            },
+            {
+                "eng": "Положение \"Лежа\"",
+                "rus": "“Ground position”.",
+                "eng_def": "“Ground position”",
+                "rus_def": "Положение \"Лежа\""
+            },
+            {
+                "eng": "Удар",
+                "rus": "Blow",
+                "eng_def": "Blow",
+                "rus_def": "Удар"
+            },
+            {
+                "eng": "Удушающий",
+                "rus": "Strangle",
+                "eng_def": "Strangle",
+                "rus_def": "Удушающий"
+            },
+            {
+                "eng": "Узел",
+                "rus": "Knot",
+                "eng_def": "Knot",
+                "rus_def": "Узел"
+            }
+        ],
+        "questions": []
+    },
+    "trap shooting": {
+        "words": [
+            {
+                "eng": "Rampant target",
+                "rus": "Угонная мишень",
+                "eng_def": "A target that is difficult to catch or control",
+                "rus_def": "Мишень, которую сложно поймать или контролировать"
+            },
+            {
+                "eng": "Receding target",
+                "rus": "Встречная мишень",
+                "eng_def": "A target that is moving away from the shooter",
+                "rus_def": "Мишень, отдаляющаяся от стрелка"
+            },
+            {
+                "eng": "Side target",
+                "rus": "Боковая мишень",
+                "eng_def": "A target placed to the side of the shooter",
+                "rus_def": "Мишень, расположенная сбоку от стрелка"
+            },
+            {
+                "eng": "Mirage target",
+                "rus": "Мишень с виражом — мишень, делающая в полете поворот",
+                "eng_def": "A target that makes a turn while in flight",
+                "rus_def": "Мишень, изменяющая направление в полете"
+            },
+            {
+                "eng": "\"Candle\" target",
+                "rus": "Мишень \"Свеча\"",
+                "eng_def": "A target that rises vertically like a candle",
+                "rus_def": "Мишень, взлетающая вертикально, как свеча"
+            },
+            {
+                "eng": "\"Rabbit\" target",
+                "rus": "Мишень \"Заяц\"",
+                "eng_def": "A target that rolls on the ground like a rabbit",
+                "rus_def": "Мишень, движущаяся по земле, как заяц"
+            },
+            {
+                "eng": "Parallel doublet",
+                "rus": "Синхронный дуплет",
+                "eng_def": "Two targets released simultaneously",
+                "rus_def": "Две мишени, запущенные одновременно"
+            },
+            {
+                "eng": "Unloaded gun",
+                "rus": "Незаряженное ружье",
+                "eng_def": "A gun that does not contain any ammunition",
+                "rus_def": "Ружье без патронов"
+            },
+            {
+                "eng": "Trap field",
+                "rus": "Стрелковое место",
+                "eng_def": "A designated area for shooting sports",
+                "rus_def": "Специальное место для стрелковых видов спорта"
+            },
+            {
+                "eng": "Skeet shooting",
+                "rus": "Круглый стенд",
+                "eng_def": "A shooting sport involving clay targets fired in specific trajectories",
+                "rus_def": "Вид стрельбы по мишеням из разных траекторий"
+            },
+            {
+                "eng": "Trap shooting",
+                "rus": "Траншейный стенд",
+                "eng_def": "A shooting sport where targets are launched away from the shooter",
+                "rus_def": "Вид стрельбы, где мишени запускаются от стрелка"
+            },
+            {
+                "eng": "Double trap shooting",
+                "rus": "Дубль-трап",
+                "eng_def": "A shooting sport where two targets are engaged in each round",
+                "rus_def": "Вид стрельбы, где в каждом раунде участвуют две мишени"
+            },
+            {
+                "eng": "Clay targets",
+                "rus": "Мишень",
+                "eng_def": "Objects thrown into the air as targets",
+                "rus_def": "Мишени, метки для стрельбы"
+            },
+            {
+                "eng": "Shotgun",
+                "rus": "Гладкоствольное ружье",
+                "eng_def": "A type of firearm typically used for shooting sports",
+                "rus_def": "Тип оружия, обычно используемый для стрелковых видов спорта"
+            },
+            {
+                "eng": "Shooter",
+                "rus": "Стрелок",
+                "eng_def": "A person who participates in shooting sports",
+                "rus_def": "Человек, участвующий в стрелковых соревнованиях"
+            },
+            {
+                "eng": "Trap house",
+                "rus": "Метательная машина",
+                "eng_def": "A device that throws targets into the air for shooting",
+                "rus_def": "Устройство для запуска мишеней в воздух для стрельбы"
+            }
+        ],
+        "questions": []
+    },
+    "dance sport": {
+        "words": [
+            {
+                "eng": "Паркет",
+                "rus": "Dance floor (parquet)",
+                "eng_def": "The type of flooring typically used in dance studios, characterized by a smooth surface suitable for dancing",
+                "rus_def": "Тип напольного покрытия, обычно используемый в танцевальных студиях, отличается гладкой поверхностью, подходящей для танцев"
+            },
+            {
+                "eng": "Стандарт",
+                "rus": "Standard",
+                "eng_def": "A style of ballroom dancing consisting of a set of standardized movements, particularly popular in competitions",
+                "rus_def": "Стиль бальных танцев, состоящий из набора стандартизированных движений, особенно популярен на соревнованиях"
+            },
+            {
+                "eng": "Вальс",
+                "rus": "Waltz",
+                "eng_def": "A graceful and flowing dance in triple time characterized by a strong accent on the first beat",
+                "rus_def": "Изящный и плавный танец в троичном времени, отличающийся сильным акцентом на первом ударе"
+            },
+            {
+                "eng": "Танго",
+                "rus": "Tango",
+                "eng_def": "A passionate and dramatic ballroom dance originating in Argentina, characterized by staccato movements and close embrace",
+                "rus_def": "Страстный и драматичный бальный танец, происходящий из Аргентины, отличается стаккато движениями и близким обниманием"
+            },
+            {
+                "eng": "Венский вальс",
+                "rus": "Viennese waltz",
+                "eng_def": "A faster version of the waltz, often seen in ballroom dancing competitions, known for its elegant and graceful movements",
+                "rus_def": "Более быстрая версия вальса, часто встречается на бальных танцах, известна своими элегантными и изящными движениями"
+            },
+            {
+                "eng": "Медленный фокстрот",
+                "rus": "Slow foxtrot",
+                "eng_def": "A smooth and sophisticated ballroom dance with long, flowing movements, danced to slow tempo music",
+                "rus_def": "Плавный и утонченный бальный танец с длинными плавными движениями, исполняется под медленную музыку"
+            },
+            {
+                "eng": "Квикстеп",
+                "rus": "Quickstep",
+                "eng_def": "A lively and fast-paced ballroom dance with syncopated footwork, known for its energy and dynamic movements",
+                "rus_def": "Живой и быстрый бальный танец с синкопированными движениями ног, известен своей энергией и динамичными движениями"
+            },
+            {
+                "eng": "Латина",
+                "rus": "Latin",
+                "eng_def": "A category of ballroom dances that originated in Latin America, known for their passionate and rhythmic movements",
+                "rus_def": "Категория бальных танцев, происходящих из Латинской Америки, известных своими страстными и ритмичными движениями"
+            },
+            {
+                "eng": "Самба",
+                "rus": "Samba",
+                "eng_def": "A lively Brazilian dance with African roots, typically danced during carnival celebrations, characterized by rhythmic hip movements",
+                "rus_def": "Живой бразильский танец с африканскими корнями, обычно исполняемый во время карнавальных празднований, отличается ритмичными движениями бедер"
+            },
+            {
+                "eng": "Ча-ча-ча",
+                "rus": "Cha-cha-cha",
+                "eng_def": "A fun and flirtatious Cuban dance with syncopated steps and sharp hip movements, popular in Latin dance competitions",
+                "rus_def": "Веселый и игривый кубинский танец с синкопированными шагами и резкими движениями бедер, популярен на соревнованиях по латиноамериканским танцам"
+            },
+            {
+                "eng": "Румба",
+                "rus": "Rumba",
+                "eng_def": "A slow and sensual Cuban dance with a focus on hip movements and expression of emotions, often performed as a romantic duet",
+                "rus_def": "Медленный и чувственный кубинский танец с акцентом на движения бедер и выражение эмоций, часто исполняемый как романтическое дуэт"
+            },
+            {
+                "eng": "Пасодобль",
+                "rus": "Paso doble",
+                "eng_def": "A theatrical Spanish dance mimicking the movements of a bullfight, characterized by strong, dramatic poses and foot stomping",
+                "rus_def": "Театральный испанский танец, имитирующий движения корриды, отличается сильными драматическими позами и стуками ног"
+            },
+            {
+                "eng": "Джайв",
+                "rus": "Jive",
+                "eng_def": "A lively and energetic dance style with roots in swing and jazz music, characterized by fast footwork and syncopated rhythms",
+                "rus_def": "Живой и энергичный стиль танца с корнями в свинге и джазовой музыке, отличается быстрым движением ног и синкопированными ритмами"
+            },
+            {
+                "eng": "Судья",
+                "rus": "Adjudicator",
+                "eng_def": "An official who evaluates performances in dance competitions, assessing technique, musicality, and overall presentation",
+                "rus_def": "Официальное лицо, оценивающее выступления на танцевальных соревнованиях, оценивая технику, музыкальность и общее представление"
+            },
+            {
+                "eng": "Пары",
+                "rus": "Couples",
+                "eng_def": "Pairs of dancers who perform together in duet or group routines, showcasing synchronized movements and chemistry",
+                "rus_def": "Пары танцоров, выступающие вместе в дуэтах или групповых номерах, демонстрируя синхронные движения и химию на сцене"
+            },
+            {
+                "eng": "Соло",
+                "rus": "Solo performance",
+                "eng_def": "A dance performance by a single dancer, often showcasing individual skills, creativity, and expression",
+                "rus_def": "Танцевальное выступление одним танцором, часто демонстрирующее индивидуальные навыки, креативность и выразительность"
+            },
+            {
+                "eng": "Юноши и девушки",
+                "rus": "Junior",
+                "eng_def": "A category in dance competitions for young dancers below a certain age, often featuring age-appropriate choreography and costumes",
+                "rus_def": "Категория на танцевальных соревнованиях для молодых танцоров младше определенного возраста, часто с возрастной хореографией и костюмами"
+            },
+            {
+                "eng": "Мальчики и девочки",
+                "rus": "Juvenile",
+                "eng_def": "A category in dance competitions for even younger dancers, typically children up to a certain age group, focusing on fundamentals and fun",
+                "rus_def": "Категория на танцевальных соревнованиях для еще более молодых танцоров, обычно детей до определенной возрастной группы, с акцентом на фундаментальные навыки и развлечения"
+            },
+            {
+                "eng": "Юниоры и юниорки",
+                "rus": "Youth",
+                "eng_def": "A category for teenage dancers in competitions, showcasing developing skills, passion for dance, and artistic interpretation",
+                "rus_def": "Категория для подростковых танцоров на соревнованиях, демонстрирующая развивающиеся навыки, страсть к танцам и художественную интерпретацию"
+            },
+            {
+                "eng": "Соблюдение дресс-кода",
+                "rus": "Dress check",
+                "eng_def": "Adherence to the specified dress code, which may include guidelines for attire, grooming, and overall presentation",
+                "rus_def": "Соблюдение установленного дресс-кода, который может включать правила для одежды, ухода за собой и общего представления"
+            },
+            {
+                "eng": "Бигёл – девушка, танцующая брейк",
+                "rus": "B-girl",
+                "eng_def": "A female dancer specializing in breakdancing, known for her skills in power moves, footwork, and creative expression",
+                "rus_def": "Танцовщица, специализирующаяся на брейк-дансе, известная своими навыками в пауэр-мувз, работе ног и креативной экспрессией"
+            },
+            {
+                "eng": "Работа ног",
+                "rus": "Foot work",
+                "eng_def": "The technique and movement of the feet in dance, emphasizing precision, speed, and coordination",
+                "rus_def": "Техника и движение ног в танце, с акцентом на точность, скорость и координацию"
+            },
+            {
+                "eng": "Сильное движение",
+                "rus": "Power move",
+                "eng_def": "A dynamic and acrobatic dance move requiring strength and momentum, often seen in breakdancing and hip-hop styles",
+                "rus_def": "Динамичное и акробатическое танцевальное движение, требующее силы и импульса, часто встречается в брейк-дансе и хип-хоп стилях"
+            },
+            {
+                "eng": "Трюки",
+                "rus": "Tricks",
+                "eng_def": "Impressive feats or maneuvers performed in dance routines, adding excitement and flair to the performance",
+                "rus_def": "Впечатляющие деяния или маневры, выполненные в танцевальных номерах, добавляющие волнение и стиль в выступление"
+            }
+        ],
+        "questions": []
+    },
+    "taekwondo": {
+        "words": [
+            {
+                "eng": "Block",
+                "rus": "Блок",
+                "eng_def": "To obstruct or stop the movement or progress of something",
+                "rus_def": "Преграждать или останавливать движение или прогресс чего-либо"
+            },
+            {
+                "eng": "Hand attack",
+                "rus": "Удар кулаком",
+                "eng_def": "An attack using one's hand or fist",
+                "rus_def": "Атака, использующая руку или кулак"
+            },
+            {
+                "eng": "Kick",
+                "rus": "Удар ногой",
+                "eng_def": "A blow or forceful thrust with the foot",
+                "rus_def": "Удар или сильный толчок ногой"
+            },
+            {
+                "eng": "Finger attack",
+                "rus": "Удар пальцем",
+                "eng_def": "An attack using one's finger to strike or poke",
+                "rus_def": "Атака, использующая палец для удара или тычка"
+            },
+            {
+                "eng": "Grappling",
+                "rus": "Бросок",
+                "eng_def": "engaging in a close-hand combat or wrestling",
+                "rus_def": "Схватывание в ближнем бою или борьба"
+            },
+            {
+                "eng": "Push",
+                "rus": "Толчок",
+                "eng_def": "To apply pressure on someone or something to move away",
+                "rus_def": "Наносить давление на кого-то или что-то, чтобы отодвинуть"
+            },
+            {
+                "eng": "Dodge",
+                "rus": "Уклон",
+                "eng_def": "To avoid something by suddenly moving to one side",
+                "rus_def": "Избегать чего-либо, внезапно отклоняясь в сторону"
+            },
+            {
+                "eng": "Sudden death",
+                "rus": "Золотой балл",
+                "eng_def": "A situation where the next point scored wins the game",
+                "rus_def": "Ситуация, когда следующий забитый очком выигрывает игру"
+            },
+            {
+                "eng": "Video replay",
+                "rus": "Повтор момента поединка",
+                "eng_def": "A video footage showing an event that is played back after it has happened",
+                "rus_def": "Видеозапись, демонстрирующая событие, которое воспроизводится после его произошедшего"
+            }
+        ],
+        "questions": []
+    },
+    "khapsagai": {
+        "words": [
+            {
+                "eng": "Throw",
+                "rus": "Бросок",
+                "eng_def": "An act of causing someone or something to move suddenly and quickly in a specified direction or way",
+                "rus_def": "Действие, приводящее к тому, что кто-то или что-то внезапно и быстро перемещается в определенном направлении или способе"
+            },
+            {
+                "eng": "Chest throw",
+                "rus": "Прогиб",
+                "eng_def": "A wrestling throw where a wrestler grips their opponent's chest and throws them",
+                "rus_def": "Бросок в борьбе, когда борец захватывает грудь соперника и бросает его(её)"
+            },
+            {
+                "eng": "Sweeps",
+                "rus": "Подсечки",
+                "eng_def": "A technique in wrestling to trip or knock down an opponent by sweeping their legs",
+                "rus_def": "Техника в борьбе, направленная на подрыв или сбивание противника, перекидывая его ноги"
+            },
+            {
+                "eng": "Footrests",
+                "rus": "Подножки",
+                "eng_def": "Devices or structures used to support the feet while sitting or standing",
+                "rus_def": "Устройства или конструкции, используемые для поддержки ног во время сидения или стояния"
+            },
+            {
+                "eng": "Wraps",
+                "rus": "Обвивы",
+                "eng_def": "To cover or enclose something with paper, cloth, or other material",
+                "rus_def": "Покрывать или обвивать что-то бумагой, тканью или другим материалом"
+            },
+            {
+                "eng": "Hooks",
+                "rus": "Бросок с зацепом",
+                "eng_def": "A wrestling move in which a wrestler uses the crook of his or her arm to catch an opponent",
+                "rus_def": "Прием в борьбе, при котором борец использует изгиб предплечья, чтобы поймать противника"
+            },
+            {
+                "eng": "Snatches",
+                "rus": "Выхваты",
+                "eng_def": "To take something quickly and eagerly",
+                "rus_def": "Быстро и жадно что-то взять"
+            },
+            {
+                "eng": "Grabs",
+                "rus": "Отхваты",
+                "eng_def": "To take hold of something or someone suddenly",
+                "rus_def": "Внезапно схватить что-то или кого-то"
+            },
+            {
+                "eng": "Hitches",
+                "rus": "Подсады",
+                "eng_def": "Problems or delays that make something difficult or stop it from happening",
+                "rus_def": "Проблемы или задержки, делающие что-то трудным или препятствующие его выполнению"
+            },
+            {
+                "eng": "Exceeding the competition area",
+                "rus": "Выход за линию ковра",
+                "eng_def": "Going beyond the designated area in a competition",
+                "rus_def": "Выход за пределы выделенной зоны в соревновании"
+            },
+            {
+                "eng": "Referee",
+                "rus": "Судья на ковре",
+                "eng_def": "An official who watches a game or match closely to ensure that the rules are adhered to and to arbitrate disputes",
+                "rus_def": "Официальный, который тщательно следит за игрой или матчем, чтобы гарантировать соблюдение правил и разрешать споры"
+            },
+            {
+                "eng": "Passive wrestling",
+                "rus": "Пассивная борьба",
+                "eng_def": "A style of wrestling where a wrestler remains defensive and reacts to their opponent's moves rather than initiating their own",
+                "rus_def": "Стиль борьбы, при котором борец остается в обороне и реагирует на движения соперника, а не начинает свои собственные атаки"
+            },
+            {
+                "eng": "Wrestling mat",
+                "rus": "Борцовский ковер",
+                "eng_def": "A cushioned mat used in wrestling competitions",
+                "rus_def": "Мягкий ковёр, используемый в борьбе"
+            },
+            {
+                "eng": "Red zone",
+                "rus": "Красная зона, зона пассивности",
+                "eng_def": "An area within an opponent's 20-yard line in American football",
+                "rus_def": "Область в пределах 20-ярдовой линии противника в американском футболе"
+            },
+            {
+                "eng": "Pass to feet",
+                "rus": "Проход в ноги",
+                "eng_def": "A move in martial arts or wrestling where one moves to attack the opponent's feet",
+                "rus_def": "Движение в единоборствах или борьбе, когда нападающий стремится атаковать ноги противника"
+            },
+            {
+                "eng": "Sweep",
+                "rus": "Подсечка",
+                "eng_def": "A technique used in various martial arts to trip an opponent to the ground",
+                "rus_def": "Прием, используемый в различных видах единоборств, для сбивания противника с ног"
+            },
+            {
+                "eng": "To touch the mat",
+                "rus": "Касаться ковра",
+                "eng_def": "To make contact with the wrestling mat, often indicating a take-down or a fall",
+                "rus_def": "Коснуться борцовского ковра, часто указывая на взятие верха или падение"
+            },
+            {
+                "eng": "Warning",
+                "rus": "Предупреждение",
+                "eng_def": "A cautionary action by an official in sports indicating a violation by a player or team",
+                "rus_def": "Предостерегающее действие судьи в спорте, указывающее на нарушение со стороны игрока или команды"
+            }
+        ],
+        "questions": []
+    },
+    "rhytmic gymnastics": {
+        "words": [
+            {
+                "rus": "Лента",
+                "eng": "Ribbon",
+                "rus_def": "Узкая, гибкая и длинная полоска материала, используемая в художественной гимнастике",
+                "eng_def": "A long, narrow strip of material used in rhythmic gymnastics"
+            },
+            {
+                "rus": "Обруч",
+                "eng": "Hoop",
+                "rus_def": "Кольцо, используемое в художественной гимнастике",
+                "eng_def": "A ring used in rhythmic gymnastics"
+            },
+            {
+                "rus": "Кувырок",
+                "eng": "Roll over",
+                "rus_def": "Движение, при котором гимнаст переворачивается вокруг продольной оси тела",
+                "eng_def": "A movement in which a gymnast rotates around the longitudinal axis of the body"
+            },
+            {
+                "rus": "Скакалка",
+                "eng": "Skipping rope",
+                "rus_def": "Предмет, используемый для прыжков в художественной гимнастике",
+                "eng_def": "An item used for jumping in rhythmic gymnastics"
+            },
+            {
+                "rus": "Булавы",
+                "eng": "Clubs",
+                "rus_def": "Специальные длинные предметы с осязаемым и ярким концом, используемые гимнастками",
+                "eng_def": "Special long items with bulbous and brightly colored ends used by gymnasts"
+            },
+            {
+                "rus": "Гимнаст",
+                "eng": "Gymnast",
+                "rus_def": "Спортсмен или спортсменка, занимающиеся гимнастикой",
+                "eng_def": "An athlete who practices gymnastics"
+            },
+            {
+                "rus": "Стиль",
+                "eng": "Style",
+                "rus_def": "Индивидуальный подход или манера выполнения движений в гимнастике",
+                "eng_def": "Individual approach or manner of performing movements in gymnastics"
+            },
+            {
+                "rus": "Выступление",
+                "eng": "Show",
+                "rus_def": "Публичное выступление гимнаста перед зрителями",
+                "eng_def": "A gymnast's public performance in front of an audience"
+            },
+            {
+                "rus": "Гимнастический ковер",
+                "eng": "Gymnastic carpet",
+                "rus_def": "Специальное покрытие для выполнения упражнений по гимнастике",
+                "eng_def": "A special surface for performing gymnastics exercises"
+            },
+            {
+                "rus": "Многоборье",
+                "eng": "All-around",
+                "rus_def": "Соревнование, включающее все основные виды упражнений в гимнастике",
+                "eng_def": "A competition including all major types of exercises in gymnastics"
+            },
+            {
+                "rus": "Снаряд",
+                "eng": "Apparatus",
+                "rus_def": "Оборудование или приспособление, используемое в гимнастике",
+                "eng_def": "Equipment or device used in gymnastics"
+            },
+            {
+                "rus": "Оценка",
+                "eng": "Evaluation",
+                "rus_def": "Процесс оценивания выступления гимнаста судейским жюри",
+                "eng_def": "The process of assessing a gymnast's performance by a panel of judges"
+            },
+            {
+                "rus": "Трудность",
+                "eng": "D-scor",
+                "rus_def": "Оценка технической сложности и содержания упражнения гимнаста",
+                "eng_def": "Assessment of the technical difficulty and content of a gymnast's exercise"
+            },
+            {
+                "rus": "Артистизм",
+                "eng": "A-score",
+                "rus_def": "Оценка художественной выразительности выступления гимнаста",
+                "eng_def": "Assessment of the artistic expressiveness of a gymnast's performance"
+            },
+            {
+                "rus": "Техническое исполнение",
+                "eng": "E-score",
+                "rus_def": "Оценка качества технического исполнения упражнения гимнаста",
+                "eng_def": "Assessment of the quality of a gymnast's technical execution in an exercise"
+            },
+            {
+                "rus": "Апелляционне жюри",
+                "eng": "Jury of appeal",
+                "rus_def": "Группа судей, ответственная за рассмотрение оспариваемых решений на соревнованиях",
+                "eng_def": "A group of judges responsible for reviewing contested decisions at competitions"
+            },
+            {
+                "rus": "Потеря предмета/снаряда",
+                "eng": "Dropping of hand apparatus",
+                "rus_def": "Ситуация, когда гимнаст уронил снаряд во время выступления",
+                "eng_def": "A situation where a gymnast drops an apparatus during a performance"
+            },
+            {
+                "rus": "Выход за линию ковра",
+                "eng": "Exceeding the competition area",
+                "rus_def": "Превышение границы соревновательной площадки гимнастом",
+                "eng_def": "A gymnast's exceeding the boundaries of the competition area"
+            },
+            {
+                "rus": "Гимнастический купальник/трико",
+                "eng": "Unitard",
+                "rus_def": "Одежда для выступлений в гимнастике, объединяющая трико и штаны",
+                "eng_def": "Clothing for performances in gymnastics that combines a leotard and tights"
+            },
+            {
+                "rus": "Судья-хронометрист",
+                "eng": "Timekeeper",
+                "rus_def": "Судья, отвечающий за контроль времени в процессе выступления гимнаста",
+                "eng_def": "A judge responsible for timing during a gymnast's performance"
             }
         ],
         "questions": []

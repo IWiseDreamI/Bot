@@ -28,11 +28,13 @@ class Test(StatesGroup):
     end = State()
 
 
-async def set_tmode(quest, question, test, state):
-    if(quest.quest_type == "translate"):
-        rus = bool(re.search('[а-яА-Я]', question))
-        if(rus): await state.update_data(quest_mode="rus")
+search_rus = lambda text: bool(re.search('[а-яА-Я]', text))
+
+async def set_qmode(quest, question, test, state):
+    if(quest.quest_type in ["translate", "translate_select"]):
+        if(search_rus(question)): await state.update_data(quest_mode="rus")
         else: await state.update_data(quest_mode="eng")
+
     else: await state.update_data(quest_mode=test.mode)
 
 
@@ -54,6 +56,7 @@ async def end_test(message: Message, state: FSMContext, bot: Bot):
 async def start_testing(message: Message, state: FSMContext):
     data = await state.get_data()
     user = get_user(message.from_user.id)
+    mode = user.mode
 
     if(data.get("test") is not None): await message.answer(text=text["unfinished_test"][user.mode]); return
     if(data.get("lesson") is not None): await message.answer(text=text["unfinished_lesson"][user.mode]); return   
@@ -62,10 +65,11 @@ async def start_testing(message: Message, state: FSMContext):
     test = generate_test(message.from_user.id)
     quest = test.quests[0]
 
-    question = quest_text(quest, test.user.mode, 0)
-    kb = quest_keyboard(quest, test.user.mode)
+    question = quest_text(quest, mode, 0)
+    if(quest.quest_type == "translate_select"): mode = "eng" if search_rus(question) else "rus"
+    kb = quest_keyboard(quest, mode)
 
-    await set_tmode(quest, question, test, state)
+    await set_qmode(quest, question, test, state)
     msg = await message.answer(text=question, reply_markup=kb, parse_mode=ParseMode.HTML)
     await state.update_data(test=test, last = 0, question=question, message_id=msg.message_id)
 
@@ -104,9 +108,14 @@ async def testing(call: CallbackQuery, state: FSMContext):
     correct = check_quest(test.quests[last], test, mode, answer, last_question)
     await call.answer("Правильно" if correct else "Неправильно")
 
-    kb = quest_keyboard(test.quests[last + 1], mode)
+    mode = test.mode
+
     question = quest_text(test.quests[last + 1], mode, last + 1)
-    await set_tmode(test.quests[last + 1], question, test, state)
+    if(test.quests[last + 1].quest_type == "translate_select"): mode = "eng" if search_rus(question) else "rus"
+    
+    kb = quest_keyboard(test.quests[last + 1], mode)
+
+    await set_qmode(test.quests[last + 1], question, test, state)
 
     await call.message.edit_text(text=question, reply_markup=kb, parse_mode=ParseMode.HTML)
     await state.update_data(last = last + 1, question=question)
@@ -119,6 +128,7 @@ async def testing(call: CallbackQuery, state: FSMContext):
 
 @router.message(Test.end)
 async def testing_end(message: Message, state: FSMContext, bot: Bot):
+    if(not message.text): return
     data = await state.get_data()
     await message.delete()
     await bot.edit_message_text(chat_id=message.chat.id, message_id=data["message_id"], text="Идет проверка...", parse_mode=ParseMode.HTML)
@@ -151,6 +161,7 @@ async def testing_end(message: Message, state: FSMContext, bot: Bot):
 
 @router.message(Test.test)
 async def testing_text_answer(message: Message, state: FSMContext, bot: Bot):
+    if(not message.text): return
     data = await state.get_data()
 
     await message.delete()
@@ -176,9 +187,11 @@ async def testing_text_answer(message: Message, state: FSMContext, bot: Bot):
     check_quest(test.quests[last], test, mode, answer, last_question)
 
     mode = test.mode
-    kb = quest_keyboard(test.quests[last + 1], mode)
+
     question = quest_text(test.quests[last + 1], mode, last + 1)
-    await set_tmode(test.quests[last + 1], question, test, state)
+    if(test.quests[last + 1].quest_type == "translate_select"): mode = "eng" if search_rus(question) else "rus"
+    kb = quest_keyboard(test.quests[last + 1], mode)
+    await set_qmode(test.quests[last + 1], question, test, state)
 
     await bot.edit_message_text(
         chat_id=message.chat.id, 

@@ -76,8 +76,6 @@ def get_topics_types_kb(mode: str):
 def get_topics_kb(mode: str, topictype: str):
     buttons = []
 
-    print(topics)
-
     for topic in topics[topictype]:
         if(topic in ["eng", "rus"]): continue
 

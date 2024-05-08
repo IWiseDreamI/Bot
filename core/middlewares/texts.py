@@ -29,13 +29,13 @@ def get_quest(quest: Quest, mode: str):
     qt = quest.quest_type 
     if(mode == "rus"):
         if(qt == "definition"): return word(quest, mode)
-        if(qt == "translate"): return list(set([quest.eng, quest.rus]))[0]
+        if(qt in ["translate", "translate_select"]): return list(set([quest.eng, quest.rus]))[0]
         if(qt != "missing"): return quest.rus
         else: return missing(quest.rus, quest.rus_answer)
 
     if(mode == "eng"): 
         if(qt == "definition"): return word(quest, mode)
-        if(qt in "translate" ): return list(set([quest.eng, quest.rus]))[0]
+        if(qt in ["translate", "translate_select"]): return list(set([quest.eng, quest.rus]))[0]
         if(qt != "missing"): return quest.eng
         else: return missing(quest.eng, quest.eng_answer)
 

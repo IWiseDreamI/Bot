@@ -142,7 +142,7 @@ topics = {
         "eng": "Artistic",
         "rus": "Артистичные",
         "dance_sport": {
-            "eng": "Dance sports",
+            "eng": "Dance sport",
             "rus": "Танцевальный спорт"
         },
         "rhytmic_gymnastics": {
@@ -182,6 +182,10 @@ quest_type_text = {
     "voice": {
         "eng": "Send a voice message of the text",
         "rus": "Отправьте голосовое сообщение текста который вы видите"
+    },
+    "translate_select": {
+        "eng": "Select the correct translation option",
+        "rus": "Выберите правильный вариант перевода"
     }
 }
 
@@ -260,14 +264,13 @@ def get_today_topic_statistic(topic: str):
 
 
 def word_confirm(data): 
-    return f"В бд будет добавлено слово:\n\nТематика: {data['topic']}\n\nRus: {data['rword']}\nRusDef: {data['rdef']}\n\nEng: {data['eword']}\nEngDef: {data['edef']}"
+    return f"В бд будет добавлено слово:\n\nТематика: {data['topic']}\n\nРусский: {data['rword']}\nОпределение: {data['rdef']}\n\nEnglish: {data['eword']}\nDefinition: {data['edef']}"
 
 def get_bot_users_stats():
     data = bot_users_stats()
     text = f"<code>Статистика бота за всё время:\n\nУникальных пользователей: {data['users_count']}\nПройдено тестирований: {data['tests']}\nПройдено уроков: {data['lessons']}\n\n</code>"
 
     for user_data in data["users_data"]:
-        print(user_data)
         text += f"<code>{data['users_data'][user_data]['name']} - Тестов: {data['users_data'][user_data]['tests']}; Уроков: {data['users_data'][user_data]['lessons']};\n</code>"
 
     return text

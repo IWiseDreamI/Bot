@@ -13,9 +13,10 @@ def quest_keyboard(quest: Quest, mode: str):
     topic = quest.topic.eng
     qt = quest.quest_type
 
-    if(qt in ["missing", "knowledge"]):
+    if(qt in ["missing", "knowledge", "translate_select"]):
         words = get_random_words(topic, mode, 6)
         answer = quest.eng_answer if mode == "eng" else quest.rus_answer
+        if(qt == "translate_select"): answer = quest.rus if mode == "rus" else quest.eng
         answer = answer.capitalize()
         if(not answer in words): words.append(answer)
         if(len(words) > 6): words = words[1:]
