@@ -54,7 +54,7 @@ quest_type_kb = InlineKeyboardMarkup(inline_keyboard=[
     InlineKeyboardButton(
         text="Boolean",
         callback_data="type_boolean"
-    )],
+    )]
 ])
 
 def get_topics_types_kb(mode: str):

@@ -36,14 +36,12 @@ def check_word(quest: Quest, mode: str, answer: str, question: str):
 def check_translate(quest: Quest, mode: str, answer: str):
     check = False
     correct_answer = quest.eng if mode == "eng" else quest.rus
-    if(quest.quest_type == "translate_select"): correct_answer = quest.eng if mode == "rus" else quest.rus
-    if(len(answer.split(" ")) > 2): check = check_translate_ai(correct_answer, answer, quest.topic.eng)
-    else: 
-        counter = 0
-        min_len = len(answer) if(len(answer) < len(correct_answer)) else len(correct_answer)
-        for i in range(min_len): counter += 1 if(answer[i] == correct_answer[i]) else 0
-        if(counter > len(correct_answer) * 0.7): check = True
+    if(quest.quest_type == "translate_select"): 
+        correct_answer = quest.eng if mode == "rus" else quest.rus
+        if(answer.replace("_", " ").lower() == correct_answer.lower()): return True
 
+    check = check_translate_ai(correct_answer, answer, quest.topic.eng)
+    
     return check
 
 

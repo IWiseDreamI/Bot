@@ -43,7 +43,7 @@ def get_quest(quest: Quest, mode: str):
 def quest_text(quest: Quest, mode: str, current: int):
     question = get_quest(quest, mode)
     question_head = quest_type_text[quest.quest_type][mode]
-    return f"<b>#{current + 1} {question_head}</b>\n\n{question}"
+    return f"<b>#{current + 1} {question_head}</b>\n\n{question}\n\n<code>#{quest.id}</code>"
 
 
 def get_result(test: Test):
@@ -55,7 +55,7 @@ def get_result(test: Test):
         answer = test.answers[i]
         if(answer.correct): correct += 1     
         emojis = ["\U0001F3AF", "❗️"]
-        result += f"#{counter+1} Ваш ответ: {answer.answer.capitalize().replace('_', ' ')} {emojis[0] if answer.correct else emojis[1]}\n"
+        result += f"#{answer.quest_id} Ответ: {answer.answer.capitalize().replace('_', ' ')} {emojis[0] if answer.correct else emojis[1]}\n"
         counter += 1
 
 
@@ -83,14 +83,17 @@ def get_example_text(quest: Quest, mode: str):
 
 
 def get_new_quests(data):
-    counter = 1
     result = "<code>"
-    result += "Сгенерированные вопросы:\n\n"
+    result += "Сгенерированный вопрос:\n\n"
     
-    for quest in data:
+    try: 
+        quest = data[0]
         if(type(quest) is str or quest is None): return False
-        if not(quest.get('eng') and quest.get('rus') and quest.get('eng_answer') and quest.get('rus_answer')): return False
-        result += f"Вопрос #{counter} | Тип вопроса: {quest.get('quest_type').capitalize()}\n\n🇬🇧 English: {quest.get('eng')}\nAnswer: {quest.get('eng_answer')}\n\n🇷🇺 Русский: {quest.get('rus')}\nОтвет: {quest.get('rus_answer')}\n\n\n"
-        counter += 1
-    result += "</code>"
-    return result
+        if not(quest.get('eng') and quest.get('rus')): return False
+        if not(quest.get('eng_answer') and quest.get('rus_answer')): result += f"Тип вопроса: {quest.get('quest_type').capitalize()}\n\n🇬🇧 English: {quest.get('eng')}\n\n🇷🇺 Русский: {quest.get('rus')}\n\n\n"
+        else: result += f"Тип вопроса: {quest.get('quest_type').capitalize()}\n\n🇬🇧 English: {quest.get('eng')}\nAnswer: {quest.get('eng_answer')}\n\n🇷🇺 Русский: {quest.get('rus')}\nОтвет: {quest.get('rus_answer')}\n\n\n"
+        
+        result += "</code>"
+        return result
+    except: 
+        return False

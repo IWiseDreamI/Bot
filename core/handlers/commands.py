@@ -26,7 +26,6 @@ class NewQuest(StatesGroup):
     qtype = State()
     quests = State()    
 
-
 class NewWord(StatesGroup):
     topic = State()
     eword = State()
@@ -35,6 +34,20 @@ class NewWord(StatesGroup):
     rdef = State()
     end = State()
     word_message = State()
+
+class AddQuest(StatesGroup):
+    quest = State()
+    topic = State()
+    qtype = State()
+    quests = State() 
+
+    equest = State()
+    rquest = State()
+    eanswer = State()
+    ranswer = State()
+    
+    quest_message = State()
+    end = State()
 
 
 class ChangeTopic(StatesGroup):
@@ -50,7 +63,154 @@ load_dotenv(find_dotenv())
 ADMINS = list(map(lambda id: int(id),os.environ.get("ADMIN_ID").split(",")))
 
 
+###############################
+# Добавление вопросов вручную #
+###############################
+
 @router.message(Command(commands=["add_quest"]))
+async def add_question(message: Message, state: FSMContext):
+    user = get_user(message.from_user.id)
+    kb = get_topics_types_kb(user.mode)
+    
+    if(message.from_user.id in ADMINS): 
+        await state.clear()
+        await state.set_state(AddQuest.quest)
+        msg = await message.answer("Выберите тематику:", reply_markup=kb)
+        await state.update_data(quest_message=msg.message_id)
+    
+
+    else: await message.answer("Вы не имеете доступа к этой команде.")
+
+
+@router.callback_query(F.data.startswith("topictype"), AddQuest.quest)
+async def add_quest(call: CallbackQuery):
+    user = get_user(call.from_user.id)
+    topictype = call.data.replace(re.findall(r"[^_]*_", call.data)[0], "")
+    await call.message.edit_text(f"Выберите тематику:", reply_markup=get_topics_kb(user.mode, topictype))
+
+
+@router.callback_query(F.data.startswith("topic_"), AddQuest.quest)
+async def added_question_topic(call: CallbackQuery, state: FSMContext):
+    topic = call.data.split("_")[1]
+
+    await state.update_data(topic=topic)
+    await call.message.edit_text(f"Выберите тип вопроса: ", reply_markup=quest_type_kb)
+    
+
+@router.callback_query(F.data.startswith("type_"), AddQuest.quest)
+async def added_question_type(call: CallbackQuery, state: FSMContext):
+    qtype = call.data.split("_")[1]
+    await state.update_data(qtype=qtype)
+    await state.set_state(AddQuest.equest)
+    await call.message.edit_text("Отправьте вариант вопроса на английском:", parse_mode=ParseMode.HTML)
+
+
+@router.message(AddQuest.equest)
+async def question_text(message: Message, state: FSMContext, bot: Bot):
+    text = message.text
+    data  = await state.get_data()
+
+    await message.delete()
+    await state.update_data(equest=text)
+    await state.set_state(AddQuest.rquest)
+    await bot.edit_message_text(
+        chat_id=message.chat.id, message_id=data.get("quest_message"), 
+        text=f"Отправьте вариант вопроса на русском:", parse_mode=ParseMode.HTML
+    )
+
+
+@router.message(AddQuest.rquest)
+async def question_text(message: Message, state: FSMContext, bot: Bot):
+    text = message.text
+
+    await state.update_data(rquest=text)
+    data  = await state.get_data()
+    
+    await message.delete()
+
+    if(data.get("qtype")  == "translate"):
+        await state.set_state(AddQuest.end)
+
+        quest = [{
+            "eng": data.get("equest"),
+            "rus": data.get("rquest"),
+            "quest_type": "translate",
+            "difficulty": "2",
+            "topic": data.get("topic")
+        }]
+
+        await bot.edit_message_text(
+            chat_id=message.chat.id, message_id=data.get("quest_message"), 
+            text=get_new_quests(quest), parse_mode=ParseMode.HTML,
+            reply_markup=confirm_key
+        )
+
+
+    else:
+        await state.set_state(AddQuest.eanswer)
+        await bot.edit_message_text(
+            chat_id=message.chat.id, message_id=data.get("quest_message"), 
+            text=f"Напишите ответ на вопрос в английском варианте:", parse_mode=ParseMode.HTML
+        )
+
+
+@router.message(AddQuest.eanswer)
+async def question_text(message: Message, state: FSMContext, bot: Bot):
+    text = message.text
+    data  = await state.get_data()
+
+    await message.delete()
+    await state.update_data(eanswer=text)
+
+    await state.set_state(AddQuest.ranswer)
+    await bot.edit_message_text(
+        chat_id=message.chat.id, message_id=data.get("quest_message"), 
+        text=f"Напишите ответ на вопрос в русском варианте:", parse_mode=ParseMode.HTML
+    )
+
+
+@router.message(AddQuest.ranswer)
+async def question_text(message: Message, state: FSMContext, bot: Bot):
+    text = message.text
+    await state.update_data(ranswer=text)
+    data  = await state.get_data()
+
+    await message.delete()
+    await state.set_state(AddQuest.end)
+
+    quest = [{
+        "eng": data.get("equest"),
+        "rus": data.get("rquest"),
+        "eng_answer": data.get("eanswer"),
+        "rus_answer": data.get("ranswer"),
+        "quest_type": data.get("qtype"),
+        "difficulty": "1",
+        "topic": data.get("topic")
+    }]
+
+    await state.update_data(quest=quest)
+
+    await bot.edit_message_text(
+        chat_id=message.chat.id, message_id=data.get("quest_message"), 
+        text=get_new_quests(quest), parse_mode=ParseMode.HTML,
+        reply_markup=confirm_key
+    )
+
+@router.callback_query(AddQuest.end)
+async def set_quest(call: CallbackQuery, state: FSMContext):
+    data = await state.get_data()
+    confirm = call.data.split("_")[1]
+    if(confirm == "false"): await call.message.edit_text("Добавление вопроса было отменено")
+    else: 
+        add_questions(data["quest"])
+        await call.message.edit_text("Вопрос был успешно добавлены в таблицу", parse_mode=ParseMode.HTML)
+
+
+#######################################
+# Добавление вопросов через генерацию # 
+#######################################
+
+@router.message(Command(commands=["generate_quest"]))
 async def add_question(message: Message, state: FSMContext):
     user = get_user(message.from_user.id)
     kb = get_topics_types_kb(user.mode)
@@ -64,7 +224,7 @@ async def add_question(message: Message, state: FSMContext):
 
 
 @router.callback_query(F.data.startswith("topictype"), NewQuest.quest)
-async def change(call: Message):
+async def new_question_topic(call: CallbackQuery):
     user = get_user(call.from_user.id)
     topictype = call.data.replace(re.findall(r"[^_]*_", call.data)[0], "")
     await call.message.edit_text(f"Выберите тематику изучения:", reply_markup=get_topics_kb(user.mode, topictype))
@@ -95,9 +255,10 @@ async def new_question_type(call: CallbackQuery, state: FSMContext):
     await call.message.edit_text(text, reply_markup=quest_confirmation_kb, parse_mode=ParseMode.HTML)
 
 
-@router.callback_query(F.data.startswith("new_quest_regenerate"))
+@router.callback_query(F.data.startswith("new_quest_regenerate"), NewQuest.quest)
 async def regenerate_quest(call: CallbackQuery, state: FSMContext):
     data = await state.get_data()
+    await call.message.edit_text(f"Идет генерация нового вопроса...")
     text = False
 
     while(not text):
@@ -108,7 +269,7 @@ async def regenerate_quest(call: CallbackQuery, state: FSMContext):
     await call.message.edit_text(text, reply_markup=quest_confirmation_kb, parse_mode=ParseMode.HTML)
 
 
-@router.callback_query(F.data.startswith("new_quest"))
+@router.callback_query(F.data.startswith("new_quest"), NewQuest.quest)
 async def set_quest(call: CallbackQuery, state: FSMContext):
     data = await state.get_data()
     confirm = call.data.split("_")[2]
@@ -116,7 +277,12 @@ async def set_quest(call: CallbackQuery, state: FSMContext):
     else: 
         add_questions(data["questions"])
         await call.message.edit_text("Вопросы были успешно добавлены в таблицу", parse_mode=ParseMode.HTML)
+    
+    state.clear()
 
+#####################
+# Команды статистик #
+#####################
 
 @router.message(Command(commands=["stats"]))
 async def stats(message: Message):
@@ -148,6 +314,47 @@ async def stats(message: Message):
     await message.answer(text=answer, parse_mode=ParseMode.HTML)
 
 
+@router.message(Command(commands=["topic_stats", "today_topic_stats"]))
+async def topic_stats(message: Message, state: FSMContext):
+    user = get_user(message.from_user.id)
+    kb = get_topics_types_kb(user.mode)
+
+    if(message.text == "/today_topic_stats"): await state.update_data(today="True")
+    else: await state.update_data(today="False")
+
+    if(message.from_user.id in ADMINS): 
+        await state.clear()
+        await state.set_state(TopicStats.topic)
+        await message.answer("Выберите тематику:", reply_markup=kb)
+    
+    else: await message.answer("Вы не имеете доступа к этой команде.")
+
+
+@router.callback_query(F.data.startswith("topictype"), TopicStats.topic)
+async def topic(call: Message):
+    user = get_user(call.from_user.id)
+    topictype = call.data.replace(re.findall(r"[^_]*_", call.data)[0], "")
+    await call.message.edit_text(f"Выберите тематику изучения:", reply_markup=get_topics_kb(user.mode, topictype))
+
+
+@router.callback_query(F.data.startswith("topic_"), TopicStats.topic)
+async def get_result(call: Message, state: FSMContext):
+    topic = call.data.replace(re.findall(r"[^_]*_", call.data)[0], "")
+    data = await state.get_data()
+
+    answer = ""
+
+    if(data.get("today")): answer = get_today_topic_statistic(topic)
+    else: answer = get_topic_statistic(topic)
+
+    await call.message.edit_text(answer, parse_mode=ParseMode.HTML)
+
+
+###################################
+# Смена пользовательских настроек #
+###################################
+
+
 @router.message(Command(commands=["change_mode"]))
 async def change_mode(message: Message):
     user = change_language(message.from_user.id)
@@ -175,6 +382,10 @@ async def change(call: Message):
     await call.message.edit_text(f"Тематика изучения: {topic.capitalize()}.\n")
 
 
+#########
+# Уроки #
+#########
+
 @router.message(F.text.lower() == "уроки")
 async def lesson(message: Message, state: FSMContext):
     data = await state.get_data()
@@ -200,7 +411,11 @@ async def lesson(message: Message, state: FSMContext):
     )
     
     await state.update_data(lesson=lesson, message_id=msg.message_id)
-    
+
+###################
+# Добавление слов #
+###################
+
 @router.message(Command(commands=["add_word"]))
 async def add_word(message: Message, state: FSMContext):
     user = get_user(message.from_user.id)
@@ -216,14 +431,14 @@ async def add_word(message: Message, state: FSMContext):
 
 
 @router.callback_query(F.data.startswith("topictype"), NewWord.topic)
-async def change(call: Message):
+async def word_topictype(call: Message):
     user = get_user(call.from_user.id)
     topictype = call.data.replace(re.findall(r"[^_]*_", call.data)[0], "")
     await call.message.edit_text(f"Выберите тематику изучения:", reply_markup=get_topics_kb(user.mode, topictype))
 
 
 @router.callback_query(F.data.startswith("topic_"), NewWord.topic)
-async def change(call: Message, state: FSMContext):
+async def word_topic(call: Message, state: FSMContext):
     topic = call.data.split("_")[1]
     
     await state.update_data(topic=topic)
@@ -284,47 +499,11 @@ async def new_word_confirm(message: Message, state: FSMContext, bot: Bot):
 
 
 @router.callback_query(NewWord.end, F.data.startswith("confirm_"))
-async def add_new_word(call: CallbackQuery, state: FSMContext):
+async def add_new_word(call: CallbackQuery):
     confirm = call.data.split("_")[1]
     
     if(confirm == "false"): await call.message.edit_text("Слово не было добавлено в бд.")
     else: await call.message.edit_text("Слово было успешно добавлено в бд.")
-
-
-@router.message(Command(commands=["topic_stats", "today_topic_stats"]))
-async def topic_stats(message: Message, state: FSMContext):
-    user = get_user(message.from_user.id)
-    kb = get_topics_types_kb(user.mode)
-
-    if(message.text == "/today_topic_stats"): await state.update_data(today="True")
-    else: await state.update_data(today="False")
-
-    if(message.from_user.id in ADMINS): 
-        await state.clear()
-        await state.set_state(TopicStats.topic)
-        await message.answer("Выберите тематику:", reply_markup=kb)
-    
-    else: await message.answer("Вы не имеете доступа к этой команде.")
-
-
-@router.callback_query(F.data.startswith("topictype"), TopicStats.topic)
-async def topic(call: Message):
-    user = get_user(call.from_user.id)
-    topictype = call.data.replace(re.findall(r"[^_]*_", call.data)[0], "")
-    await call.message.edit_text(f"Выберите тематику изучения:", reply_markup=get_topics_kb(user.mode, topictype))
-
-
-@router.callback_query(F.data.startswith("topic_"), TopicStats.topic)
-async def get_result(call: Message, state: FSMContext):
-    topic = call.data.replace(re.findall(r"[^_]*_", call.data)[0], "")
-    data = await state.get_data()
-
-    answer = ""
-
-    if(data.get("today")): answer = get_today_topic_statistic(topic)
-    else: answer = get_topic_statistic(topic)
-
-    await call.message.edit_text(answer, parse_mode=ParseMode.HTML)
 
 
 async def set_admin_commands(dp: Dispatcher):
