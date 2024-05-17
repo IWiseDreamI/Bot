@@ -128,7 +128,6 @@ async def testing(call: CallbackQuery, state: FSMContext):
 
 @router.message(Test.end)
 async def testing_end(message: Message, state: FSMContext, bot: Bot):
-    if(not message.text): return
     data = await state.get_data()
     await message.delete()
     await bot.edit_message_text(chat_id=message.chat.id, message_id=data["message_id"], text="Идет проверка...", parse_mode=ParseMode.HTML)
@@ -139,6 +138,7 @@ async def testing_end(message: Message, state: FSMContext, bot: Bot):
     question = data["question"]
     answer = ""
 
+    if(not message.text and test.quests[last].quest_type != "voice"): return
     if(test.quests[last].quest_type == "voice" and message.voice is None): answer = False
     elif(test.quests[last].quest_type == "voice"):
         file = await bot.get_file(message.voice.file_id)
@@ -161,7 +161,6 @@ async def testing_end(message: Message, state: FSMContext, bot: Bot):
 
 @router.message(Test.test)
 async def testing_text_answer(message: Message, state: FSMContext, bot: Bot):
-    if(not message.text): return
     data = await state.get_data()
 
     await message.delete()
@@ -175,6 +174,7 @@ async def testing_text_answer(message: Message, state: FSMContext, bot: Bot):
     mode = data["quest_mode"]
     last_question = data["question"]
 
+    if(not message.text and test.quests[last].quest_type != "voice"): return
     if(test.quests[last].quest_type == "voice" and message.voice is None): answer = False
     elif(test.quests[last].quest_type == "voice"): 
         file = await bot.get_file(message.voice.file_id); filename = file.file_id
