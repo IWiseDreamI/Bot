@@ -447,6 +447,9 @@ def bot_users_stats(today: bool = False):
             users_data[test.user_id] = {}
             users_data[test.user_id]["tests"] = 0
 
+        if(not users_data[test.user_id].get("tests")): 
+            users_data[test.user_id]["tests"] = 0
+            
         users_data[test.user_id]["tests"] += 1
         users.append(test.user_id)
 
