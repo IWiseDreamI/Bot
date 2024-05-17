@@ -27,6 +27,57 @@ confirm_key = InlineKeyboardMarkup(inline_keyboard=[
     )]
 ])
 
+edit_word_kb =  InlineKeyboardMarkup(inline_keyboard=[
+    [InlineKeyboardButton(
+        text="English",
+        callback_data="word_eng"
+    )], 
+    [InlineKeyboardButton(
+        text="Русский",
+        callback_data="word_rus"
+    )],
+    [InlineKeyboardButton(
+        text="Definition",
+        callback_data="word_engDef"
+    )],
+    [InlineKeyboardButton(
+        text="Определение",
+        callback_data="word_rusDef"
+    )]
+])
+
+def get_edit_quest_kb(qt: str): 
+    if(qt in ["translate", "translate_select"]):
+        return InlineKeyboardMarkup(inline_keyboard=[
+            [InlineKeyboardButton(
+                text="English",
+                callback_data="quest_eng"
+            )], 
+            [InlineKeyboardButton(
+                text="Русский",
+                callback_data="quest_rus"
+            )]
+        ])
+    else:
+        return InlineKeyboardMarkup(inline_keyboard=[
+            [InlineKeyboardButton(
+                text="English",
+                callback_data="quest_eng"
+            )], 
+            [InlineKeyboardButton(
+                text="Русский",
+                callback_data="quest_rus"
+            )]
+            [InlineKeyboardButton(
+                text="English",
+                callback_data="quest_engAnswer"
+            )], 
+            [InlineKeyboardButton(
+                text="Русский",
+                callback_data="quest_rusAnswer"
+            )]
+        ])
+
 user_mode = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(
         text="Eng",

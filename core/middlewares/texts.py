@@ -25,7 +25,7 @@ def word(quest: Quest, mode: str):
     return f"{termin} \n\n A) {variants[0]}\n\nB) {variants[1]}\n\nC) {variants[2]}\n\nD) {variants[3]}"
 
     
-def get_quest(quest: Quest, mode: str):
+def get_question(quest: Quest, mode: str):
     qt = quest.quest_type 
     if(mode == "rus"):
         if(qt == "definition"): return word(quest, mode)
@@ -41,7 +41,7 @@ def get_quest(quest: Quest, mode: str):
 
 
 def quest_text(quest: Quest, mode: str, current: int):
-    question = get_quest(quest, mode)
+    question = get_question(quest, mode)
     question_head = quest_type_text[quest.quest_type][mode]
     return f"<b>#{current + 1} {question_head}</b>\n\n{question}\n\n<code>#{quest.id}</code>"
 
@@ -97,3 +97,10 @@ def get_new_quests(data):
         return result
     except: 
         return False
+    
+def get_text_quest(data):
+    if not(data.eng_answer or data.rus_answer): return f"<code>#{data.id} Тип вопроса: {data.quest_type.replace('_', ' ').capitalize() }\n\n🇬🇧 English: {data.eng}\n\n🇷🇺 Русский: {data.rus}\n</code>"
+    return f"<code>#{data.id} Тип вопроса: {data.quest_type.replace('_', ' ').capitalize() }\n\n🇬🇧 English: {data.eng}\nAnswer: {data.eng_answer}\n\n🇷🇺 Русский: {data.rus}\nОтвет: {data.rus_answer}\n</code>"
+
+def get_text_word(data):
+    return f"<code>🇬🇧 English: {data.eng}\nDefinition: {data.eng_def}\n\n🇷🇺 Русский: {data.rus}\nОпределение: {data.rus_def}\n</code>"

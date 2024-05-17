@@ -12,12 +12,12 @@ from aiogram import Bot, Dispatcher, F, Router
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-from core.middlewares.ai import get_question
+from core.middlewares.ai import gen_question
 from core.middlewares.voice import get_text_from_audio
 from core.data.env import get_bot_stats, get_bot_stats_today, get_bot_users_stats, get_stats, get_today_topic_statistic, get_topic_statistic, text, word_confirm
-from core.middlewares.texts import get_lesson_text, get_new_quests
-from core.markup.inline import get_topics_kb, get_topics_types_kb, quest_type_kb, quest_confirmation_kb, confirm_key
-from db.queries import add_questions, change_language, change_topic, generate_lesson, get_user
+from core.middlewares.texts import get_lesson_text, get_new_quests, get_text_quest, get_text_word
+from core.markup.inline import get_edit_quest_kb, get_topics_kb, get_topics_types_kb, quest_type_kb, quest_confirmation_kb, confirm_key, edit_word_kb
+from db.queries import add_questions, change_language, change_topic, edit_quest, edit_word, generate_lesson, get_quest, get_user, get_word
 
 
 class NewQuest(StatesGroup):
@@ -248,7 +248,7 @@ async def new_question_type(call: CallbackQuery, state: FSMContext):
     await call.message.edit_text("Идёт генерация заданий, подождите...", parse_mode=ParseMode.HTML)
 
     while(not text):
-        questions = get_question(data["topic"], qtype)
+        questions = gen_question(data["topic"], qtype)
         if(questions): text = get_new_quests(questions)
 
     await state.update_data(questions=questions)
@@ -262,7 +262,7 @@ async def regenerate_quest(call: CallbackQuery, state: FSMContext):
     text = False
 
     while(not text):
-        questions = get_question(data["topic"], data["qtype"])
+        questions = gen_question(data["topic"], data["qtype"])
         text = get_new_quests(questions)
 
     await state.update_data(questions=questions)
@@ -499,12 +499,207 @@ async def new_word_confirm(message: Message, state: FSMContext, bot: Bot):
 
 
 @router.callback_query(NewWord.end, F.data.startswith("confirm_"))
-async def add_new_word(call: CallbackQuery):
+async def add_new_word(call: CallbackQuery, state: FSMContext):
     confirm = call.data.split("_")[1]
     
     if(confirm == "false"): await call.message.edit_text("Слово не было добавлено в бд.")
     else: await call.message.edit_text("Слово было успешно добавлено в бд.")
+    await state.clear()
 
+
+#################
+# Question edit #
+#################
+class EditQuest(StatesGroup):
+    quest = State()
+    updated = State()
+    quest_item = State()
+    edit_message = State()
+
+@router.message(Command(commands=["edit_quest"]))
+async def start_edit_quest(message: Message, state: FSMContext):
+    await state.set_state(EditQuest.quest)
+    msg = await message.answer("Введите числовое ID вопроса (#1024):")
+    await state.update_data(edit_message = msg.message_id)
+
+
+@router.message(EditQuest.quest)
+async def edit_quest_id(message: Message, state: FSMContext, bot: Bot):
+    data = await state.get_data()
+    quest_id = int(message.text.replace("#", "")) 
+    await message.delete()
+
+    qdata = get_quest(quest_id) 
+    
+    if qdata:
+        text = get_text_quest(qdata)    
+        
+        await state.update_data(quest=qdata)
+        await bot.edit_message_text(
+            chat_id=message.chat.id, message_id=data.get("edit_message"), 
+            text=text, parse_mode=ParseMode.HTML, reply_markup=confirm_key
+        )
+    
+    else: 
+        await bot.edit_message_text(
+            chat_id=message.chat.id, message_id=data.get("edit_message"), 
+            text="Вопроса не найдено, попробуйте ещё раз.", parse_mode=ParseMode.HTML, reply_markup=confirm_key
+        )
+
+@router.callback_query(EditQuest.quest, F.data.startswith("confirm_"))
+async def edit_quest_item(call: CallbackQuery, state: FSMContext):
+    data = await state.get_data()
+    confirm = call.data.split("_")[1]
+
+    if(confirm == "false"): await call.message.edit_text("Введите числовое ID вопроса (#1024):")
+    else:
+        kb = get_edit_quest_kb(data.get("quest").quest_type)
+        await call.message.edit_text("Выберите значение для изменения:", reply_markup=kb, parse_mode=ParseMode.HTML)
+
+
+@router.callback_query(EditQuest.quest, F.data.startswith("quest_"))
+async def edit_quest_item_value(call: CallbackQuery, state: FSMContext):
+    data = call.data.split("_")[1]
+    data = "eng_answer" if (data == "engAnswer") else data
+    data = "rus_answer" if (data == "rusAnswer") else data
+    await state.set_state(EditQuest.quest_item)
+    await state.update_data(quest_item=data)
+    await call.message.edit_text("Введите измененный вариант:", parse_mode=ParseMode.HTML)
+
+
+@router.message(EditQuest.quest_item)
+async def edit_quest_item(message: Message, state: FSMContext, bot: Bot):
+    data = await state.get_data()
+    await message.delete()
+    qdata = data.get("quest") 
+    qi = data.get("quest_item")
+
+    updated_quest = {
+        "eng": qdata.eng,
+        "eng_answer": qdata.eng_answer,
+        "rus": qdata.rus,
+        "rus_answer": qdata.rus_answer,
+    }
+
+    replaced = updated_quest[qi]
+    updated_quest[qi] = message.text
+
+    text = get_text_quest(qdata).replace(replaced, message.text)    
+    await state.update_data(updated=updated_quest)
+    await bot.edit_message_text(
+        chat_id=message.chat.id, message_id=data.get("edit_message"), 
+        text=text, parse_mode=ParseMode.HTML, reply_markup=confirm_key
+    )
+
+
+@router.callback_query(EditQuest.quest_item, F.data.startswith("confirm_"))
+async def edit_quest_item(call: CallbackQuery, state: FSMContext):
+    data = await state.get_data()
+    confirm = call.data.split("_")[1]
+
+    if(confirm == "false"): await call.message.edit_text("Отмена")
+    else: 
+        edit_quest(data.get("quest").id, data.get("updated"))        
+        await call.message.edit_text("Изменения были применены", parse_mode=ParseMode.HTML)
+    
+    await state.clear()
+
+#############
+# Word edit #
+#############
+class EditWord(StatesGroup):
+    word = State()
+    updated = State()
+    word_item = State()
+    edit_message = State()
+
+@router.message(Command(commands=["edit_word"]))
+async def start_edit_word(message: Message, state: FSMContext):
+    await state.set_state(EditWord.word)
+    msg = await message.answer("Введите слово на английском:")
+    await state.update_data(edit_message = msg.message_id)
+
+@router.message(EditWord.word)
+async def edit_word_find(message: Message, state: FSMContext, bot: Bot):
+    data = await state.get_data() 
+    await message.delete()
+
+    wdata = get_word(message.text)     
+
+    if wdata:
+        text = get_text_word(wdata)
+        await state.update_data(word=wdata)
+        await bot.edit_message_text(
+            chat_id=message.chat.id, message_id=data.get("edit_message"), 
+            text=text, parse_mode=ParseMode.HTML, reply_markup=confirm_key
+        )
+
+    else:
+        await bot.edit_message_text(
+            chat_id=message.chat.id, message_id=data.get("edit_message"), 
+            text="Слово не найдено, попробуйте ещё раз.", parse_mode=ParseMode.HTML
+        )
+    
+@router.callback_query(EditWord.word, F.data.startswith("confirm_"))
+async def word_item(call: CallbackQuery, state: FSMContext):
+    confirm = call.data.split("_")[1]
+
+    if(confirm == "false"): await call.message.edit_text("Введите слово на английском:")
+    else:
+        kb = edit_word_kb
+        await call.message.edit_text("Выберите значение для изменения:", reply_markup=kb, parse_mode=ParseMode.HTML)
+
+
+@router.callback_query(EditWord.word, F.data.startswith("word_"))
+async def edit_word_item_value(call: CallbackQuery, state: FSMContext):
+    data = call.data.split("_")[1]
+    data = "eng_def" if (data == "engDef") else data
+    data = "rus_def" if (data == "rusDef") else data
+    await state.set_state(EditWord.word_item)
+    await state.update_data(word_item=data)
+    await call.message.edit_text("Введите измененный вариант:", parse_mode=ParseMode.HTML)
+
+
+@router.message(EditWord.word_item)
+async def edit_word_item(message: Message, state: FSMContext, bot: Bot):
+    data = await state.get_data()
+    await message.delete()
+    wdata = data.get("word") 
+    wi = data.get("word_item")
+
+    updated_word = {
+        "eng": wdata.eng,
+        "eng_def": wdata.eng_def,
+        "rus": wdata.rus,
+        "rus_def": wdata.rus_def,
+    }
+
+    replaced = updated_word[wi]
+    updated_word[wi] = message.text
+
+    text = get_text_word(wdata).replace(replaced, message.text)    
+    await state.update_data(updated=updated_word)
+    await bot.edit_message_text(
+        chat_id=message.chat.id, message_id=data.get("edit_message"), 
+        text=text, parse_mode=ParseMode.HTML, reply_markup=confirm_key
+    )   
+
+
+@router.callback_query(EditWord.word_item, F.data.startswith("confirm_"))
+async def edit_word_item(call: CallbackQuery, state: FSMContext):
+    data = await state.get_data()
+    confirm = call.data.split("_")[1]
+
+    if(confirm == "false"): await call.message.edit_text("Отмена")
+    else: 
+        edit_word(data.get("word").id, data.get("updated"))        
+        await call.message.edit_text("Изменения были применены", parse_mode=ParseMode.HTML)
+    
+    await state.clear()
+
+#################
+# import router #
+#################
 
 async def set_admin_commands(dp: Dispatcher):
     dp.include_router(router)

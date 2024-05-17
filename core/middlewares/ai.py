@@ -70,7 +70,7 @@ requests = {
     """
 }
 
-def get_question(topic, qt):
+def gen_question(topic, qt):
     word = get_topic_random_word(topic)
     answer = False
     text = requests[qt].replace("|topic|", topic).replace("|rword|", word.rus).replace("|eword|", word.eng)
