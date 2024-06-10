@@ -37,7 +37,7 @@ topics = {
         },
     },
 
-    "martial_arts": {
+    "martial arts": {
         "eng": "Matrial arts",
         "rus": "Единоборства",
         "box": {

@@ -2,3 +2,4 @@ venv
 .env
 *.wav
 *.ogg
+__pycache__/
